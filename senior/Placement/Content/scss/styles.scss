@@ -1,0 +1,39 @@
+//使用客製化bs參數及bs參數
+@import "bootstrap-5.3.8/scss/functions";
+@import "bootstrap-5.3.8/variables-custom";
+@import "bootstrap-5.3.8/scss/maps";
+@import "bootstrap-5.3.8/scss/mixins";
+@import "bootstrap-5.3.8/scss/utilities";
+
+@import "modules/var"; 
+ 
+@import "master/header";   
+@import "master/footer";
+@import "master/main";
+
+@import "modules/back-to-top"; 
+@import "modules/spinner"; 
+@import "modules/UI"; 
+
+
+@import "pages/index"; 
+@import "pages/news"; 
+
+/*@import "modules/animate"; 
+
+@import "modules/academic";   
+@import "modules/metrics";   
+@import "modules/mend-bs"; 
+@import "modules/page-header"; 
+@import "modules/spinner"; 
+@import "modules/UI"; 
+
+@import "modules/exam-item"; 
+@import "modules/user"; 
+
+
+
+@import "pages/apply"; */
+
+
+
