@@ -2,7 +2,7 @@
 <html lang="zh-Hans-CN">
 <head>
 <meta charset="utf-8">
-<title>赞生涯高中生生涯落点分析系统</title>
+<title>赞生涯生涯落点分析系统 高中生</title>
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <meta content="生涯規劃不再迷惘！讚生涯帶你掌握精彩職涯旅程！" name="description">
 <meta content="生涯,落点,分析,落点分析,讚,讚生涯,高中生,,高中生生涯" name="keywords">
@@ -13,8 +13,8 @@
 <!-- Icon Font Stylesheet -->
 <link rel="stylesheet" href="Content/lib/bootstrap-icons-1.11.3/font/bootstrap-icons.min.css">
 
-<!-- Libraries Stylesheet --> 
-<!--<link rel="stylesheet" href="Content/lib/animate.css-main/animate.min.css">--> 
+<!-- Libraries Stylesheet -->
+<link rel="stylesheet" href="Content/lib/animate.css-main/animate.min.css">
 
 <!-- Customized Bootstrap Stylesheet -->
 <link rel="stylesheet" href="Content/css/bootstrap-custom.css">
@@ -31,7 +31,7 @@
   </div>
   <!-- Spinner End -->
   <header></header>
-  <main>
+  <main class="news">
     <div class="container"> 
       <!-- breadcrumb start -->
       <nav aria-label="breadcrumb">
@@ -77,86 +77,32 @@
 <!-- JavaScript Libraries --> 
 <script src="Content/js/jquery-3.4.1.min.js"></script> 
 <script src="Content/lib/bootstrap-5.3.8/dist/js/bootstrap.bundle.min.js"></script> 
-<!--<script src="Content/lib/WOW-master/dist/wow.min.js"></script> --> 
-<!-- widgets js --> 
-<script src="Content/lib/isotope/isotope.pkgd.min.js"></script> 
+<script src="Content/lib/WOW-master/dist/wow.min.js"></script> 	
+	
+<!-- This page Javascript Libraries --> 	
+	
 <!-- This web Javascript --> 
 <script src="Content/js/fn.js"></script> 
-<script src="Content/js/main.js"></script> 
+<script src="Content/js/main.js"></script> 	
 <script>
 $(document).ready(function() {
 	//nowPage
   	$('.nav-news').addClass('active');
-
-	//點[活動專區]各項目，篩選出各項目內容 
-	var $grid = $('.news-list').isotope({
-		itemSelector: '.news-item',
-		layoutMode: 'fitRows',
-	});
-	//點.activity-nav選單
-	var $buttonGroup = $('.news-nav');
-	$buttonGroup.on( 'click', 'a', function( event ) {
-		var $button = $( event.currentTarget );
-		var filterValue = $button.attr('data-filter');
-		$grid.isotope({ filter: filterValue });
-		newsNone(filterValue);
-	});
-	//點其他頁navi-main、footer-info__sitemap選單
-	$hash= document.location.hash.substring(1);
-	if($hash.length!=0){
-		filterValue = '.'+$hash;
-		$grid.isotope({ filter: filterValue });
-		newsNone(filterValue);
-	}
-	//點此頁navi-main、footer-info__sitemap選單
-	$(window).on( 'hashchange', function() {
-		var $hash = document.location.hash.substr(1);
-		filterValue = '.'+$hash;
-		$grid.isotope({ filter: filterValue });
-		newsNone(filterValue);
-	})
 })	
-function newsNone(filterValue) {
-	 $('.news-nav a').removeClass('active')
-					 .filter('[data-filter="' + filterValue + '"]')
-					 .addClass('active');
-	
-	var nowText = $('.news-nav a.active').text();
-	$('.breadcrumb li:last-child').text(nowText);
-	
-	let hasItem;
-
-	if (filterValue === '*') {
-		hasItem = $('.news-item').length > 0;
-	} else {
-		hasItem = $('.news-item' + filterValue).length > 0;
-	}
-	
-	if (!hasItem) {
-		$('.news-list').css('height', 'auto')
-					   .find('.news-list-none')
-					   .text('目前无新闻。');
-	} else {
-		$('.news-list-none').text('');
-	}
-	
-	$('html,body').animate({scrollTop:0},0);
-}	
 </script> 
 <script>
 //demo用
 $(function () {
 // 取 URL 參數
 function getQueryParam(name) {
-  const params = new URLSearchParams(window.location.search);
-  return params.get(name);
+	const params = new URLSearchParams(window.location.search);
+	return params.get(name);
 }
 
 const newsId = parseInt(getQueryParam("n"), 10) || 1; // 預設 1
 
 // 讀取 JSON
-$.getJSON("Content/json/news.json")
-  .done(function (data) {
+$.getJSON("Content/json/news.json").done(function (data) {
 	const list = (data && data.news) ? data.news : [];
 	const item = list.find(n => Number(n.id) === newsId) || list[0];
 
@@ -170,23 +116,18 @@ $.getJSON("Content/json/news.json")
 
 	// Image（依你 HTML 結構重建）
 	const imgFile = item.img ? String(item.img) : "news-1.jpg";
-	$("#newsImg").html(`
-	  <div class="ratio ratio-16x9 mb-2">
-		<img src="Content/img/news/${imgFile}" alt=""/>
-	  </div>
-	`);
+	$("#newsImg").html(`<div class="ratio ratio-16x9 mb-2">
+							<img src="Content/img/news/${imgFile}" alt=""/>
+						</div>`);
 
-	// Content（你的 content 是 array，但裡面其實放了一整串 HTML）
-	// 兼容：若是 array 就 join；若是 string 直接放
+	// Content
 	const contentHtml = Array.isArray(item.content)
 	  ? item.content.join("")
 	  : (item.content || "");
 
-	$("#newsText").html(contentHtml);
-  })
-  .fail(function (xhr, status, err) {
-	console.error("Load news.json failed:", status, err);
-  });
+	$("#newsText").html(contentHtml);}).fail(function (xhr, status, err) {
+		console.error("Load json failed.");
+	});
 });
 </script>
 </body>
