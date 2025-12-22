@@ -503,7 +503,7 @@ $position-values: (
 
 $body-text-align:           null !default;
 $body-color:                $gray-800 !default;//cg. $gray-900 !default;
-$body-bg:                   $gray-100 !default;//cg. $white !default;
+$body-bg:                   $white !default;
 
 $body-secondary-color:      rgba($body-color, .75) !default;
 $body-secondary-bg:         $gray-200 !default;
@@ -1657,7 +1657,7 @@ $progress-bar-transition:           width .6s ease !default;
 
 // scss-docs-start list-group-variables
 $list-group-color:                  var(--#{$prefix}body-color) !default;
-$list-group-bg:                     var(--#{$prefix}body-bg) !default;
+$list-group-bg:                     transparent !default;//cg. var(--#{$prefix}body-bg) !default;
 $list-group-border-color:           var(--#{$prefix}border-color) !default;
 $list-group-border-width:           var(--#{$prefix}border-width) !default;
 $list-group-border-radius:          var(--#{$prefix}border-radius) !default;
