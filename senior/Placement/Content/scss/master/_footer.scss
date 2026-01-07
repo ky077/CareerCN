@@ -1,7 +1,7 @@
 footer{
-	background: -webkit-linear-gradient(top left, $secondary 0%, $primary 100%);
-	background: -o-linear-gradient(top left, $secondary 0%, $primary 100%);
-	background: linear-gradient(to bottom right, $secondary 0%, $primary 100%); 
+	background: -webkit-linear-gradient(top left, $secondary 0%, $primary-500 50%);
+	background: -o-linear-gradient(top left, $secondary 0%, $primary-500 50%);
+	background: linear-gradient(to bottom right, $secondary 0%, $primary-500 50%); 
     .infomation{
 		background-color: rgba($white, .125);
 		color: #fff;
@@ -58,11 +58,11 @@ footer{
         border-top: 1px solid rgba(#fff, .25);
 		padding-top: .75rem;
 		padding-bottom: .75rem;
-		letter-spacing: $letter-spacing-sm;
+		letter-spacing: .05em;
 		a{
 			color: #fff;	
 			margin-right: 1rem;
-			letter-spacing: $letter-spacing-base;
+			letter-spacing: .1em;
 			&:hover, &:focus, &:active{
 				color: $tertiary;	
 			}

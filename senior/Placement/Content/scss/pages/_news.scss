@@ -1,3 +1,8 @@
+main.news{
+	background: -webkit-linear-gradient(rgba($primary-100, .25) 0%, rgba(0,0,0,0) 5rem);
+	background: -o-linear-gradient(rgba($primary-100, .25) 0%, rgba(0,0,0,0) 5rem);
+	background: linear-gradient(rgba($primary-100, .25) 0%, rgba(0,0,0,0) 5rem);
+}
 .news-nav{
 	font-size: $font-size-lg;
 	.nav-link {
@@ -16,10 +21,10 @@
 }
 
 .news-list{
-	margin-bottom: map-get($spacers, 4);  
+	margin-bottom: map-get($spacers, 4);
 	.news-list-none{
 		text-align: center;
-		margin: map-get($spacers, 5) auto;
+		margin: map-get($spacers, 7) auto;
 		color: $secondary;
 	}
 	.news-item{

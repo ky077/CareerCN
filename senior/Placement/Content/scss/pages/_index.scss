@@ -2,7 +2,6 @@
 	width: 100%;
 	overflow-x: hidden;
 	.hero{
-		margin-bottom: map-get($spacers, 3);  
 		.hero-carousel{
 			.item{ 
 				width: 100%;
@@ -98,6 +97,9 @@
 		}	
 	}
 	.news{
+		background-color: $white;
+		padding-top: map-get($spacers, 4);
+		padding-bottom: map-get($spacers, 4);
 		.list-group{
 			.list-group-item{
 				color: $body-secondary-color;
@@ -117,8 +119,12 @@
 	}
 	.feature{
 		background-color: rgba($cyan-100, .5);
-		padding-top: map-get($spacers, 4);  
-		padding-bottom: map-get($spacers, 4);  
+		padding-top: map-get($spacers, 7);  
+		padding-bottom: map-get($spacers, 7); 
+		> [class*="container"]{
+			padding-top: map-get($spacers, 4);  
+			padding-bottom: map-get($spacers, 7); 	
+		}
 		.feature-title{
 			font-weight: 700;
 			color: $primary-700;
@@ -172,9 +178,13 @@
 		background-position: center bottom;
 		background-repeat: no-repeat;
 		background-size: 100% 100%;
-		padding-top: map-get($spacers, 5);  
-		padding-bottom: map-get($spacers, 5);  
+		padding-top: map-get($spacers, 7);  
+		padding-bottom: map-get($spacers, 7);  
 		position: relative;
+		> [class*="container"]{
+			padding-top: map-get($spacers, 7);  
+			padding-bottom: map-get($spacers, 7); 	
+		}
 		.join-title{
 			color: $primary-600;
 			font-size: $h1-font-size*1.1;

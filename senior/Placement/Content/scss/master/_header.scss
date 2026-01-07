@@ -12,9 +12,6 @@ header{
 		font-size: 1.1rem;
 		.navbar-brand{
 			flex: 1;
-			@media screen and (min-width: 768px) {
-			flex: none;	
-			}
 			.logo{
 				margin-bottom: 0;
 				img{

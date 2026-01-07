@@ -29,54 +29,53 @@
   <main class="scorePlacement"> 
     <!-- banner start -->
     <div class="banner">
-      <div class="container">
+      <div class="container-lg">
         <div class="row align-items-center">
           <div class="col">
-            <h2 class="fs-3 mb-3 banner-title">成绩落点查询<small>结合你的考试分数与历年录取资料，精准推估各校系录取可能性，<br>
+            <h2 class="fs-3 banner-title">成绩落点查询<small>结合你的考试分数与历年录取资料，精准推估各校系录取可能性，<br>
               帮你筛选最合适、最有把握的志愿，让升学决策不再盲目，轻松规划未来。</small></h2>
           </div>
-          <div class="col-4"><img src="Content/img/scorePlacement/banner-img.png" alt="" class="img-fluid d-block mx-auto"/></div>
         </div>
       </div>
     </div>
     <!-- banner end --> 
     
     <!-- search start -->
-    <div class="search bg-white small">
-      <div class="container py-5">
-        <div class="row row-cols-1 g-4">
+    <div class="search">
+      <div class="container-lg">
+        <div class="row row-cols-1 gy-5">
           <div class="col col-lg-6">
-            <div class="card card-1 h-100">
+            <div class="card h-100 card-score">
               <div class="card-header">
-                <h3 class="card-title">我的成绩</h3>
+                <h3 class="card-title"><img src="Content/img/scorePlacement/icon-score.png" alt=""/>我的成绩</h3>
               </div>
               <div class="card-body">
-                <div class="row gx-2 mb-2 align-items-center">
+                <div class="row gx-2 mb-2">
                   <label for="TB_Nscore1" class="col-auto col-form-label">区外高考总分︰</label>
-                  <div class="col-auto">
-                    <input name="ctl00$ContentPlaceHolder1$TB_Nscore1" type="text" id="TB_Nscore1" class="form-control form-control-sm rounded-0">
+                  <div class="col">
+                    <input name="ctl00$ContentPlaceHolder1$TB_Nscore1" type="text" id="TB_Nscore1" class="form-control form-control-sm rounded-0 d-inline w-auto" autocomplete="off">
+                    <div class="form-text"> <span id="RequiredFieldValidator1" class="text-danger" style="display: none;">请输入分数</span> <span id="RangeValidator1" class="text-danger" style="display: none;">请输入数字１～９９９</span> </div>
                   </div>
-                  <div class="col-auto"> <span id="RequiredFieldValidator1" class="form-text text-danger">请输入分数</span> <span id="RangeValidator1" class="form-text text-danger" style="display: none;">请输入数字１～９９９</span> </div>
                 </div>
-                <div class="row gx-2 mb-2 align-items-center">
+                <div class="row gx-2 mb-2">
                   <label for="TB_Nscore2" class="col-auto col-form-label">区外高考总分︰</label>
-                  <div class="col-auto">
-                    <input name="ctl00$ContentPlaceHolder1$TB_Nscore2" type="text" id="TB_Nscore2" class="form-control form-control-sm rounded-0">
+                  <div class="col">
+                    <input name="ctl00$ContentPlaceHolder1$TB_Nscore2" type="text" id="TB_Nscore2" class="form-control form-control-sm rounded-0 d-inline w-auto" autocomplete="off">
+                    <div class="form-text"> <span id="RequiredFieldValidator2" class="text-danger" style="display: none;">请输入分数</span> <span id="RangeValidator2" class="text-danger">请输入数字１～９９９</span> </div>
                   </div>
-                  <div class="col-auto"> <span id="RequiredFieldValidator2" class="form-text text-danger">请输入分数</span> <span id="RangeValidator2" class="form-text text-danger" style="display: none;">请输入数字１～９９９</span> </div>
                 </div>
               </div>
             </div>
           </div>
           <div class="col col-lg-6">
-            <div class="card card-2 h-100">
+            <div class="card h-100 card-subject">
               <div class="card-header">
-                <h3 class="card-title">我的科目</h3>
+                <h3 class="card-title"><img src="Content/img/scorePlacement/icon-subject.png" alt=""/>我的科目</h3>
               </div>
               <div class="card-body">
                 <div class="row gx-2 mb-2">
-                  <label for="TB_Nscore2" class="col-auto col-form-label">首选科目︰</label>
-                  <div class="col-auto pt-2">
+                  <label for="" class="col-auto col-form-label">首选科目︰</label>
+                  <div class="col pt-1">
                     <div class="form-check form-check-inline">
                       <input class="form-check-input" type="radio" name="ctl00$ContentPlaceHolder1$RB_FCS" id="RB_FCS_0" value="1" checked>
                       <label class="form-check-label" for="RB_FCS_0">历史</label>
@@ -88,8 +87,8 @@
                   </div>
                 </div>
                 <div class="row gx-2 mb-2">
-                  <label for="TB_Nscore2" class="col-auto col-form-label">再选科目︰</label>
-                  <div class="col-auto pt-2">
+                  <label for="" class="col-auto col-form-label">再选科目︰</label>
+                  <div class="col pt-1">
                     <div class="form-check form-check-inline">
                       <input class="form-check-input" type="checkbox" id="CB_SS_0" name="ctl00$ContentPlaceHolder1$CB_SS$CB_SS_0">
                       <label class="form-check-label" for="CB_SS_0">思想政治</label>
@@ -108,48 +107,30 @@
                     </div>
                   </div>
                 </div>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card card-3">
-              <div class="card-header">
-                <h3 class="card-title">科类名称</h3>
-              </div>
-              <div class="card-body">
-                <div class="row row-cols-2 row-cols-lg-6 g-3">
-                  <div class="col">
-                    <div class="form-check form-check-inline">
+                <div class="row gx-2 mb-2">
+                  <label for="" class="col-auto col-form-label">科类名称︰</label>
+                  <div class="col pt-1 grid gap-2">
+                    <div class="form-check form-check-inline order-xxl-first">
                       <input class="form-check-input" type="checkbox" id="CB_DC_0" name="ctl00$ContentPlaceHolder1$CB_DC$CB_DC_0">
                       <label class="form-check-label" for="CB_DC_0">普通类(历史)</label>
                     </div>
-                  </div>
-                  <div class="col">
-                    <div class="form-check form-check-inline">
+                    <div class="form-check form-check-inline order-xxl-4">
                       <input class="form-check-input" type="checkbox" id="CB_DC_1" name="ctl00$ContentPlaceHolder1$CB_DC$CB_DC_1">
                       <label class="form-check-label" for="CB_DC_1">普通类(物理)</label>
                     </div>
-                  </div>
-                  <div class="col">
-                    <div class="form-check form-check-inline">
+                    <div class="form-check form-check-inline order-xxl-2">
                       <input class="form-check-input" type="checkbox" id="CB_DC_2" name="ctl00$ContentPlaceHolder1$CB_DC$CB_DC_2">
                       <label class="form-check-label" for="CB_DC_2">艺术类(历史)</label>
                     </div>
-                  </div>
-                  <div class="col">
-                    <div class="form-check form-check-inline">
+                    <div class="form-check form-check-inline order-xxl-5">
                       <input class="form-check-input" type="checkbox" id="CB_DC_3" name="ctl00$ContentPlaceHolder1$CB_DC$CB_DC_3">
                       <label class="form-check-label" for="CB_DC_3">艺术类(物理)</label>
                     </div>
-                  </div>
-                  <div class="col">
-                    <div class="form-check form-check-inline">
+                    <div class="form-check form-check-inline order-xxl-3">
                       <input class="form-check-input" type="checkbox" id="CB_DC_4" name="ctl00$ContentPlaceHolder1$CB_DC$CB_DC_4">
                       <label class="form-check-label" for="CB_DC_4">体育类(历史)</label>
                     </div>
-                  </div>
-                  <div class="col">
-                    <div class="form-check form-check-inline">
+                    <div class="form-check form-check-inline order-xxl-last">
                       <input class="form-check-input" type="checkbox" id="CB_DC_5" name="ctl00$ContentPlaceHolder1$CB_DC$CB_DC_5">
                       <label class="form-check-label" for="CB_DC_5">体育类(物理)</label>
                     </div>
@@ -159,58 +140,63 @@
             </div>
           </div>
           <div class="col">
-            <div class="card card-4">
+            <div class="card card-admission">
               <div class="card-header">
-                <h3 class="card-title">录取批次</h3>
+                <h3 class="card-title"><img src="Content/img/scorePlacement/icon-admission.png" alt=""/>录取批次</h3>
               </div>
               <div class="card-body">
-                <div class="row row-cols-2 row-cols-lg-3 row-cols-xl-4 g-3">
-                  <div class="col">
-                    <div class="form-check form-check-inline">
-                      <input class="form-check-input" type="checkbox" id="CB_AB_0" value="0" name="ctl00$ContentPlaceHolder1$CB_AB">
-                      <label class="form-check-label" for="CB_AB_0">本科提前批艺术类本科第二批</label>
-                    </div>
-                  </div>
-                  <div class="col">
-                    <div class="form-check form-check-inline">
-                      <input class="form-check-input" type="checkbox" id="CB_AB_1" value="1" name="ctl00$ContentPlaceHolder1$CB_AB">
-                      <label class="form-check-label" for="CB_AB_1">本科提前批体育类</label>
-                    </div>
-                  </div>
-                  <div class="col">
-                    <div class="form-check form-check-inline">
-                      <input class="form-check-input" type="checkbox" id="CB_AB_2" value="2" name="ctl00$ContentPlaceHolder1$CB_AB">
-                      <label class="form-check-label" for="CB_AB_2">本科提前批其他一类</label>
-                    </div>
-                  </div>
-                  <div class="col">
-                    <div class="form-check form-check-inline">
-                      <input class="form-check-input" type="checkbox" id="CB_AB_3" value="3" name="ctl00$ContentPlaceHolder1$CB_AB">
-                      <label class="form-check-label" for="CB_AB_3">本科普通批</label>
-                    </div>
-                  </div>
-                  <div class="col">
-                    <div class="form-check form-check-inline">
-                      <input class="form-check-input" type="checkbox" id="CB_AB_4" value="4" name="ctl00$ContentPlaceHolder1$CB_AB">
-                      <label class="form-check-label" for="CB_AB_4">高职高专提前批艺术类</label>
-                    </div>
-                  </div>
-                  <div class="col">
-                    <div class="form-check form-check-inline">
-                      <input class="form-check-input" type="checkbox" id="CB_AB_5" value="5" name="ctl00$ContentPlaceHolder1$CB_AB">
-                      <label class="form-check-label" for="CB_AB_5">高职高专提前批体育类</label>
-                    </div>
-                  </div>
-                  <div class="col">
-                    <div class="form-check form-check-inline">
-                      <input class="form-check-input" type="checkbox" id="CB_AB_6" value="6" name="ctl00$ContentPlaceHolder1$CB_AB">
-                      <label class="form-check-label" for="CB_AB_6">高职高专提前批其他类</label>
-                    </div>
-                  </div>
-                  <div class="col">
-                    <div class="form-check form-check-inline">
-                      <input class="form-check-input" type="checkbox" id="CB_AB_7" value="7" name="ctl00$ContentPlaceHolder1$CB_AB">
-                      <label class="form-check-label" for="CB_AB_7">高职高专普通批</label>
+                <div class="row gx-2 mb-2">
+                  <label for="" class="col-auto col-form-label text-end">录取批次︰</label>
+                  <div class="col pt-2">
+                    <div class="row row-cols-2 row-cols-lg-3 row-cols-xl-4 g-3">
+                      <div class="col">
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="checkbox" id="CB_AB_0" value="0" name="ctl00$ContentPlaceHolder1$CB_AB">
+                          <label class="form-check-label" for="CB_AB_0">本科提前批艺术类本科第二批</label>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="checkbox" id="CB_AB_1" value="1" name="ctl00$ContentPlaceHolder1$CB_AB">
+                          <label class="form-check-label" for="CB_AB_1">本科提前批体育类</label>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="checkbox" id="CB_AB_2" value="2" name="ctl00$ContentPlaceHolder1$CB_AB">
+                          <label class="form-check-label" for="CB_AB_2">本科提前批其他一类</label>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="checkbox" id="CB_AB_3" value="3" name="ctl00$ContentPlaceHolder1$CB_AB">
+                          <label class="form-check-label" for="CB_AB_3">本科普通批</label>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="checkbox" id="CB_AB_4" value="4" name="ctl00$ContentPlaceHolder1$CB_AB">
+                          <label class="form-check-label" for="CB_AB_4">高职高专提前批艺术类</label>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="checkbox" id="CB_AB_5" value="5" name="ctl00$ContentPlaceHolder1$CB_AB">
+                          <label class="form-check-label" for="CB_AB_5">高职高专提前批体育类</label>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="checkbox" id="CB_AB_6" value="6" name="ctl00$ContentPlaceHolder1$CB_AB">
+                          <label class="form-check-label" for="CB_AB_6">高职高专提前批其他类</label>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="checkbox" id="CB_AB_7" value="7" name="ctl00$ContentPlaceHolder1$CB_AB">
+                          <label class="form-check-label" for="CB_AB_7">高职高专普通批</label>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -218,213 +204,87 @@
             </div>
           </div>
           <div class="col">
-            <div class="card card-5">
+            <div class="card card-college">
               <div class="card-header">
-                <h3 class="card-title">院校条件</h3>
+                <h3 class="card-title"><img src="Content/img/scorePlacement/icon-college.png" alt=""/>院校条件</h3>
               </div>
               <div class="card-body">
                 <div class="row gx-2 mb-2">
-                  <label for="TB_Nscore2" class="col-auto col-form-label text-end">院校所在省市︰</label>
-                  <div class="col-auto">
-                    <div class="row">
-                      <div class="col">
-                        <div class="form-check">
-                          <input class="form-check-input" type="checkbox" id="CBL_area_0" name="ctl00$ContentPlaceHolder1$CBL_area$CBL_area_0">
-                          <label class="form-check-label" for="CBL_area_0">北京</label>
-                        </div>
-                      </div>
-                      <div class="col">
-                        <div class="form-check">
-                          <input class="form-check-input" type="checkbox" id="CBL_area_1" name="ctl00$ContentPlaceHolder1$CBL_area$CBL_area_1">
-                          <label class="form-check-label" for="CBL_area_1">天津</label>
-                        </div>
-                      </div>
-                      <div class="col">
-                        <div class="form-check">
-                          <input class="form-check-input" type="checkbox" id="CBL_area_2" name="ctl00$ContentPlaceHolder1$CBL_area$CBL_area_2">
-                          <label class="form-check-label" for="CBL_area_2">河北</label>
-                        </div>
-                      </div>
-                      <div class="col">
-                        <div class="form-check">
-                          <input class="form-check-input" type="checkbox" id="CBL_area_3" name="ctl00$ContentPlaceHolder1$CBL_area$CBL_area_3">
-                          <label class="form-check-label" for="CBL_area_3">山西</label>
-                        </div>
-                      </div>
-                      <div class="col">
-                        <div class="form-check">
-                          <input class="form-check-input" type="checkbox" id="CBL_area_4" name="ctl00$ContentPlaceHolder1$CBL_area$CBL_area_4">
-                          <label class="form-check-label" for="CBL_area_4">内蒙古</label>
-                        </div>
-                      </div>
-                      <div class="col">
-                        <div class="form-check">
-                          <input class="form-check-input" type="checkbox" id="CBL_area_5" name="ctl00$ContentPlaceHolder1$CBL_area$CBL_area_5">
-                          <label class="form-check-label" for="CBL_area_5">辽宁</label>
-                        </div>
-                      </div>
-                      <div class="col">
-                        <div class="form-check">
-                          <input class="form-check-input" type="checkbox" id="CBL_area_6" name="ctl00$ContentPlaceHolder1$CBL_area$CBL_area_6">
-                          <label class="form-check-label" for="CBL_area_6">吉林</label>
-                        </div>
-                      </div>
-                      <div class="col">
-                        <div class="form-check">
-                          <input class="form-check-input" type="checkbox" id="CBL_area_7" name="ctl00$ContentPlaceHolder1$CBL_area$CBL_area_7">
-                          <label class="form-check-label" for="CBL_area_7">黑龙江</label>
-                        </div>
-                      </div>
-                      <div class="col">
-                        <div class="form-check">
-                          <input class="form-check-input" type="checkbox" id="CBL_area_8" name="ctl00$ContentPlaceHolder1$CBL_area$CBL_area_8">
-                          <label class="form-check-label" for="CBL_area_8">上海</label>
-                        </div>
-                      </div>
-                      <div class="col">
-                        <div class="form-check">
-                          <input class="form-check-input" type="checkbox" id="CBL_area_9" name="ctl00$ContentPlaceHolder1$CBL_area$CBL_area_9">
-                          <label class="form-check-label" for="CBL_area_9">江苏</label>
-                        </div>
-                      </div>
-                      <div class="col">
-                        <div class="form-check">
-                          <input class="form-check-input" type="checkbox" id="CBL_area_10" name="ctl00$ContentPlaceHolder1$CBL_area$CBL_area_10">
-                          <label class="form-check-label" for="CBL_area_10">浙江</label>
-                        </div>
-                      </div>
-                      <div class="col">
-                        <div class="form-check">
-                          <input class="form-check-input" type="checkbox" id="CBL_area_11" name="ctl00$ContentPlaceHolder1$CBL_area$CBL_area_11">
-                          <label class="form-check-label" for="CBL_area_11">安徽</label>
-                        </div>
-                      </div>
-                      <div class="col">
-                        <div class="form-check">
-                          <input class="form-check-input" type="checkbox" id="CBL_area_12" name="ctl00$ContentPlaceHolder1$CBL_area$CBL_area_12">
-                          <label class="form-check-label" for="CBL_area_12">福建</label>
-                        </div>
-                      </div>
-                      <div class="col">
-                        <div class="form-check">
-                          <input class="form-check-input" type="checkbox" id="CBL_area_13" name="ctl00$ContentPlaceHolder1$CBL_area$CBL_area_13">
-                          <label class="form-check-label" for="CBL_area_13">江西</label>
-                        </div>
-                      </div>
-                      <div class="col">
-                        <div class="form-check">
-                          <input class="form-check-input" type="checkbox" id="CBL_area_14" name="ctl00$ContentPlaceHolder1$CBL_area$CBL_area_14">
-                          <label class="form-check-label" for="CBL_area_14">山东</label>
-                        </div>
-                      </div>
-                      <div class="col">
-                        <div class="form-check">
-                          <input class="form-check-input" type="checkbox" id="CBL_area_15" name="ctl00$ContentPlaceHolder1$CBL_area$CBL_area_15">
-                          <label class="form-check-label" for="CBL_area_15">河南</label>
-                        </div>
-                      </div>
-                      <div class="col">
-                        <div class="form-check">
-                          <input class="form-check-input" type="checkbox" id="CBL_area_16" name="ctl00$ContentPlaceHolder1$CBL_area$CBL_area_16">
-                          <label class="form-check-label" for="CBL_area_16">湖北</label>
-                        </div>
-                      </div>
-                      <div class="col">
-                        <div class="form-check">
-                          <input class="form-check-input" type="checkbox" id="CBL_area_17" name="ctl00$ContentPlaceHolder1$CBL_area$CBL_area_17">
-                          <label class="form-check-label" for="CBL_area_17">湖南</label>
-                        </div>
-                      </div>
-                      <div class="col">
-                        <div class="form-check">
-                          <input class="form-check-input" type="checkbox" id="CBL_area_18" name="ctl00$ContentPlaceHolder1$CBL_area$CBL_area_18">
-                          <label class="form-check-label" for="CBL_area_18">广东</label>
-                        </div>
-                      </div>
-                      <div class="col">
-                        <div class="form-check">
-                          <input class="form-check-input" type="checkbox" id="CBL_area_19" name="ctl00$ContentPlaceHolder1$CBL_area$CBL_area_19">
-                          <label class="form-check-label" for="CBL_area_19">广西</label>
-                        </div>
-                      </div>
-                      <div class="col">
-                        <div class="form-check">
-                          <input class="form-check-input" type="checkbox" id="CBL_area_20" name="ctl00$ContentPlaceHolder1$CBL_area$CBL_area_20">
-                          <label class="form-check-label" for="CBL_area_20">海南</label>
-                        </div>
-                      </div>
-                      <div class="col">
-                        <div class="form-check">
-                          <input class="form-check-input" type="checkbox" id="CBL_area_21" name="ctl00$ContentPlaceHolder1$CBL_area$CBL_area_21">
-                          <label class="form-check-label" for="CBL_area_21">重庆</label>
-                        </div>
-                      </div>
-                      <div class="col">
-                        <div class="form-check">
-                          <input class="form-check-input" type="checkbox" id="CBL_area_22" name="ctl00$ContentPlaceHolder1$CBL_area$CBL_area_22">
-                          <label class="form-check-label" for="CBL_area_22">四川</label>
-                        </div>
-                      </div>
-                      <div class="col">
-                        <div class="form-check">
-                          <input class="form-check-input" type="checkbox" id="CBL_area_23" name="ctl00$ContentPlaceHolder1$CBL_area$CBL_area_23">
-                          <label class="form-check-label" for="CBL_area_23">贵州</label>
-                        </div>
-                      </div>
-                      <div class="col">
-                        <div class="form-check">
-                          <input class="form-check-input" type="checkbox" id="CBL_area_24" name="ctl00$ContentPlaceHolder1$CBL_area$CBL_area_24">
-                          <label class="form-check-label" for="CBL_area_24">云南</label>
-                        </div>
-                      </div>
-                      <div class="col">
-                        <div class="form-check">
-                          <input class="form-check-input" type="checkbox" id="CBL_area_25" name="ctl00$ContentPlaceHolder1$CBL_area$CBL_area_25">
-                          <label class="form-check-label" for="CBL_area_25">西藏</label>
-                        </div>
-                      </div>
-                      <div class="col">
-                        <div class="form-check">
-                          <input class="form-check-input" type="checkbox" id="CBL_area_26" name="ctl00$ContentPlaceHolder1$CBL_area$CBL_area_26">
-                          <label class="form-check-label" for="CBL_area_26">陕西</label>
-                        </div>
-                      </div>
-                      <div class="col">
-                        <div class="form-check">
-                          <input class="form-check-input" type="checkbox" id="CBL_area_27" name="ctl00$ContentPlaceHolder1$CBL_area$CBL_area_27">
-                          <label class="form-check-label" for="CBL_area_27">甘肃</label>
-                        </div>
-                      </div>
-                      <div class="col">
-                        <div class="form-check">
-                          <input class="form-check-input" type="checkbox" id="CBL_area_28" name="ctl00$ContentPlaceHolder1$CBL_area$CBL_area_28">
-                          <label class="form-check-label" for="CBL_area_28">青海</label>
-                        </div>
-                      </div>
-                      <div class="col">
-                        <div class="form-check">
-                          <input class="form-check-input" type="checkbox" id="CBL_area_29" name="ctl00$ContentPlaceHolder1$CBL_area$CBL_area_29">
-                          <label class="form-check-label" for="CBL_area_29">宁夏</label>
-                        </div>
-                      </div>
-                      <div class="col">
-                        <div class="form-check">
-                          <input class="form-check-input" type="checkbox" id="CBL_area_30" name="ctl00$ContentPlaceHolder1$CBL_area$CBL_area_30">
-                          <label class="form-check-label" for="CBL_area_30">新疆</label>
-                        </div>
-                      </div>
-                      <div class="col">
-                        <div class="form-check">
-                          <input class="form-check-input" type="checkbox" id="CBL_area_31" name="ctl00$ContentPlaceHolder1$CBL_area$CBL_area_31">
-                          <label class="form-check-label" for="CBL_area_31">香港特别行政区</label>
-                        </div>
-                      </div>
+                  <label for="" class="col-auto col-form-label text-end">院校所在省市︰</label>
+                  <div class="col-auto col-lg">
+                    <div class="btn-group">
+                      <input type="checkbox" class="btn-check" id="CBL_area_0" autocomplete="off">
+                      <label class="btn" for="CBL_area_0">北京</label>
+                      <input type="checkbox" class="btn-check" id="CBL_area_1" autocomplete="off">
+                      <label class="btn" for="CBL_area_1">天津</label>
+                      <input type="checkbox" class="btn-check" id="CBL_area_2" autocomplete="off">
+                      <label class="btn" for="CBL_area_2">河北</label>
+                      <input type="checkbox" class="btn-check" id="CBL_area_3" autocomplete="off">
+                      <label class="btn" for="CBL_area_3">山西</label>
+                      <input type="checkbox" class="btn-check" id="CBL_area_4" autocomplete="off">
+                      <label class="btn" for="CBL_area_4">内蒙古</label>
+                      <input type="checkbox" class="btn-check" id="CBL_area_5" autocomplete="off">
+                      <label class="btn" for="CBL_area_5">辽宁</label>
+                      <input type="checkbox" class="btn-check" id="CBL_area_6" autocomplete="off">
+                      <label class="btn" for="CBL_area_6">吉林</label>
+                      <input type="checkbox" class="btn-check" id="CBL_area_7" autocomplete="off">
+                      <label class="btn" for="CBL_area_7">黑龙江</label>
+                      <input type="checkbox" class="btn-check" id="CBL_area_8" autocomplete="off">
+                      <label class="btn" for="CBL_area_8">上海</label>
+                      <input type="checkbox" class="btn-check" id="CBL_area_9" autocomplete="off">
+                      <label class="btn" for="CBL_area_9">江苏</label>
+                      <input type="checkbox" class="btn-check" id="CBL_area_10" autocomplete="off">
+                      <label class="btn" for="CBL_area_10">浙江</label>
+                      <input type="checkbox" class="btn-check" id="CBL_area_11" autocomplete="off">
+                      <label class="btn" for="CBL_area_11">安徽</label>
+                      <input type="checkbox" class="btn-check" id="CBL_area_12" autocomplete="off">
+                      <label class="btn" for="CBL_area_12">福建</label>
+                      <input type="checkbox" class="btn-check" id="CBL_area_13" autocomplete="off">
+                      <label class="btn" for="CBL_area_13">江西</label>
+                      <input type="checkbox" class="btn-check" id="CBL_area_14" autocomplete="off">
+                      <label class="btn" for="CBL_area_14">山东</label>
+                      <input type="checkbox" class="btn-check" id="CBL_area_15" autocomplete="off">
+                      <label class="btn" for="CBL_area_15">河南</label>
+                      <input type="checkbox" class="btn-check" id="CBL_area_16" autocomplete="off">
+                      <label class="btn" for="CBL_area_16">湖北</label>
+                      <input type="checkbox" class="btn-check" id="CBL_area_17" autocomplete="off">
+                      <label class="btn" for="CBL_area_17">湖南</label>
+                      <input type="checkbox" class="btn-check" id="CBL_area_18" autocomplete="off">
+                      <label class="btn" for="CBL_area_18">广东</label>
+                      <input type="checkbox" class="btn-check" id="CBL_area_19" autocomplete="off">
+                      <label class="btn" for="CBL_area_19">广西</label>
+                      <input type="checkbox" class="btn-check" id="CBL_area_20" autocomplete="off">
+                      <label class="btn" for="CBL_area_20">海南</label>
+                      <input type="checkbox" class="btn-check" id="CBL_area_21" autocomplete="off">
+                      <label class="btn" for="CBL_area_21">重庆</label>
+                      <input type="checkbox" class="btn-check" id="CBL_area_22" autocomplete="off">
+                      <label class="btn" for="CBL_area_22">四川</label>
+                      <input type="checkbox" class="btn-check" id="CBL_area_23" autocomplete="off">
+                      <label class="btn" for="CBL_area_23">贵州</label>
+                      <input type="checkbox" class="btn-check" id="CBL_area_24" autocomplete="off">
+                      <label class="btn" for="CBL_area_24">云南</label>
+                      <input type="checkbox" class="btn-check" id="CBL_area_25" autocomplete="off">
+                      <label class="btn" for="CBL_area_25">西藏</label>
+                      <input type="checkbox" class="btn-check" id="CBL_area_26" autocomplete="off">
+                      <label class="btn" for="CBL_area_26">陕西</label>
+                      <input type="checkbox" class="btn-check" id="CBL_area_27" autocomplete="off">
+                      <label class="btn" for="CBL_area_27">甘肃</label>
+                      <input type="checkbox" class="btn-check" id="CBL_area_28" autocomplete="off">
+                      <label class="btn" for="CBL_area_28">青海</label>
+                      <input type="checkbox" class="btn-check" id="CBL_area_29" autocomplete="off">
+                      <label class="btn" for="CBL_area_29">宁夏</label>
+                      <input type="checkbox" class="btn-check" id="CBL_area_30" autocomplete="off">
+                      <label class="btn" for="CBL_area_30">新疆</label>
+                      <input type="checkbox" class="btn-check" id="CBL_area_31" autocomplete="off">
+                      <label class="btn" for="CBL_area_31">香港特别行政区</label>
+                      <button type="button" class="btn" id="checkAll">全選</button>
+                      <button type="button" class="btn" id="clearAll">取消</button>
                     </div>
                   </div>
                 </div>
                 <div class="row gx-2 mb-2 align-items-center">
-                  <label for="TB_Nscore2" class="col-auto col-form-label text-end" style="letter-spacing: .55em;">办学性质︰</label>
-                  <div class="col-auto">
+                  <label for="" class="col-auto col-form-label text-end" style="letter-spacing: .55em;">办学性质︰</label>
+                  <div class="col-auto col-lg">
                     <div class="form-check form-check-inline">
                       <input class="form-check-input" type="radio" name="ctl00$ContentPlaceHolder1$RB_ST" id="RB_ST_0" value="1">
                       <label class="form-check-label" for="RB_ST_0">不限</label>
@@ -438,56 +298,224 @@
                       <label class="form-check-label" for="RB_ST_2">民办</label>
                     </div>
                   </div>
-                  <div class="col-auto"></div>
                 </div>
                 <div class="row gx-2 mb-2 align-items-center">
                   <label for="TextBox1" class="col-auto col-form-label text-end" style="letter-spacing: .55em;">院校名称︰</label>
                   <div class="col-auto">
                     <input name="ctl00$ContentPlaceHolder1$TextBox1" type="text" id="TextBox1" class="form-control form-control-sm rounded-0">
                   </div>
-                  <div class="col-auto"> </div>
                 </div>
                 <div class="row gx-2 mb-2 align-items-center">
                   <label for="TextBox2" class="col-auto col-form-label text-end" style="letter-spacing: .55em;">专业名称︰</label>
                   <div class="col-auto">
                     <input name="ctl00$ContentPlaceHolder1$TextBox2" type="text" id="TextBox2" class="form-control form-control-sm rounded-0">
                   </div>
-                  <div class="col-auto"> </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="col text-center"><a href="news.html" class="btn btn-secondary btn-lg rounded-pill px-4">开始分析我的成绩落点</a></div>
+          <div class="col text-center"><a href="" class="btn btn-secondary btn-lg rounded-pill px-4 shadow-sm" id="LBB_go">开始分析我的成绩落点</a></div>
         </div>
       </div>
     </div>
     <!-- search end --> 
     
     <!-- result start -->
-    <div>
-      <div class="container">
-        <h3>2024年落点分析結果</h3>
-        <nav>
-          <div class="nav nav-tabs" id="nav-tab" role="tablist">
-            <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">冲刺</button>
-            <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">稳妥</button>
-            <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">保底</button>
+    <div class="result" style="display: none;">
+      <div class="container-lg">
+        <div class="result-info">
+          <div class="result-info-item">錄取批次
+            <label class="result-info-label">本科普通批 </label>
           </div>
-        </nav>
-        <div class="tab-content" id="nav-tabContent">
-          <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">...</div>
-          <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0">...</div>
-          <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab" tabindex="0">...</div>
+          <div class="result-info-item"> 区外高考总分
+            <label class="result-info-label">700</label>
+          </div>
+          <div class="result-info-item"> 区內高考总分
+            <label class="result-info-label">700</label>
+          </div>
+          <div class="result-info-item"> 分析日期
+            <label class="result-info-label">2025/05/20 </label>
+          </div>
+          <a href="" class="icon-link icon-link-hover ms-auto"><i class="bi bi-chevron-double-left"></i>返回成績落點查詢</a></div>
+        <h3 class="result-title">2024年落点分析結果</h3>
+        <div class="result-content">
+          <nav>
+            <div class="nav nav-tabs nav-fill result-tab" id="result-tab" role="tablist">
+              <button class="nav-link active" id="result-Sprint-tab" data-bs-toggle="tab" data-bs-target="#result-Sprint" type="button" role="tab" aria-controls="result-Sprint" aria-selected="true">冲刺 (0)</button>
+              <button class="nav-link" id="result-Stable-tab" data-bs-toggle="tab" data-bs-target="#result-Stable" type="button" role="tab" aria-controls="result-Stable" aria-selected="false">稳妥 (12)</button>
+              <button class="nav-link" id="result-Safe-tab" data-bs-toggle="tab" data-bs-target="#result-Safe" type="button" role="tab" aria-controls="result-Safe" aria-selected="false">保底 (8)</button>
+            </div>
+          </nav>
+          <div class="tab-content result-tab-content" id="result-tabContent">
+            <div class="tab-pane fade show active" id="result-Sprint" role="tabpanel" aria-labelledby="result-Sprint-tab" tabindex="0">
+              <div class="table-responsive">
+                <table class="table table-Sprint" id="GridViewc1">
+                  <thead>
+                    <tr>
+                      <th scope="col" class="td-order">落点序</th>
+                      <th scope="col" class="td-school-major">院校与专业</th>
+                      <th scope="col" class="td-region-type">地区/办学</th>
+                      <th scope="col" class="td-scale">招生規模</th>
+                      <th scope="col" class="td-score-group">录取数据<small>（最低分/平均分/最高分）</small></th>
+                      <th scope="col" class="td-rank-min">最低分排位</th>
+                      <th scope="col" class="td-gap">主要差距指标</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td colspan="7">无冲刺数据</td>
+                    </tr>
+                    <!--<tr>
+                      <td class="td-order">1</td>
+                      <td class="td-school-major"><div>
+                          <div class="school-name">中国人民大学</div>
+                          <div class="school-code">10002</div>
+                        </div>
+                        <div>
+                          <div class="major-name">法学</div>
+                          <div class="major-code">100</div>
+                        </div></td>
+                      <td class="td-region-type"><div>
+                          <div class="region">北京</div>
+                          <div class="type">公办</div>
+                        </div>
+                        <div>
+                          <div class="category">普通类(历史)</div>
+                        </div></td>
+                      <td class="td-scale">计画数：3<br>
+                        第一次投档录取数：4</td>
+                      <td class="td-score-group">666/667/668</td>
+                      <td class="td-rank-min">28</td>
+                      <td class="td-gap">34</td>
+                    </tr>-->
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="result-Stable" role="tabpanel" aria-labelledby="result-Stable-tab" tabindex="0">
+              <div class="table-responsive">
+                <table class="table table-Stable" id="GridViewc2">
+                  <thead>
+                    <tr>
+                      <th scope="col" class="td-order">落点序</th>
+                      <th scope="col" class="td-school-major">院校与专业</th>
+                      <th scope="col" class="td-region-type">地区/办学</th>
+                      <th scope="col" class="td-scale">招生规模</th>
+                      <th scope="col" class="td-score-group">录取数据<small>（最低分/平均分/最高分）</small></th>
+                      <th scope="col" class="td-rank-min">最低分排位</th>
+                      <th scope="col" class="td-gap">主要差距指标</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <!--<tr>
+                      <td colspan="7">无稳妥数据</td>
+                    </tr>-->
+                    <tr>
+                      <td class="td-order">1</td>
+                      <td class="td-school-major"><div>
+                          <div class="school-name">中国人民大学</div>
+                          <div class="school-code">10002</div>
+                        </div>
+                        <div>
+                          <div class="major-name">法学</div>
+                          <div class="major-code">100</div>
+                        </div></td>
+                      <td class="td-region-type"><div>
+                          <div class="region">北京</div>
+						  <div class="type">公办</div>
+                        </div>
+                        <div>
+                          <div class="category">普通类(历史)</div>
+                        </div></td>
+                      <td class="td-scale">
+						  <div>
+							  <div class="scale-title">计画数</div><div class="scale-count">3</div>
+						  </div>
+						  <div>
+							  <div class="scale-title">一投录取</div><div class="scale-count">4</div>
+						  </div>
+                        </td>
+                      <td class="td-score-group">
+						  <div class="score-min">666</div>
+							  <div class="score-avg">667</div>
+								  <div class="score-max">668</div>
+						</td>
+                      <td class="td-rank-min">28</td>
+                      <td class="td-gap plus">+34</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="result-Safe" role="tabpanel" aria-labelledby="result-Safe-tab" tabindex="0">
+              <div class="table-responsive">
+                <table class="table table-Safe" id="GridViewc3">
+                  <thead>
+                    <tr>
+                      <th scope="col" class="td-order">落点序</th>
+                      <th scope="col" class="td-school-major">院校与专业</th>
+                      <th scope="col" class="td-region-type">地区/办学</th>
+                      <th scope="col" class="td-scale">招生規模</th>
+                      <th scope="col" class="td-score-group">录取数据<small>（最低分/平均分/最高分）</small></th>
+                      <th scope="col" class="td-rank-min">最低分排位</th>
+                      <th scope="col" class="td-gap">主要差距指标</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <!--<tr>
+                      <td colspan="7">无保底数据</td>
+                    </tr>-->
+                    <tr>
+                      <td class="td-order">1</td>
+                      <td class="td-school-major"><div>
+                          <div class="school-name">中国人民大学</div>
+                          <div class="school-code">10002</div>
+                        </div>
+                        <div>
+                          <div class="major-name">法学</div>
+                          <div class="major-code">100</div>
+                        </div></td>
+                      <td class="td-region-type"><div>
+                          <div class="region">北京</div>
+                          <div class="type">公办</div>
+                        </div>
+                        <div>
+                          <div class="category">普通类(历史)</div>
+                        </div></td>
+                      <td class="td-scale">
+						  <div>
+							  <div class="scale-title">计画数</div><div class="scale-count">3</div>
+						  </div>
+						  <div>
+							  <div class="scale-title">一投录取</div><div class="scale-count">4</div>
+						  </div>
+                        </td>
+                      <td class="td-score-group">666/667/668</td>
+                      <td class="td-rank-min">28</td>
+                      <td class="td-gap">34</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="tab-content">
+            <div class="tab-pane fade show active" id="pills-Sprint" role="tabpanel" aria-labelledby="pills-Sprint-tab" tabindex="0"> </div>
+            <div class="tab-pane fade" id="pills-Stable" role="tabpanel" aria-labelledby="pills-Stable-tab" tabindex="0"> </div>
+            <div class="tab-pane fade" id="pills-Safe" role="tabpanel" aria-labelledby="pills-Safe-tab" tabindex="0"> </div>
+          </div>
         </div>
-      </div>
-      <div class="container">
-        <h3>2025年推荐志愿专业组</h3>
-        <p>根据冲刺、稳妥与保底之落点分析结果，链接的2025年推荐志愿专业组可下载文件参考</p>
-        <a href="news.html" class="btn btn-primary btn-lg rounded-pill px-4">2025年推荐志愿专业组（含2024年落点分析结果）下载</a>
-        <div class="alert alert-warning" role="alert"> 温馨提醒：
-          （1）选填院校专业组志愿时，请评估"是否服从专业组内专业调剂"选项。
-          
-          （2）本系统提供信息仅供参考，我们对您最终录取结果不承担任何责任。 </div>
+        <h3 class="result-title">2025年推荐志愿专业组</h3>
+        <div class="result-content">
+          <div class="result-jumbotron"> 根据冲刺、稳妥与保底之落点分析结果，链接的2025年推荐志愿专业组可下载文件参考
+            <button type="button" class="btn btn-dark" id="btnDownload"><i class="bi bi-download me-1"></i>立即下载 EXCEL</button>
+          </div>
+          <div class="result-remark">
+            <p><i class="bi bi-info-circle me-1"></i>温馨提醒：</p>
+            <p>（1）选填院校专业组志愿时，请评估"是否服从专业组内专业调剂"选项。 </p>
+            <p>（2）本系统提供信息仅供参考，我们对您最终录取结果不承担任何责任。 </p>
+          </div>
+        </div>
       </div>
     </div>
     <!-- search end --> 
@@ -510,7 +538,61 @@
 <script>
 $(document).ready(function() {
 	//nowPage
-  	$('.nav-scorePlacement').addClass('active');
+	$('.nav-scorePlacement').addClass('active');
+
+	//[开始分析我的成绩落点]
+	$('#LBB_go').click(function (e) { 
+		e.preventDefault();
+		
+		$('.search').slideUp();
+		
+		$('.result').css({
+			"min-height": $(window).height() - $('header').height() - $('.banner').outerHeight()
+		}).slideDown();
+		
+		$("html,body").animate( { scrollTop:0 }, 800 );
+	});
+
+
+
+	
+	//院校所在省市 [全選]
+  const $group = $('.btn-group');
+  const $checks = $group.find('.btn-check');
+  const $checkAll = $('#checkAll');
+  const $clearAll = $('#clearAll');
+
+  // 同步「全選」按鈕狀態
+  function syncCheckAll() {
+    const total = $checks.length;
+    const checked = $checks.filter(':checked').length;
+
+    if (checked === total) {
+      $checkAll.addClass('active');
+    } else {
+      $checkAll.removeClass('active');
+    }
+  }
+
+  // 點擊「全選」
+  $checkAll.on('click', function () {
+    $checks.prop('checked', true);
+    $checkAll.addClass('active');
+  });
+
+  // 點擊「取消」
+  $clearAll.on('click', function () {
+    $checks.prop('checked', false);
+    $checkAll.removeClass('active');
+  });
+
+  // 手動點擊任一省市
+  $group.on('change', '.btn-check', function () {
+    syncCheckAll();
+  });
+
+  // 初始狀態（例如北京預設 checked）
+  syncCheckAll();	
 })	
 </script>
 </body>

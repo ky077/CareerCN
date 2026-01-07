@@ -1,2 +1,112 @@
-/* CSS Document */
-
+.careerPlacement{
+	$placement-color: $indigo;
+	background: linear-gradient(to bottom right, $pink 0%, $placement-color 25%, mix($white, $placement-color, 60%) 100%);
+	.banner{ 
+		padding-top: map-get($spacers, 7);
+		padding-bottom: map-get($spacers, 7);
+		position: relative;
+		.banner-title{
+			color: $white;
+			font-weight: 500;
+			text-shadow: 1px 1px .125rem rgba($black, .25);
+			text-align: center;
+			> small{
+				display: block;
+				margin-top: .75rem;
+				font-size: $font-size-base;
+				line-height: $line-height-base;
+				font-weight: 400;
+				color: rgba($white, .85);
+			}
+		}
+	}
+	.search{
+		padding-bottom: map-get($spacers, 7);
+		.card{
+			border-width: 0;
+			box-shadow: $box-shadow-sm;
+			background-color: rgba($white, .75);
+			.card-header{
+				border-bottom: 0;
+				padding: $card-cap-padding-y*2 $card-cap-padding-x;
+				.card-title{
+					font-size: $font-size-base;
+					font-weight: 500;
+					margin-bottom: 0;
+				}
+			}
+			.card-body{
+				label{
+					font-size: $font-size-sm;
+				}
+			}
+			
+			.form-control:focus{
+				border-color: rgba($placement-color, $focus-ring-opacity);
+    			box-shadow: 0 0 $focus-ring-blur $focus-ring-width rgba($placement-color, $focus-ring-opacity);
+			}
+			.form-check-input:focus{
+				box-shadow: 0 0 $focus-ring-blur $focus-ring-width rgba($placement-color, $focus-ring-opacity);
+			}
+			.form-check-input:hover {
+				+ .form-check-label{
+					color: $placement-color;	
+				}
+			}
+			.form-check-input:checked {
+				background-color: $placement-color;
+				border-color: $placement-color;	
+				+ .form-check-label{
+					color: $placement-color;	
+				}
+			}
+			.form-check-input[type="radio"]:checked{
+				background-image: escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='2' fill='#{$placement-color}'/></svg>"));
+			}
+			
+			.btn-group {
+    			border-radius: 0;
+				flex-wrap: wrap;
+				.btn{
+					border-radius: 0;
+					margin-right: map-get($spacers, 1);  
+					margin-bottom: map-get($spacers, 1);  
+					border-color: $border-color;
+					background-color: $gray-200;
+					&.active{
+						color: $white;
+						border-color: $placement-color;
+						background-color: $placement-color;
+					}
+					&:not(.active):hover{
+						border-color: $placement-color;	
+						color: $placement-color;	
+					}
+				}
+				.btn-check{
+					+ .btn{
+						background-color: $white;
+						padding-left: 0;
+						padding-right: 0;
+						width: calc( (100%/4) - #{map-get($spacers, 1)} );
+						@media screen and (min-width: 1600px) {
+						width: calc( (100%/8) - #{map-get($spacers, 1)} );	
+						}
+					}
+					&:checked + .btn{
+						border-color: $placement-color;
+						background-color: $placement-color;
+						color:$white;
+					}
+				}
+			}
+		}
+		
+		.search-subject-score{}
+	}
+	.result{
+		padding-top: map-get($spacers, 7);
+		padding-bottom: map-get($spacers, 7);
+		background-color: $white;
+	}
+}
