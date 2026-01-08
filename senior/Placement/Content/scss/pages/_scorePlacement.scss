@@ -395,15 +395,6 @@
 									width: 7rem;
 									font-size: 1.75em;
 									font-weight: 600;
-									&.plus{
-										color: $red;
-										&::before{
-											content: "+";
-										}
-									}
-									//&.minus{不用-，分數不需要退步...
-										//color: $green;
-									//}
 								}	
 							}
 						}
@@ -425,6 +416,9 @@
 									.major-name{
 										color: $color;
 									}
+								}
+								&.td-gap {	
+									color: $color;
 								}
 							}
 						}
