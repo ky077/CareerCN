@@ -1,0 +1,441 @@
+.scorePlacement{
+	$placement-color: mix($cyan, $blue, 50%);
+	background: url("../img/scorePlacement/banner-bg.png"), 
+		        linear-gradient(to bottom right, $pink 0%, $placement-color 25%, mix($white, $placement-color, 60%) 100%);
+	background-position: top center;
+	background-repeat: no-repeat;
+	.banner{ 
+		> [class*="container"]{
+			padding-top: map-get($spacers, 7);
+			padding-bottom: map-get($spacers, 7);
+			position: relative;
+			&::after{
+				content: "";
+				display: block;
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				top: 0;
+				left: 0;
+				bottom: 0;
+				right: 0;
+				background-image: url("../img/scorePlacement/banner-img.png");
+				background-position: right 8.33333333% bottom;
+				background-repeat: no-repeat;
+				background-size:  auto 85%;	
+				z-index: 0;
+				opacity: .85;
+				@media screen and (min-width: 768px) {
+				opacity: 1.0;
+				filter: drop-shadow(1px -1px 3px rgba($black, .25));	
+				}
+			}
+			> *{
+				position: relative;
+				z-index: 1;
+			}
+		}
+		.banner-title{
+			color: $white;
+			font-size: 1.75rem;
+			font-weight: 500;
+			text-shadow: 1px 1px .125rem rgba($black, .5);
+			> small{
+				display: block;
+				margin-top: .75rem;
+				font-size: $font-size-base;
+				line-height: $line-height-base;
+				font-weight: 400;
+				color: rgba($white, .85);
+			}
+		}
+	}
+	.search{
+		padding-bottom: map-get($spacers, 7);
+		position: relative;
+		&:before{
+			content: "";
+			display: block;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			background-image: url("../img/scorePlacement/banner-bg.png");
+			background-position: top center;
+			background-repeat: no-repeat;
+			transform: rotate(180deg);
+		}
+		> *{
+			position: relative;
+			z-index: 1;
+		}
+		.card{
+			border-width: 0;
+			box-shadow: $box-shadow-sm;
+			background-color: rgba($white, .75);
+			.card-header{
+				border-bottom: 0;
+				padding: $card-cap-padding-y*2 $card-cap-padding-x;
+				position: relative;
+				.card-title{
+					font-size: $font-size-base;
+					font-weight: 500;
+					margin-bottom: 0;
+					padding-left:  4.8rem;
+					> img{ 
+						width: 4.8rem;
+						height: 4.8rem;
+						position: absolute;
+						bottom: 0;
+						left: $card-cap-padding-x*.5;
+						
+					}
+				}
+			}
+			.card-body{
+				label{
+					font-size: $font-size-sm;
+				}
+			}
+			
+			.form-control:focus, .form-select:focus{
+				border-color: rgba($placement-color, $focus-ring-opacity);
+    			box-shadow: 0 0 $focus-ring-blur $focus-ring-width rgba($placement-color, $focus-ring-opacity);
+			}
+			.form-check-input:focus{
+				box-shadow: 0 0 $focus-ring-blur $focus-ring-width rgba($placement-color, $focus-ring-opacity);
+			}
+			.form-check-input:hover {
+				+ .form-check-label{
+					color: $placement-color;	
+				}
+			}
+			.form-check-input:checked {
+				background-color: $placement-color;
+				border-color: $placement-color;	
+				+ .form-check-label{
+					color: $placement-color;	
+				}
+			}
+			.form-check-input[type="radio"]:checked{
+				background-image: escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='2' fill='#{$placement-color}'/></svg>"));
+			}
+			
+			.btn-group {
+    			border-radius: 0;
+				flex-wrap: wrap;
+				.btn{
+					border-radius: 0;
+					margin-right: map-get($spacers, 1);  
+					margin-bottom: map-get($spacers, 1);  
+					border-color: $border-color;
+					background-color: $gray-200;
+					&.active{
+						color: $white;
+						border-color: $placement-color;
+						background-color: $placement-color;
+					}
+					&:not(.active):hover{
+						border-color: $placement-color;	
+						color: $placement-color;	
+					}
+				}
+				.btn-check{
+					+ .btn{
+						background-color: $white;
+						padding-left: 0;
+						padding-right: 0;
+						width: calc( (100%/4) - #{map-get($spacers, 1)} );
+						@media screen and (min-width: 1600px) {
+						width: calc( (100%/8) - #{map-get($spacers, 1)} );	
+						}
+					}
+					&:checked + .btn{
+						border-color: $placement-color;
+						background-color: $placement-color;
+						color:$white;
+					}
+				}
+			}
+		}
+		.card-score{
+			.form-control + .form-text{
+				min-height: $input-height;
+			}
+			.form-control-sm + .form-text{
+				min-height: $input-height-sm;
+			}
+		}
+		.card-subject{
+			.grid{
+				--bs-columns: 2;
+				@media screen and (min-width: 1400px) {
+				--bs-columns: 3;	
+				}
+			}
+		}
+		.card-admission{
+			.form-check-inline{
+				margin-right: 0;
+			}
+		}
+	}
+	.result{
+		padding-top: map-get($spacers, 7);
+		padding-bottom: map-get($spacers, 7);
+		background-color: $white;
+		.result-info{
+			display: flex;
+			align-items: center;
+			font-size: $font-size-sm;
+			color: $body-tertiary-color;
+			.result-info-item{
+				margin-right: 1.5rem;
+				&:not(:nth-of-type(1)){
+					padding-left: 1.5rem;
+					border-left: 1px solid $border-color;	
+				}
+				.result-info-label{
+					display: block;
+					color: $body-color;
+					font-size: $font-size-base;
+				}
+			}
+			.icon-link-hover{
+				--bs-icon-link-transform: translate3d(-0.25em, 0, 0);
+			}
+		}
+		.result-title{
+			margin-top: map-get($spacers, 7);
+			font-weight: 500;
+		}
+		.result-content{
+			.result-tab{
+				--bs-nav-tabs-link-hover-border-color: transparent;
+				--bs-nav-tabs-link-active-border-color: transparent;
+				.nav-link{
+					padding-top: 1rem;
+					padding-bottom: 1rem;
+					&::before{
+						content: "";
+						display: inline-flex;
+						vertical-align: middle;
+						justify-content: center;
+						align-items: center;
+						font-family: "bootstrap-icons"; 
+						font-weight: 900;
+						width: 2rem;
+						height: 2rem;
+						border-radius: 100%;
+						margin-right: .25em;
+					}
+				}
+				@mixin navLinkStyles($color, $icon){
+					color: $color;
+					&::before{
+						content: "#{$icon}";
+						background-color: rgba($color, .25);
+					}
+					&:hover{
+						background-color: tint-color($color, 90%);
+					}
+					&.active{	
+						border-bottom: 5px solid $color;
+					}
+				}
+				.nav-link[aria-controls="result-Sprint"]{
+					@include navLinkStyles($Sprint-color, "\F46F"); //bi-lightning
+				}
+				.nav-link[aria-controls="result-Stable"]{
+					@include navLinkStyles($Stable-color, "\F270"); //bi-check2-circle
+				}
+				.nav-link[aria-controls="result-Safe"]{
+					@include navLinkStyles($Safe-color, "\F53F"); //bi-shield
+				}
+			}
+			.result-tab-content{
+				.table-responsive{
+					.table{
+						min-width: 1200px;
+					}	
+				}
+				.table{
+					margin-bottom: 0;
+					>thead{
+						>tr{
+							>th, >td{
+								text-align: center;
+								vertical-align: middle;
+								color: $body-secondary-color;
+								font-size: $font-size-sm;
+								&.td-school-major, &.td-region-type{
+									text-align: left;	
+								}
+								&.td-score-group { 
+									>small{
+										display: block;
+										color: $gray-600;
+									}
+								}
+							}
+						}
+					}
+					>tbody {
+						>tr{
+							>th, >td{
+								text-align: center;
+								vertical-align: middle;
+								color: $body-color;
+								font-size: $font-size-sm;
+								&.td-order {		  
+									width: 4rem;
+								}
+								&.td-school-major {
+									text-align: left;
+									.school-name{
+										display: inline-block;
+										font-size: $font-size-lg;
+									}
+									.school-code{
+										display: inline-block;
+										color: $body-tertiary-color;
+										background-color: $gray-100;
+										border: 1px solid $gray-200;
+										border-radius: 2rem;
+										font-size: $font-size-sm*.75;
+										padding: 0 .75em;
+									}
+									.major-name{
+										display: inline-block;
+										color: $primary;
+										font-size: $font-size-base;
+										&::before{
+											content: "\F194";
+											display: inline;
+											font-family: "bootstrap-icons"; 
+											font-weight: 400;
+											margin-right: .25em;
+											vertical-align: middle;
+										}
+									}
+									.major-code{
+										display: inline-block;
+										color: $body-tertiary-color;
+										background-color: $gray-100;
+										border: 1px solid $gray-200;
+										border-radius: 2rem;
+										font-size: $font-size-sm*.75;
+										padding: 0 .75em;
+									}
+								}
+								&.td-region-type { 
+									width: 10rem;
+									text-align: left;
+									.region{
+										display: inline-block;
+										&::after{ 
+											content: " / ";
+											display: inline;
+										}
+									}
+									.type{
+										display: inline-block;
+									}
+									.category{
+										color: $body-tertiary-color;
+									}
+								}
+								&.td-scale {		  
+									width: 10rem;
+									>div{
+										display: inline-block;
+										margin: 0 .5rem;
+									}
+									.scale-title{
+										font-size:  $font-size-sm;
+										color:  $body-tertiary-color;
+									}
+									.scale-num{}
+								}
+								&.td-score-group { 
+									width: 12rem;
+									[class*="score-"]{
+										display: inline;
+										font-size: 1.5em;
+										font-weight: 500;
+										&:not(:last-child){
+											&::after{
+												font-size: 1rem;
+												content: " / ";
+											}	
+										}
+									}
+								}
+								&.td-rank-min {	 
+									width: 6rem;
+								}
+								&.td-gap {		  
+									width: 7rem;
+									font-size: 1.75em;
+									font-weight: 600;
+								}	
+							}
+						}
+					}
+					
+				}
+				@mixin tableStyles($color){
+					>thead{
+						>tr{
+							>th, >td {
+								background-color: rgba($color, .1);
+							}
+						}
+					}
+					>tbody {
+						>tr{
+							>th, >td{
+								&.td-school-major {
+									.major-name{
+										color: $color;
+									}
+								}
+								&.td-gap {	
+									color: $color;
+								}
+							}
+						}
+					}
+				}
+				.table-Sprint{
+					@include tableStyles($Sprint-color);
+				}
+				.table-Stable{
+					@include tableStyles($Stable-color);
+				}
+				.table-Safe{
+					@include tableStyles($Safe-color);
+				}
+			}
+			.result-jumbotron{
+				background-color: $gray-100;
+				border-radius: $border-radius;
+				padding: map-get($spacers, 4);
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+			}
+			.result-remark{
+				padding: map-get($spacers, 4);
+				font-size: $font-size-sm;	
+				color:$body-secondary-color;
+			}
+		}
+		.result-content +.result-title{
+			margin-top: map-get($spacers, 7)*2;
+		}
+	}
+}

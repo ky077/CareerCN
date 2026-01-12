@@ -1,0 +1,586 @@
+<!doctype html>
+<html lang="zh-Hans-CN">
+<head>
+<meta charset="utf-8">
+<title>赞生涯生涯落点分析系统 高中生</title>
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta content="赞生涯生涯落点分析系统 结合成绩、能力与潜能AI分析,助你规划升学路径" name="description">
+<meta content="生涯,落点,分析,落点分析,赞,赞生涯,高中生,,高中生生涯" name="keywords">
+<link href="Content/img/favicon.ico" rel="icon">
+<!-- AlibabaPuHuiTi Fonts -->
+<link rel="stylesheet" href="Content/css/fonts.css">
+
+<!-- Icon Font Stylesheet -->
+<link rel="stylesheet" href="Content/lib/bootstrap-icons-1.11.3/font/bootstrap-icons.min.css">
+
+<!-- Libraries Stylesheet -->
+<link rel="stylesheet" href="Content/lib/animate.css-main/animate.min.css">
+
+<!-- Customized Bootstrap Stylesheet -->
+<link rel="stylesheet" href="Content/css/bootstrap-custom.css">
+
+<!-- This web Core Stylesheet -->
+<link rel="stylesheet" href="Content/css/styles.css">
+</head>
+
+<body>
+<form>
+  <header></header>
+  <main class="careerPlacement"> 
+    <!-- banner start -->
+    <div class="banner">
+      <div class="container-lg">
+        <div class="row">
+          <div class="col">
+            <h2 class="banner-title">生涯落点查询<small>跳脱传统只看分数的录取推估，整合你的考试成绩、潜能能力与兴趣特质测评结果。<br>
+              系统不仅帮你判断「能不能录取」，更引导你思考「适不适合就读」。<br>
+              透过多面向分析，学生在填报志愿时可同时考虑分数、能力与兴趣，<br>
+              找到既有录取机会又符合自身特性的校系或专业，轻松做出最适合自己的升学与生涯选择。</small></h2>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- banner end --> 
+    
+    <!-- search start -->
+    <div class="search">
+      <div class="container-lg">
+        <div class="row row-cols-1 gy-5">
+          <div class="col">
+            <div class="card card-college">
+              <div class="card-header">
+                <h3 class="card-title"></h3>
+              </div>
+              <div class="card-body">
+                <div class="row gx-2 mb-3">
+                  <label for="searchGrade" class="col-auto col-form-label text-lg-end"><span class="form-required">*</span>所在年级︰</label>
+                  <div class="col-auto col-lg">
+                    <select class="form-select form-select-sm rounded-0 d-inline w-auto" id="searchGrade">
+                      <option selected>选择年级...</option>
+                      <option value="1">高一</option>
+                      <option value="2">高二</option>
+                      <option value="3">高三</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="row gx-2 mb-3">
+                  <label for="" class="col-auto col-form-label text-lg-end"><span class="form-required">*</span>高考分科︰</label>
+                  <div class="col-auto col-lg pt-1">
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="suject" id="s1" value="1" checked>
+                      <label class="form-check-label" for="s1">理科</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="suject" id="s2" value="2">
+                      <label class="form-check-label" for="s2">文科</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="suject" id="s3" value="3">
+                      <label class="form-check-label" for="s3">不分文理</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="row gx-2 mb-3">
+                  <label for="" class="col-auto col-form-label text-lg-end"><span class="form-required">*</span>选考科目分数︰</label>
+                  <div class="col-auto col-lg">
+                    <div class="row row-cols-3 row-cols-lg-6 mb-3 search-subject-score">
+                      <div class="col">
+                        <label for="score1" class="col-form-label">历史</label>
+                        <input name="" type="text" id="score1" class="form-control form-control-sm rounded-0 d-inline w-100" placeholder="分数">
+                      </div>
+                      <div class="col">
+                        <label for="score2" class="col-form-label">地理</label>
+                        <input name="" type="text" id="score2" class="form-control form-control-sm rounded-0 d-inline w-100" placeholder="分数">
+                      </div>
+                      <div class="col">
+                        <label for="score3" class="col-form-label">思想政治</label>
+                        <input name="" type="text" id="score3" class="form-control form-control-sm rounded-0 d-inline w-100" placeholder="分数">
+                      </div>
+                      <div class="col">
+                        <label for="score4" class="col-form-label">物理 </label>
+                        <input name="" type="text" id="score4" class="form-control form-control-sm rounded-0 d-inline w-100" placeholder="分数">
+                      </div>
+                      <div class="col">
+                        <label for="score5" class="col-form-label">化学</label>
+                        <input name="" type="text" id="score5" class="form-control form-control-sm rounded-0 d-inline w-100" placeholder="分数">
+                      </div>
+                      <div class="col">
+                        <label for="score6" class="col-form-label">生物</label>
+                        <input name="" type="text" id="score6" class="form-control form-control-sm rounded-0 d-inline w-100" placeholder="分数">
+                      </div>
+                    </div>  
+                  </div>
+                </div>
+                <div class="row gx-2 mb-3">
+                  <label for="preScore" class="col-auto col-form-label text-lg-end">高考(预估)分数︰</label>
+                  <div class="col-auto col-lg">
+                    <input name="" type="text" id="preScore" class="form-control form-control-sm rounded-0 d-inline w-auto">
+                  </div>
+                </div>
+                <div class="row gx-2 mb-3">
+                  <label for="batch" class="col-auto col-form-label text-lg-end"><span class="form-required">*</span>录取批次︰</label>
+                  <div class="col-auto col-lg">
+                    <select class="form-select form-select-sm rounded-0 d-inline w-auto" id="batch">
+                      <option selected>选择批次...</option>
+                      <option value="1">一批</option>
+                      <option value="2">二批</option>
+                      <option value="3">三批</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="row gx-2 mb-3">
+                  <label for="" class="col-auto col-form-label text-end">意向求学地区︰</label>
+                  <div class="col-auto col-lg">
+                    <div class="btn-group">
+                      <input type="checkbox" class="btn-check" id="CBL_area_0" autocomplete="off">
+                      <label class="btn" for="CBL_area_0">北京</label>
+                      <input type="checkbox" class="btn-check" id="CBL_area_1" autocomplete="off">
+                      <label class="btn" for="CBL_area_1">天津</label>
+                      <input type="checkbox" class="btn-check" id="CBL_area_2" autocomplete="off">
+                      <label class="btn" for="CBL_area_2">河北</label>
+                      <input type="checkbox" class="btn-check" id="CBL_area_3" autocomplete="off">
+                      <label class="btn" for="CBL_area_3">山西</label>
+                      <input type="checkbox" class="btn-check" id="CBL_area_4" autocomplete="off">
+                      <label class="btn" for="CBL_area_4">内蒙古</label>
+                      <input type="checkbox" class="btn-check" id="CBL_area_5" autocomplete="off">
+                      <label class="btn" for="CBL_area_5">辽宁</label>
+                      <input type="checkbox" class="btn-check" id="CBL_area_6" autocomplete="off">
+                      <label class="btn" for="CBL_area_6">吉林</label>
+                      <input type="checkbox" class="btn-check" id="CBL_area_7" autocomplete="off">
+                      <label class="btn" for="CBL_area_7">黑龙江</label>
+                      <input type="checkbox" class="btn-check" id="CBL_area_8" autocomplete="off">
+                      <label class="btn" for="CBL_area_8">上海</label>
+                      <input type="checkbox" class="btn-check" id="CBL_area_9" autocomplete="off">
+                      <label class="btn" for="CBL_area_9">江苏</label>
+                      <input type="checkbox" class="btn-check" id="CBL_area_10" autocomplete="off">
+                      <label class="btn" for="CBL_area_10">浙江</label>
+                      <input type="checkbox" class="btn-check" id="CBL_area_11" autocomplete="off">
+                      <label class="btn" for="CBL_area_11">安徽</label>
+                      <input type="checkbox" class="btn-check" id="CBL_area_12" autocomplete="off">
+                      <label class="btn" for="CBL_area_12">福建</label>
+                      <input type="checkbox" class="btn-check" id="CBL_area_13" autocomplete="off">
+                      <label class="btn" for="CBL_area_13">江西</label>
+                      <input type="checkbox" class="btn-check" id="CBL_area_14" autocomplete="off">
+                      <label class="btn" for="CBL_area_14">山东</label>
+                      <input type="checkbox" class="btn-check" id="CBL_area_15" autocomplete="off">
+                      <label class="btn" for="CBL_area_15">河南</label>
+                      <input type="checkbox" class="btn-check" id="CBL_area_16" autocomplete="off">
+                      <label class="btn" for="CBL_area_16">湖北</label>
+                      <input type="checkbox" class="btn-check" id="CBL_area_17" autocomplete="off">
+                      <label class="btn" for="CBL_area_17">湖南</label>
+                      <input type="checkbox" class="btn-check" id="CBL_area_18" autocomplete="off">
+                      <label class="btn" for="CBL_area_18">广东</label>
+                      <input type="checkbox" class="btn-check" id="CBL_area_19" autocomplete="off">
+                      <label class="btn" for="CBL_area_19">广西</label>
+                      <input type="checkbox" class="btn-check" id="CBL_area_20" autocomplete="off">
+                      <label class="btn" for="CBL_area_20">海南</label>
+                      <input type="checkbox" class="btn-check" id="CBL_area_21" autocomplete="off">
+                      <label class="btn" for="CBL_area_21">重庆</label>
+                      <input type="checkbox" class="btn-check" id="CBL_area_22" autocomplete="off">
+                      <label class="btn" for="CBL_area_22">四川</label>
+                      <input type="checkbox" class="btn-check" id="CBL_area_23" autocomplete="off">
+                      <label class="btn" for="CBL_area_23">贵州</label>
+                      <input type="checkbox" class="btn-check" id="CBL_area_24" autocomplete="off">
+                      <label class="btn" for="CBL_area_24">云南</label>
+                      <input type="checkbox" class="btn-check" id="CBL_area_25" autocomplete="off">
+                      <label class="btn" for="CBL_area_25">西藏</label>
+                      <input type="checkbox" class="btn-check" id="CBL_area_26" autocomplete="off">
+                      <label class="btn" for="CBL_area_26">陕西</label>
+                      <input type="checkbox" class="btn-check" id="CBL_area_27" autocomplete="off">
+                      <label class="btn" for="CBL_area_27">甘肃</label>
+                      <input type="checkbox" class="btn-check" id="CBL_area_28" autocomplete="off">
+                      <label class="btn" for="CBL_area_28">青海</label>
+                      <input type="checkbox" class="btn-check" id="CBL_area_29" autocomplete="off">
+                      <label class="btn" for="CBL_area_29">宁夏</label>
+                      <input type="checkbox" class="btn-check" id="CBL_area_30" autocomplete="off">
+                      <label class="btn" for="CBL_area_30">新疆</label>
+                      <input type="checkbox" class="btn-check" id="CBL_area_31" autocomplete="off">
+                      <label class="btn" for="CBL_area_31">香港特别行政区</label>
+                      <button type="button" class="btn" id="checkAll">全选</button>
+                      <button type="button" class="btn" id="clearAll">取消</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col text-center"><a href="#" class="btn btn-secondary btn-lg rounded-pill px-4" id="LBB_go">开始分析我的生涯落点</a></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- search end --> 
+    
+    <!-- result start -->
+    <div class="result" style="display: none;">
+      <div class="result-info">
+        <div class="container-lg">
+          <div class="row align-items-center">
+            <div class="col-auto">
+              <div class="avater">郑</div>
+            </div>
+            <div class="col-auto">
+              <div>
+                <label class="student-name">郑小文</label>
+                <label class="student-school">北京四中</label>
+                <label class="student-grade">高三</label>
+              </div>
+              <div>
+                <label class="student-category">理科</label>
+                <label class="student-batch">一批次</label>
+              </div>
+            </div>
+            <div class="col-auto ms-auto">
+              <div class="student-scoreTitle">高考(预估)分数</div>
+              <div class="student-score">
+                <label>700</label>
+                分</div>
+              <div class="student-scoreBatch">超过<span>一批</span>线
+                <label class="mx-1">150</label>
+                分</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="result-content">
+        <div class="container-lg">
+          <nav id="scrollspyNav" class="navbar sticky-top scrollspy-nav">
+            <ul class="nav nav-pills">
+              <li class="nav-item"> <a class="nav-link" href="#Sprint">冲刺 (5)</a> </li>
+              <li class="nav-item"> <a class="nav-link" href="#Stable">稳妥 (5)</a> </li>
+              <li class="nav-item"> <a class="nav-link" href="#Safe">保底 (5)</a> </li>
+            </ul>
+          </nav>
+          <div class="result-remark">
+            <div class="matchRegion">意向地区</div>
+            <div class="matchTA">性向匹配</div>
+            <div class="matchTI">兴趣匹配</div>
+          </div>
+          <div data-bs-spy="scroll" data-bs-target="#scrollspyNav" data-bs-smooth-scroll="true" class="scrollspy-content" tabindex="0">
+            <div id="Sprint">
+              <div class="card matchRegion">
+                <div class="card-body">
+                  <div class="row g-2">
+                    <div class="col-auto">
+                      <div class="school-order">1</div>
+                    </div>
+                    <div class="col-3">
+                      <div class="school-name">清华大学</div>
+                      <div class="school-region">北京</div>
+                    </div>
+                    <div class="col">
+                      <div class="major-title">专业领域排序与分数(门坎线/安全线)</div>
+                      <ul class="major-list">
+                        <li class="matchTI"><span>商业领域</span>
+                          <ul>
+                            <li>经济与金融<small>(656/696)</small></li>
+                          </ul>
+                        </li>
+                        <li><span>传播领域</span>
+                          <ul>
+                            <li>新闻学<small>(657/695)</small></li>
+                          </ul>
+                        </li>
+                        <li class="matchTA matchTI"><span>数学及统计领域</span>
+                          <ul>
+                            <li>数学与应用数学<small>(657/695)</small></li>
+                            <li>数理基础科学<small>(657/695)</small></li>
+                          </ul>
+                        </li>
+                        <li class="matchTA"><span>生命科学领域</span>
+                          <ul>
+                            <li>生物科学<small>(657/695)</small></li>
+                          </ul>
+                        </li>
+                        <li class="matchTA matchTI"><span>工程领域</span>
+                          <ul>
+                            <li>机械工程<small>(657/695)</small></li>
+                            <li>车辆工程<small>(657/695)</small></li>
+                            <li>测控技术与仪器<small>(657/695)</small></li>
+                            <li>材料科学与工程<small>(657/695)</small></li>
+                            <li>高分子材料与工程<small>(657/695)</small></li>
+                            <li>能源与动力工程<small>(657/695)</small></li>
+                            <li>电气工程及其自动化<small>(657/695)</small></li>
+                            <li>电子信息类<small>(657/695)</small></li>
+                            <li>自动化<small>(657/695)</small></li>
+                            <li>土木工程<small>(657/695)</small></li>
+                            <li>化学工程与工业生物工程<small>(657/695)</small></li>
+                            <li>生物医学工程<small>(657/695)</small></li>
+                            <li>工程物理<small>(657/695)</small></li>
+                          </ul>
+                        </li>
+                        <li><span>电算机领域</span>
+                          <ul>
+                            <li>计算机科学与技术<small>(657/695)</small></li>
+                            <li>软件工程<small>(657/695)</small></li>
+                          </ul>
+                        </li>
+                        <li class="matchTA"><span>环境保护领域</span>
+                          <ul>
+                            <li>环境工程<small>(657/695)</small></li>
+                          </ul>
+                        </li>
+                        <li><span>建筑及都市规划领域</span>
+                          <ul>
+                            <li>建筑学<small>(657/695)</small></li>
+                          </ul>
+                        </li>
+                        <li><span>医药卫生领域</span>
+                          <ul>
+                            <li>临床医学<small>(657/695)</small></li>
+                          </ul>
+                        </li>
+                        <li class="matchTI"><span>管理领域</span>
+                          <ul>
+                            <li>工商管理类<small>(657/695)</small></li>
+                            <li>工业工程<small>(657/695)</small></li>
+                          </ul>
+                        </li>
+                        <li><span>运输服务领域</span>
+                          <ul>
+                            <li>航空航天类<small>(657/695)</small></li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="Stable">
+              <div class="card">
+                <div class="card-body">
+                  <div class="row g-2">
+                    <div class="col-auto">
+                      <div class="school-order">6</div>
+                    </div>
+                    <div class="col-3">
+                      <div class="school-name">浙江大学</div>
+                      <div  class="school-region">浙江</div>
+                    </div>
+                    <div class="col">
+                      <div class="major-title">专业领域排序与分数(门坎线/安全线)</div>
+                      <ul class="major-list">
+                        <li><span>跨领域</span>
+                          <ul>
+                            <li>理科试验班类<small>(654/681)</small></li>
+                            <li>社会科学试验班<small>(653/681)</small></li>
+                          </ul>
+                        </li>
+                        <li class="matchTA matchTI"><span>工程领域</span>
+                          <ul>
+                            <li>工科试验班<small>(653/681)</small></li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="Safe">
+              <div class="card">
+                <div class="card-body">
+                  <div class="row g-2">
+                    <div class="col-auto">
+                      <div class="school-order">11</div>
+                    </div>
+                    <div class="col-3">
+                      <div class="school-name">北京师范大学</div>
+                      <div  class="school-region match">北京</div>
+                    </div>
+                    <div class="col">
+                      <div class="major-title">专业领域排序与分数(门坎线/安全线)</div>
+                      <ul class="major-list">
+                        <li><span>跨领域</span>
+                          <ul>
+                            <li>理科试验班<small>(657/672)</small></li>
+                          </ul>
+                        </li>
+                        <li class="matchTI">商业领域
+                          <ul>
+                            <li>经济学<small>(654/672)</small></li>
+                            <li>金融学<small>(654/672)</small></li>
+                            <li>国际经济与贸易<small>(654/672)</small></li>
+                          </ul>
+                        </li>
+                        <li><span>法律领域</span>
+                          <ul>
+                            <li>法学<small>(653/672)</small></li>
+                          </ul>
+                        </li>
+                        <li><span>教育领域</span>
+                          <ul>
+                            <li>教育学<small>(653/672)</small></li>
+                          </ul>
+                        </li>
+                        <li><span>外语领域</span>
+                          <ul>
+                            <li>英语<small>(653/672)</small></li>
+                          </ul>
+                        </li>
+                        <li><span>数学及统计领域</span>
+                          <ul>
+                            <li>数学与应用数学<small>(653/672)</small></li>
+                            <li>统计学<small>(653/672)</small></li>
+                          </ul>
+                        </li>
+                        <li class="matchTA matchTI"><span>数学及统计领域</span>
+                          <ul>
+                            <li>物理学<small>(653/672)</small></li>
+                            <li>化学<small>(653/672)</small></li>
+                            <li>地理科学类<small>(653/672)</small></li>
+                          </ul>
+                        </li>
+                        <li class="matchTA"><span>生命科学领域</span>
+                          <ul>
+                            <li>生物科学类<small>(653/672)</small></li>
+                          </ul>
+                        </li>
+                        <li><span>心理领域</span>
+                          <ul>
+                            <li>心理学<small>(653/672)</small></li>
+                          </ul>
+                        </li>
+                        <li class="matchTA matchTI">工程领域
+                          <ul>
+                            <li>电子信息科学与技术<small>(653/672)</small></li>
+                          </ul>
+                        </li>
+                        <li><span>电算机领域</span>
+                          <ul>
+                            <li>计算机科学与技术<small>(653/672)</small></li>
+                          </ul>
+                        </li>
+                        <li class="matchTA"><span>环境保护领域</span>
+                          <ul>
+                            <li>环境科学<small>(653/672)</small></li>
+                            <li>资源环境科学<small>(653/672)</small></li>
+                          </ul>
+                        </li>
+                        <li><span>贸易营销领域</span>
+                          <ul>
+                            <li>会计学<small>(653/672)</small></li>
+                          </ul>
+                        </li>
+                        <li class="matchTI"><span>管理领域</span>
+                          <ul>
+                            <li>人力资源管理<small>(653/672)</small></li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+	  <div class="col text-center mt-5"><a href="careerPlacement.html" class="btn btn-secondary rounded-pill px-4" id="">重新分析</a></div>	
+    </div>
+
+    <!-- search end --> 
+  </main>
+  <footer></footer>
+</form>
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<!-- JavaScript Libraries --> 
+<script src="Content/js/jquery-3.4.1.min.js"></script> 
+<script src="Content/lib/bootstrap-5.3.8/dist/js/bootstrap.bundle.min.js"></script> 
+<script src="Content/lib/WOW-master/dist/wow.min.js"></script> 
+
+<!-- This page Javascript Libraries --> 
+
+<!-- This web Javascript --> 
+<script src="Content/js/fn.js"></script> 
+<script src="Content/js/main.js"></script> 
+<script>
+$(document).ready(function() {
+	//nowPage
+  	$('.nav-careerPlacement').addClass('active');
+	
+    // 更新捲動偏移量的函式
+    function updateScrollOffset() {
+        const headerHeight = $('header').outerHeight() || 0;
+        // 將高度寫入 CSS 變數，供 scroll-padding-top 使用
+        document.documentElement.style.setProperty('--scroll-offset', headerHeight + 'px');
+        return headerHeight;
+    }	
+	
+	//[开始分析我的生涯落点]
+	$('#LBB_go').click(function (e) { 
+		e.preventDefault();
+		
+		$('.search').slideUp();
+		
+		const currentHeaderHeight = updateScrollOffset();
+		
+		$('.result').css({
+			"min-height": $(window).height() - $('header').height() - $('.banner').outerHeight()
+		}).slideDown(600, function() {
+			const scrollSpyEl = document.querySelector('[data-bs-spy="scroll"]');
+            if (scrollSpyEl) {
+                const instance = bootstrap.ScrollSpy.getInstance(scrollSpyEl);
+                if (instance) {
+                    instance.refresh();
+                } else {
+                    // 如果尚未初始化，則在此時手動初始化
+                    new bootstrap.ScrollSpy(scrollSpyEl, {
+                        target: '#scrollspyNav',
+                        smoothScroll: true,
+                        // 如果有偏移問題，BS5.3+ 可以使用 rootMargin
+                        rootMargin: `-${currentHeaderHeight}px 0px -40%` 
+                    });
+                }
+            }	
+		});
+		
+		$("html,body").animate( { scrollTop:0 }, 800 );
+		
+
+	});
+	
+	//院校所在省市 [全選]
+	const $group = $('.btn-group');
+	const $checks = $group.find('.btn-check');
+	const $checkAll = $('#checkAll');
+	const $clearAll = $('#clearAll');
+
+	// 同步「全選」按鈕狀態
+	function syncCheckAll() {
+		const total = $checks.length;
+		const checked = $checks.filter(':checked').length;
+
+		if (checked === total) {
+			$checkAll.addClass('active');
+		} else {
+			$checkAll.removeClass('active');
+		}
+	}
+
+	// 點擊「全選」
+	$checkAll.on('click', function () {
+		$checks.prop('checked', true);
+		$checkAll.addClass('active');
+	});
+
+	// 點擊「取消」
+	$clearAll.on('click', function () {
+		$checks.prop('checked', false);
+		$checkAll.removeClass('active');
+	});
+
+	// 手動點擊任一省市
+	$group.on('change', '.btn-check', function () {
+		syncCheckAll();
+	});
+
+	// 初始狀態（例如北京預設 checked）
+	syncCheckAll();	
+})	
+</script>
+</body>
+</html>
