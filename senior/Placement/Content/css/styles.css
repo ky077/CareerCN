@@ -135,7 +135,7 @@ a { text-underline-offset: .25em; word-break: break-all; }
 .index .join .join-title small { display: block; font-size: 50%; font-weight: 400; margin-top: 1rem; }
 .index .join .join-title small [class*="star"] { color: #008BD6; filter: brightness(1.1); }
 .index .join::before { content: ""; display: block; position: absolute; bottom: 6%; left: 8.33333333%; width: 29.1666666667%; height: 0; padding-bottom: 16.6666666667%; background-image: url("../img/index/join-img.png"); background-repeat: no-repeat; background-size: cover; background-position: center; }
-.index .join::after { content: ""; display: block; position: absolute; bottom: 6%; right: 16.66666667%; width: 17.1875%; height: 0; padding-bottom: 15.5987394958%; background-image: url("../img/nice-hi.png"); background-repeat: no-repeat; background-size: cover; background-position: center; }
+.index .join::after { content: ""; display: block; position: absolute; bottom: 6%; right: 16.66666667%; width: 17.1875%; height: 0; padding-bottom: 15.5987394958%; background-image: url("../img/nice-hi.apng"); background-repeat: no-repeat; background-size: cover; background-position: center; }
 .index .join .join-btn { position: relative; overflow: hidden; }
 .index .join .join-btn::after { content: ""; display: block; width: 20%; height: 300%; position: absolute; top: 0; left: -25%; background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 20%, rgba(255, 255, 255, 0.9) 45%, white 50%, rgba(255, 255, 255, 0.9) 55%, rgba(255, 255, 255, 0.3) 80%, rgba(255, 255, 255, 0) 100%); mix-blend-mode: plus-lighter; transform: rotate(45deg); transform-origin: right top; opacity: .5; animation: AN-btnFlash 3.5s ease-in-out infinite; }
 
