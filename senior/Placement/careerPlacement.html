@@ -114,7 +114,7 @@
                 <div class="row gx-2 mb-3">
                   <label for="preScore" class="col-auto col-form-label text-lg-end">高考(预估)分数︰</label>
                   <div class="col-auto col-lg">
-                    <input name="" type="text" id="preScore" class="form-control form-control-sm rounded-0 d-inline w-auto">
+                    <input name="" type="text" id="preScore" class="form-control form-control-sm rounded-0 d-inline w-auto" placeholder="分数">
                   </div>
                 </div>
                 <div class="row gx-2 mb-3">
@@ -208,7 +208,6 @@
         </div>
       </div>
     </div>
-
     <!-- search end --> 
     
     <!-- result start -->
@@ -268,7 +267,7 @@
                       <div class="school-name">清华大学</div>
                       <div class="school-region">北京</div>
                     </div>
-                    <div class="col">
+                    <div class="col-12 col-sm">
                       <div class="major-title">专业领域排序与分数(门坎线/安全线)</div>
                       <ul class="major-list">
                         <li class="matchTI"><span>商业领域</span>
@@ -358,7 +357,7 @@
                       <div class="school-name">浙江大学</div>
                       <div  class="school-region">浙江</div>
                     </div>
-                    <div class="col">
+                    <div class="col-12 col-sm">
                       <div class="major-title">专业领域排序与分数(门坎线/安全线)</div>
                       <ul class="major-list">
                         <li><span>跨领域</span>
@@ -389,7 +388,7 @@
                       <div class="school-name">北京师范大学</div>
                       <div  class="school-region match">北京</div>
                     </div>
-                    <div class="col">
+                    <div class="col-12 col-sm">
                       <div class="major-title">专业领域排序与分数(门坎线/安全线)</div>
                       <ul class="major-list">
                         <li><span>跨领域</span>
@@ -479,10 +478,11 @@
       </div>
 	  <div class="col text-center mt-5"><a href="careerPlacement.html" class="btn btn-secondary rounded-pill px-4" id="">重新分析</a></div>	
     </div>
-
-    <!-- search end --> 
+    <!-- result end --> 
   </main>
   <footer></footer>
+  <!-- Back to Top --> 
+  <a href="#" class="btn btn-outline-primary rounded-circle back-to-top" style="display: none;"><i class="bi bi-arrow-up"></i></a>	
 </form>
 <!-- ------- ------- ------- ------- ------- ------- ------- --> 
 <!-- ------- ------- ------- ------- ------- ------- ------- --> 
@@ -500,47 +500,45 @@
 <script>
 $(document).ready(function() {
 	//nowPage
-  	$('.nav-careerPlacement').addClass('active');
-	
-    // 更新捲動偏移量的函式
-    function updateScrollOffset() {
-        const headerHeight = $('header').outerHeight() || 0;
-        // 將高度寫入 CSS 變數，供 scroll-padding-top 使用
-        document.documentElement.style.setProperty('--scroll-offset', headerHeight + 'px');
-        return headerHeight;
-    }	
+	$('.nav-careerPlacement').addClass('active');
+
+	// 更新捲動偏移量的函式
+	function updateScrollOffset() {
+		const headerHeight = $('header').outerHeight() || 0;
+		// 將高度寫入 CSS 變數，供 scroll-padding-top 使用
+		document.documentElement.style.setProperty('--scroll-offset', headerHeight + 'px');
+		return headerHeight;
+	}	
 	
 	//[开始分析我的生涯落点]
 	$('#LBB_go').click(function (e) { 
 		e.preventDefault();
-		
+
 		$('.search').slideUp();
-		
+
 		const currentHeaderHeight = updateScrollOffset();
-		
+
 		$('.result').css({
 			"min-height": $(window).height() - $('header').height() - $('.banner').outerHeight()
 		}).slideDown(600, function() {
 			const scrollSpyEl = document.querySelector('[data-bs-spy="scroll"]');
-            if (scrollSpyEl) {
-                const instance = bootstrap.ScrollSpy.getInstance(scrollSpyEl);
-                if (instance) {
-                    instance.refresh();
-                } else {
-                    // 如果尚未初始化，則在此時手動初始化
-                    new bootstrap.ScrollSpy(scrollSpyEl, {
-                        target: '#scrollspyNav',
-                        smoothScroll: true,
-                        // 如果有偏移問題，BS5.3+ 可以使用 rootMargin
-                        rootMargin: `-${currentHeaderHeight}px 0px -40%` 
-                    });
-                }
-            }	
+						if (scrollSpyEl) {
+								const instance = bootstrap.ScrollSpy.getInstance(scrollSpyEl);
+								if (instance) {
+										instance.refresh();
+								} else {
+										// 如果尚未初始化，則在此時手動初始化
+										new bootstrap.ScrollSpy(scrollSpyEl, {
+												target: '#scrollspyNav',
+												smoothScroll: true,
+												// 如果有偏移問題，BS5.3+ 可以使用 rootMargin
+												rootMargin: `-${currentHeaderHeight}px 0px -40%` 
+										});//這邊要添加>多少 top:0
+								}
+						}	
 		});
-		
-		$("html,body").animate( { scrollTop:0 }, 800 );
-		
 
+		$("html,body").animate( { scrollTop:0 }, 800 );
 	});
 	
 	//院校所在省市 [全選]
@@ -582,5 +580,136 @@ $(document).ready(function() {
 	syncCheckAll();	
 })	
 </script>
+<script>
+//符合class
+const MATCH_CLASS = {
+  region: 'matchRegion',
+  TA: 'matchTA',
+  TI: 'matchTI'
+};	
+	
+fetch('Content/json/careerPlacement.json')
+  .then(res => res.json())
+  .then(renderCareerPlacement);	
+	
+//专业领域排序与分数
+function renderField(field) {
+  const liClass = (field.matches || [])
+    .map(m => MATCH_CLASS[m])
+    .join(' ');
+
+  const majorsHtml = field.majors.map(m =>
+    `<li>${m.name}<small>(${m.score.threshold}/${m.score.safe})</small></li>`
+  ).join('');
+
+  return `
+    <li class="${liClass}">
+      <span>${field.field}</span>
+      <ul>${majorsHtml}</ul>
+    </li>
+  `;
+}
+	
+//card
+function renderCard(row) {
+  const schoolMatchClass = (row.school.matches || [])
+    .map(m => MATCH_CLASS[m])
+    .join(' ');
+
+  const fieldsHtml = row.fields.map(renderField).join('');
+
+  return `
+    <div class="card ${schoolMatchClass}">
+      <div class="card-body">
+        <div class="row g-2">
+          <div class="col-auto">
+            <div class="school-order">${row.order}</div>
+          </div>
+
+          <div class="col-3">
+            <div class="school-name">${row.school.name}</div>
+            <div class="school-region">${row.school.region}</div>
+          </div>
+
+          <div class="col-12 col-sm">
+            <div class="major-title">
+              专业领域排序与分数(门坎线/安全线)
+            </div>
+            <ul class="major-list">
+              ${fieldsHtml}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  `;
+}
+
+//
+function renderCareerPlacement(data) {
+
+  Object.entries(data).forEach(([key, tab], index) => {
+
+    /* ===== Nav ===== */
+    const navLink = document.querySelector(
+      `#scrollspyNav .nav-link[href="#${key}"]`
+    );
+    navLink.textContent = `${tab.label} (${tab.rows.length})`;
+
+    /* ===== Content ===== */
+    const container = document.getElementById(key);
+    container.innerHTML = tab.rows.map(renderCard).join('');
+
+  });
+	
+	//意向地区、性向匹配、兴趣匹配 BS Tooltips
+	initMatchTooltips();
+
+  /* ===== 重新初始化 ScrollSpy ===== */
+  bootstrap.ScrollSpy.getOrCreateInstance(
+    document.querySelector('.scrollspy-content'),
+    { target: '#scrollspyNav' }
+  );
+}
+	
+	
+//BS Tooltips
+function initMatchTooltips() {
+	// 先清掉舊的 tooltip避免重複初始化
+	function resetTooltip(el) {
+		const inst = bootstrap.Tooltip.getInstance(el);
+		if (inst) inst.dispose();
+	}
+
+	function makeTooltip($els, titleText) {
+		$els.each(function () {
+			const el = this;
+
+			resetTooltip(el);
+
+			// 設定必要屬性
+			el.setAttribute('data-bs-toggle', 'tooltip');
+			el.setAttribute('title', titleText);
+
+			// 建立 tooltip
+			new bootstrap.Tooltip(el, {
+				trigger: 'hover focus',
+				container: 'body',
+				placement: 'right',
+			});
+		});
+	}
+
+	//意向地区
+	makeTooltip($('.card.matchRegion .school-name'), '意向地区');
+
+	//TA / TI
+	makeTooltip($('.matchTA > span'), '性向匹配');
+	makeTooltip($('.matchTI > span'), '兴趣匹配');
+
+	//TA + TI
+	makeTooltip($('.matchTA.matchTI > span'), '性向匹配、兴趣匹配');
+}
+</script>	
 </body>
 </html>

@@ -24,10 +24,11 @@
 				background-repeat: no-repeat;
 				background-size:  auto 85%;	
 				z-index: 0;
-				opacity: .85;
+				filter: opacity(.75);
+				opacity: .75;
 				@media screen and (min-width: 768px) {
 				opacity: 1.0;
-				filter: drop-shadow(1px -1px 3px rgba($black, .25));	
+				filter: drop-shadow(1px -1px 3px rgba($black, .25)) opacity(1.0);	
 				}
 			}
 			> *{
@@ -189,6 +190,7 @@
 		background-color: $white;
 		.result-info{
 			display: flex;
+			flex-wrap: wrap;
 			align-items: center;
 			font-size: $font-size-sm;
 			color: $body-tertiary-color;
@@ -241,6 +243,7 @@
 					}
 					&:hover{
 						background-color: tint-color($color, 90%);
+						border-bottom-color: $border-color;
 					}
 					&.active{	
 						border-bottom: 5px solid $color;
@@ -259,7 +262,7 @@
 			.result-tab-content{
 				.table-responsive{
 					.table{
-						min-width: 1200px;
+						min-width: 920px;
 					}	
 				}
 				.table{
@@ -286,21 +289,29 @@
 					>tbody {
 						>tr{
 							>th, >td{
-								text-align: center;
+								text-align: center;	
 								vertical-align: middle;
 								color: $body-color;
 								font-size: $font-size-sm;
+								padding: .75rem .5rem;
+								&.td-none{
+									text-align: left;
+									@media screen and (min-width: 992px) {
+										text-align: center;	
+									}
+								}
 								&.td-order {		  
 									width: 4rem;
-								}
+								}						
 								&.td-school-major {
-									text-align: left;
+									text-align: left;	
+									width: auto;
 									.school-name{
-										display: inline-block;
+										display: inline;
 										font-size: $font-size-lg;
 									}
 									.school-code{
-										display: inline-block;
+										display: inline;
 										color: $body-tertiary-color;
 										background-color: $gray-100;
 										border: 1px solid $gray-200;
@@ -309,7 +320,7 @@
 										padding: 0 .75em;
 									}
 									.major-name{
-										display: inline-block;
+										display: inline;
 										color: $primary;
 										font-size: $font-size-base;
 										&::before{
@@ -322,7 +333,7 @@
 										}
 									}
 									.major-code{
-										display: inline-block;
+										display: inline;
 										color: $body-tertiary-color;
 										background-color: $gray-100;
 										border: 1px solid $gray-200;
@@ -332,17 +343,21 @@
 									}
 								}
 								&.td-region-type { 
-									width: 10rem;
-									text-align: left;
+									text-align: left;	
+									width: 7rem;
+									> div{
+										display: flex;
+										gap: 0;
+									}
 									.region{
-										display: inline-block;
+										display: inline;
 										&::after{ 
-											content: " / ";
+											content: "/";
 											display: inline;
 										}
 									}
 									.type{
-										display: inline-block;
+										display: inline;
 									}
 									.category{
 										color: $body-tertiary-color;
@@ -369,7 +384,7 @@
 										&:not(:last-child){
 											&::after{
 												font-size: 1rem;
-												content: " / ";
+												content: "/";
 											}	
 										}
 									}
@@ -383,9 +398,12 @@
 									font-weight: 600;
 								}	
 							}
+							&:hover > *{
+								  background-color: rgba($tertiary, $table-hover-bg-factor);
+									box-shadow: none;
+							}
 						}
 					}
-					
 				}
 				@mixin tableStyles($color){
 					>thead{
@@ -425,6 +443,7 @@
 				border-radius: $border-radius;
 				padding: map-get($spacers, 4);
 				display: flex;
+				flex-wrap: wrap;
 				justify-content: space-between;
 				align-items: center;
 			}

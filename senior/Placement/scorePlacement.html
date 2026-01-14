@@ -132,7 +132,7 @@
                     </div>
                     <div class="form-check form-check-inline order-xxl-last">
                       <input class="form-check-input" type="checkbox" id="CB_DC_5" name="ctl00$ContentPlaceHolder1$CB_DC$CB_DC_5">
-                      <label class="form-check-label" for="CB_DC_5">体育类(物理)</label> 
+                      <label class="form-check-label" for="CB_DC_5">体育类(物理)</label>
                     </div>
                   </div>
                 </div>
@@ -302,13 +302,13 @@
                 <div class="row gx-2 mb-2 align-items-center">
                   <label for="TextBox1" class="col-auto col-form-label text-end" style="letter-spacing: .55em;">院校名称︰</label>
                   <div class="col-auto">
-                    <input name="ctl00$ContentPlaceHolder1$TextBox1" type="text" id="TextBox1" class="form-control form-control-sm rounded-0">
+                    <input name="ctl00$ContentPlaceHolder1$TextBox1" type="text" id="TextBox1" class="form-control form-control-sm rounded-0" placeholder="院校名称">
                   </div>
                 </div>
                 <div class="row gx-2 mb-2 align-items-center">
                   <label for="TextBox2" class="col-auto col-form-label text-end" style="letter-spacing: .55em;">专业名称︰</label>
                   <div class="col-auto">
-                    <input name="ctl00$ContentPlaceHolder1$TextBox2" type="text" id="TextBox2" class="form-control form-control-sm rounded-0">
+                    <input name="ctl00$ContentPlaceHolder1$TextBox2" type="text" id="TextBox2" class="form-control form-control-sm rounded-0" placeholder="专业名称">
                   </div>
                 </div>
               </div>
@@ -324,11 +324,11 @@
     <div class="result" style="display: none;">
       <div class="container-lg">
         <div class="result-info">
-			<div class="result-info-item">考生姓名
-            <label class="result-info-label">王小明 </label>
+          <div class="result-info-item">考生姓名
+            <label class="result-info-label">郑小文</label>
           </div>
           <div class="result-info-item">录取批次
-            <label class="result-info-label">本科普通批 </label>
+            <label class="result-info-label">本科普通批</label>
           </div>
           <div class="result-info-item"> 区外高考总分
             <label class="result-info-label">700</label>
@@ -352,7 +352,7 @@
           <div class="tab-content result-tab-content" id="resultTabContent">
             <div class="tab-pane fade show active" id="result-Sprint" role="tabpanel" aria-labelledby="result-Sprint-tab" tabindex="0">
               <div class="table-responsive">
-                <table class="table table-Sprint" id="GridViewc1">
+                <table class="table table-hover table-Sprint" id="GridViewc1">
                   <thead>
                     <tr>
                       <th scope="col" class="td-order">落点序</th>
@@ -366,7 +366,7 @@
                   </thead>
                   <tbody>
                     <tr>
-                      <td colspan="7">无冲刺数据</td>
+                      <td class="td-none" colspan="7">无冲刺数据</td>
                     </tr>
                     <!--<tr>
                       <td class="td-order">1</td>
@@ -393,11 +393,11 @@
                           <div class="scale-title">一投录取</div>
                           <div class="scale-count">39</div>
                         </div></td>
-                      <td class="td-score-group"><div class="score-min">791</div>
-                        <div class="score-avg">797</div>
-                        <div class="score-max">711</div></td>
+                      <td class="td-score-group"><div class="score-min">591</div>
+                        <div class="score-avg">597</div>
+                        <div class="score-max">611</div></td>
                       <td class="td-rank-min">1905</td>
-                      <td class="td-gap">91</td>
+                      <td class="td-gap">109</td>
                     </tr>-->
                   </tbody>
                 </table>
@@ -405,7 +405,7 @@
             </div>
             <div class="tab-pane fade" id="result-Stable" role="tabpanel" aria-labelledby="result-Stable-tab" tabindex="0">
               <div class="table-responsive">
-                <table class="table table-Stable" id="GridViewc2">
+                <table class="table table-hover table-Stable" id="GridViewc2">
                   <thead>
                     <tr>
                       <th scope="col" class="td-order">落点序</th>
@@ -419,7 +419,7 @@
                   </thead>
                   <tbody>
                     <!--<tr>
-                      <td colspan="7">无稳妥数据</td>
+                      <td class="td-none" colspan="7">无稳妥数据</td>
                     </tr>-->
                     <tr>
                       <td class="td-order">1</td>
@@ -458,7 +458,7 @@
             </div>
             <div class="tab-pane fade" id="result-Safe" role="tabpanel" aria-labelledby="result-Safe-tab" tabindex="0">
               <div class="table-responsive">
-                <table class="table table-Safe" id="GridViewc3">
+                <table class="table table-hover table-Safe" id="GridViewc3">
                   <thead>
                     <tr>
                       <th scope="col" class="td-order">落点序</th>
@@ -472,7 +472,7 @@
                   </thead>
                   <tbody>
                     <!--<tr>
-                      <td colspan="7">无保底数据</td>
+                      <td class="td-none" colspan="7">无保底数据</td>
                     </tr>-->
                     <tr>
                       <td class="td-order">1</td>
@@ -519,7 +519,7 @@
         <h3 class="result-title">2025年推荐志愿专业组</h3>
         <div class="result-content">
           <div class="result-jumbotron"> 根据冲刺、稳妥与保底之落点分析结果，链接的2025年推荐志愿专业组可下载文件参考
-            <button type="button" class="btn btn-dark" id="btnDownload"><i class="bi bi-download me-1"></i>立即下载 EXCEL</button>
+            <button type="button" class="btn btn-dark my-1" id="btnDownload"><i class="bi bi-download me-1"></i>立即下载 EXCEL</button>
           </div>
           <div class="result-remark">
             <p><i class="bi bi-info-circle me-1"></i>温馨提醒：</p>
@@ -529,9 +529,11 @@
         </div>
       </div>
     </div>
-    <!-- search end --> 
+    <!-- result end --> 
   </main>
   <footer></footer>
+  <!-- Back to Top --> 
+  <a href="#" class="btn btn-outline-primary rounded-circle back-to-top" style="display: none;"><i class="bi bi-arrow-up"></i></a>	
 </form>
 <!-- ------- ------- ------- ------- ------- ------- ------- --> 
 <!-- ------- ------- ------- ------- ------- ------- ------- --> 
@@ -563,27 +565,24 @@ $(document).ready(function() {
 		
 		$("html,body").animate( { scrollTop:0 }, 800 );
 	});
-
-
-
 	
 	//院校所在省市 [全選]
-  const $group = $('.btn-group');
-  const $checks = $group.find('.btn-check');
-  const $checkAll = $('#checkAll');
-  const $clearAll = $('#clearAll');
+	const $group = $('.btn-group');
+	const $checks = $group.find('.btn-check');
+	const $checkAll = $('#checkAll');
+	const $clearAll = $('#clearAll');
+  
+	// 同步「全選」按鈕狀態
+	function syncCheckAll() {
+		const total = $checks.length;
+		const checked = $checks.filter(':checked').length;
 
-  // 同步「全選」按鈕狀態
-  function syncCheckAll() {
-    const total = $checks.length;
-    const checked = $checks.filter(':checked').length;
-
-    if (checked === total) {
-      $checkAll.addClass('active');
-    } else {
-      $checkAll.removeClass('active');
-    }
-  }
+		if (checked === total) {
+		  $checkAll.addClass('active');
+		} else {
+		  $checkAll.removeClass('active');
+		}
+	}
 
   // 點擊「全選」
   $checkAll.on('click', function () {
@@ -605,6 +604,92 @@ $(document).ready(function() {
   // 初始狀態（例如北京預設 checked）
   syncCheckAll();	
 })	
+</script> 
+<script>
+//表格ID	
+const tableMap = {
+  Sprint: '#GridViewc1',
+  Stable: '#GridViewc2',
+  Safe:   '#GridViewc3'
+};
+
+//產生 <tr> DOM
+function renderRow(row) {
+  return `
+    <tr>
+      <td class="td-order">${row.order}</td>
+
+      <td class="td-school-major">
+        <div>
+          <div class="school-name">${row.school.name}</div>
+				  <div class="school-code">${row.school.code}</div>
+        </div>
+        <div>
+          <div class="major-name">${row.major.name}</div>
+				  <div class="major-code">${row.major.code}</div>
+        </div>
+      </td>
+
+      <td class="td-region-type">
+        <div>
+          <div class="region">${row.region}</div>
+				  <div class="type">${row.schoolType}</div>
+        </div>
+        <div>
+          <div class="category">${row.category}</div>
+        </div>
+      </td>
+
+      <td class="td-scale">
+        <div>
+          <div class="scale-title">计划数</div>
+          <div class="scale-count">${row.scale.plan}</div>
+        </div>
+        <div>
+          <div class="scale-title">一投录取</div>
+          <div class="scale-count">${row.scale.admitted}</div>
+        </div>
+      </td>
+
+      <td class="td-score-group">
+        <div class="score-min">${row.score.min}</div>
+        <div class="score-avg">${row.score.avg}</div>
+        <div class="score-max">${row.score.max}</div>
+      </td>
+
+      <td class="td-rank-min">${row.rankMin}</td>
+      <td class="td-gap">${row.gap}</td>
+    </tr>
+  `;
+}
+
+//載入 JSON 並寫入表格
+fetch('Content/json/scorePlacement.json')
+  .then(res => res.json())
+  .then(data => {
+
+	Object.entries(data).forEach(([key, tab]) => {
+		const table = document.querySelector(tableMap[key]);
+		const tbody = table.querySelector('tbody');
+
+		// 更新 tab 數量
+		const tabBtn = document.querySelector(`#result-${key}-tab`);
+		tabBtn.textContent = `${tab.label} (${tab.rows.length})`;
+
+		// 無資料
+		if (tab.rows.length === 0) {
+			tbody.innerHTML = `
+				<tr>
+					<td class="td-none" colspan="7">无${tab.label}数据</td>
+				</tr>
+			`;
+			return;
+		}
+
+		// 有資料
+		tbody.innerHTML = tab.rows.map(renderRow).join('');
+	});
+});	
 </script>
 </body>
 </html>

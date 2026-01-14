@@ -1,0 +1,2301 @@
+{
+  "Sprint": {
+    "label": "冲刺",
+    "rows": [
+			{
+        "order": 1,
+        "school": {
+          "name": "清华大学",
+          "region": "北京",
+          "matches": ["region"]
+        },
+        "fields": [
+					{
+            "field": "商业领域",
+            "matches": ["TI"],
+            "majors": [{
+              "name": "经济与金融",
+              "score": {
+                "threshold": 656,
+                "safe": 696
+              }
+            }]
+          },
+          {
+            "field": "传播领域",
+            "majors": [{
+              "name": "新闻学",
+              "score": {
+                "threshold": 657,
+                "safe": 695
+              }
+            }]
+          },
+          {
+            "field": "数学及统计领域",
+            "matches": ["TA", "TI"],
+            "majors": [{
+                "name": "数学与应用数学",
+                "score": {
+                  "threshold": 657,
+                  "safe": 695
+                }
+              },
+              {
+                "name": "数理基础科学",
+                "score": {
+                  "threshold": 657,
+                  "safe": 695
+                }
+              }
+            ]
+          },
+          {
+            "field": "生命科学领域",
+						"matches": ["TA"],
+            "majors": [{
+              "name": "生物科学",
+              "score": {
+                "threshold": 657,
+                "safe": 695
+              }
+            }]
+          },
+          {
+            "field": "工程领域",
+            "matches": ["TA", "TI"],
+            "majors": [{
+                "name": "机械工程",
+                "score": {
+                  "threshold": 657,
+                  "safe": 695
+                }
+              },
+              {
+                "name": "车辆工程",
+                "score": {
+                  "threshold": 657,
+                  "safe": 695
+                }
+              },
+              {
+                "name": "测控技术与仪器",
+                "score": {
+                  "threshold": 657,
+                  "safe": 695
+                }
+              },
+              {
+                "name": "材料科学与工程",
+                "score": {
+                  "threshold": 657,
+                  "safe": 695
+                }
+              },
+              {
+                "name": "高分子材料与工程",
+                "score": {
+                  "threshold": 657,
+                  "safe": 695
+                }
+              },
+              {
+                "name": "能源与动力工程",
+                "score": {
+                  "threshold": 657,
+                  "safe": 695
+                }
+              },
+              {
+                "name": "电气工程及其自动化",
+                "score": {
+                  "threshold": 657,
+                  "safe": 695
+                }
+              },
+              {
+                "name": "电子信息类",
+                "score": {
+                  "threshold": 657,
+                  "safe": 695
+                }
+              },
+              {
+                "name": "自动化",
+                "score": {
+                  "threshold": 657,
+                  "safe": 695
+                }
+              },
+              {
+                "name": "土木工程",
+                "score": {
+                  "threshold": 657,
+                  "safe": 695
+                }
+              },
+              {
+                "name": "化学工程与工业生物工程",
+                "score": {
+                  "threshold": 657,
+                  "safe": 695
+                }
+              },
+              {
+                "name": "生物医学工程",
+                "score": {
+                  "threshold": 657,
+                  "safe": 695
+                }
+              },
+              {
+                "name": "工程物理",
+                "score": {
+                  "threshold": 657,
+                  "safe": 695
+                }
+              }
+            ]
+          },
+          {
+            "field": "电算机领域",
+            "majors": [{
+                "name": "计算机科学与技术",
+                "score": {
+                  "threshold": 657,
+                  "safe": 695
+                }
+              },
+              {
+                "name": "软件工程",
+                "score": {
+                  "threshold": 657,
+                  "safe": 695
+                }
+              }
+            ]
+          },
+          {
+            "field": "环境保护领域",
+						"matches": ["TA"],
+            "majors": [{
+              "name": "环境工程",
+              "score": {
+                "threshold": 657,
+                "safe": 695
+              }
+            }]
+          },
+          {
+            "field": "建筑及都市规划领域",
+            "majors": [{
+              "name": "建筑学",
+              "score": {
+                "threshold": 657,
+                "safe": 695
+              }
+            }]
+          },
+          {
+            "field": "医药卫生领域",
+            "majors": [{
+              "name": "临床医学",
+              "score": {
+                "threshold": 657,
+                "safe": 695
+              }
+            }]
+          },
+          {
+            "field": "管理领域",
+            "matches": ["TI"],
+            "majors": [{
+                "name": "工商管理类",
+                "score": {
+                  "threshold": 657,
+                  "safe": 695
+                }
+              },
+              {
+                "name": "工业工程",
+                "score": {
+                  "threshold": 657,
+                  "safe": 695
+                }
+              }
+            ]
+          },
+          {
+            "field": "运输服务领域",
+            "majors": [{
+              "name": "航空航天类",
+              "score": {
+                "threshold": 657,
+                "safe": 695
+              }
+            }]
+          }
+        ]
+      },
+      {
+        "order": 2,
+        "school": {
+          "name": "北京大学",
+          "region": "北京",
+          "matches": ["region"]
+        },
+        "fields": [
+					{
+            "field": "跨领域",
+            "majors": [{
+              "name": "理科试验班类",
+              "score": {
+                "threshold": 666,
+                "safe": 690
+              }
+            }]
+          },
+          {
+            "field": "商业领域",
+            "matches": ["TI"],
+            "majors": [{
+              "name": "经济学类",
+              "score": {
+                "threshold": 657,
+                "safe": 688
+              }
+            }]
+          },
+          {
+            "field": "法律领域",
+            "majors": [{
+              "name": "法学",
+              "score": {
+                "threshold": 658,
+                "safe": 689
+              }
+            }]
+          },
+          {
+            "field": "外语领域",
+            "majors": [{
+              "name": "英语",
+              "score": {
+                "threshold": 656,
+                "safe": 690
+              }
+            }]
+          },
+          {
+            "field": "数学及统计领域",
+						"matches": ["TA", "TI"],
+            "majors": [{
+              "name": "数学类",
+              "score": {
+                "threshold": 658,
+                "safe": 690
+              }
+            }]
+          },
+          {
+            "field": "自然科学领域",
+            "majors": [{
+              "name": "物理学类",
+              "score": {
+                "threshold": 658,
+                "safe": 690
+              }
+            },{
+              "name": "化学类",
+              "score": {
+                "threshold": 658,
+                "safe": 690
+              }
+            }]
+          },
+          {
+            "field": "生命科学领域",
+						"matches": ["TA"],
+            "majors": [{
+              "name": "生物科学",
+              "score": {
+                "threshold": 658,
+                "safe": 690
+              }
+            }]
+          },
+          {
+            "field": "心理领域",
+            "majors": [{
+              "name": "心理学",
+              "score": {
+                "threshold": 658,
+                "safe": 690
+              }
+            }]
+          },
+          {
+            "field": "工程领域",
+						"matches": ["TA", "TI"],
+            "majors": [{
+              "name": "电子信息类",
+              "score": {
+                "threshold": 658,
+                "safe": 690
+              }
+            },{
+              "name": "工科试验班类",
+              "score": {
+                "threshold": 658,
+                "safe": 690
+              }
+            }]
+          },
+          {
+            "field": "环境保护领域",
+						"matches": ["TA"],
+            "majors": [{
+              "name": "环境科学与工程类",
+              "score": {
+                "threshold": 658,
+                "safe": 690
+              }
+            },{
+              "name": "环境科学",
+              "score": {
+                "threshold": 658,
+                "safe": 690
+              }
+            }]
+          },
+          {
+            "field": "建筑及都市规划领域",
+            "majors": [{
+              "name": "城乡规划",
+              "score": {
+                "threshold": 658,
+                "safe": 690
+              }
+            }]
+          },
+          {
+            "field": "医药卫生领域",
+            "majors": [{
+              "name": "基础医学",
+              "score": {
+                "threshold": 658,
+                "safe": 690
+              }
+            },{
+              "name": "临床医学",
+              "score": {
+                "threshold": 658,
+                "safe": 690
+              }
+            },{
+              "name": "口腔医学",
+              "score": {
+                "threshold": 658,
+                "safe": 690
+              }
+            },{
+              "name": "预防医学",
+              "score": {
+                "threshold": 658,
+                "safe": 690
+              }
+            },{
+              "name": "药学",
+              "score": {
+                "threshold": 658,
+                "safe": 690
+              }
+            }]
+          },
+          {
+            "field": "管理领域",
+						"matches": ["TI"],
+            "majors": [{
+              "name": "工商管理类",
+              "score": {
+                "threshold": 658,
+                "safe": 690
+              }
+            }]
+          }
+        ]
+      },
+      {
+        "order": 3,
+        "school": {
+          "name": "复旦大学",
+          "region": "上海"
+        },
+        "fields": [
+					{
+            "field": "跨领域",
+            "majors": [{
+              "name": "理科试验班",
+              "score": {
+                "threshold": 654,
+                "safe": 684
+              }
+            }]
+          },
+          {
+            "field": "商业领域",
+            "matches": ["TI"],
+            "majors": [{
+              "name": "经济学试验班",
+              "score": {
+                "threshold": 655,
+                "safe": 684
+              }
+            }]
+          },
+          {
+            "field": "数学及统计领域",
+            "matches": ["TA", "TI"],
+            "majors": [{
+              "name": "数学类",
+              "score": {
+                "threshold": 658,
+                "safe": 684
+              }
+            }]
+          },
+          {
+            "field": "医药卫生领域",
+            "majors": [{
+              "name": "临床医学",
+              "score": {
+                "threshold": 657,
+                "safe": 684
+              }
+            }]
+          }
+        ]
+      },
+      {
+        "order": 4,
+        "school": {
+          "name": "上海交通大学",
+          "region": "上海"
+        },
+        "fields": [
+					{
+            "field": "商业领域",
+            "majors": [{
+              "name": "经济学类",
+              "score": {
+                "threshold": 669,
+                "safe": 683
+              }
+            }]
+          },
+          {
+            "field": "工程领域",
+            "matches": ["TA", "TI"],
+            "majors": [
+							{
+                "name": "机械类",
+                "score": {
+                  "threshold": 668,
+                  "safe": 682
+                }
+              },
+              {
+                "name": "机械工程",
+                "score": {
+                  "threshold": 668,
+                  "safe": 682
+                }
+              },
+              {
+                "name": "电子信息类",
+                "score": {
+                  "threshold": 668,
+                  "safe": 682
+                }
+              },
+              {
+                "name": "电子信息科学与技术",
+                "score": {
+                  "threshold": 668,
+                  "safe": 682
+                }
+              }
+            ]
+          },
+					{
+            "field": "医药卫生领域",
+            "majors": [{
+              "name": "临床医学",
+              "score": {
+                "threshold": 668,
+                "safe": 683
+              }
+            }]
+          },
+					{
+            "field": "管理领域",
+						"matches": ["TI"],
+            "majors": [{
+              "name": "工商管理类",
+              "score": {
+                "threshold": 668,
+                "safe": 683
+              }
+            }]
+          }
+        ]
+      },
+      {
+        "order": 5,
+        "school": {
+          "name": "中国人民大学",
+          "region": "北京",
+          "matches": ["region"]
+        },
+        "fields": [
+					{
+            "field": "跨领域",
+            "majors": [{
+              "name": "理科试验班类",
+              "score": {
+                "threshold": 640,
+                "safe": 681
+              }
+            }]
+          },
+          {
+            "field": "商业领域",
+            "matches": ["TI"],
+            "majors": [{
+              "name": "经济学试验班",
+              "score": {
+                "threshold": 639,
+                "safe": 681
+              }
+            }]
+          },
+					{
+            "field": "数学及统计领域",
+            "matches": ["TA", "TI"],
+            "majors": [{
+              "name": "数学类",
+              "score": {
+                "threshold": 635,
+                "safe": 681
+              }
+            }]
+          },
+					{
+            "field": "自然科学领域",
+            "majors": [
+							{
+              "name": "物理学类",
+              "score": {
+                "threshold": 637,
+                "safe": 681
+              }
+            },
+						{
+              "name": "化学类",
+              "score": {
+                "threshold": 637,
+                "safe": 681
+              }
+            },
+						{
+              "name": "地球物理学类",
+              "score": {
+                "threshold": 637,
+                "safe": 681
+              }
+            }]
+          },
+					{
+            "field": "生命科学领域",
+            "matches": ["TA"],
+            "majors": [{
+              "name": "生物科学类",
+              "score": {
+                "threshold": 637,
+                "safe": 681
+              }
+            }]
+          },
+          {
+            "field": "工程领域",
+            "matches": ["TA", "TI"],
+            "majors": [
+							{
+                "name": "材料类",
+                "score": {
+                  "threshold": 637,
+                  "safe": 681
+                }
+              },
+              {
+                "name": "电子信息类",
+                "score": {
+                  "threshold": 637,
+                  "safe": 681
+                }
+              },
+              {
+                "name": "工科试验班",
+                "score": {
+                  "threshold": 638,
+                  "safe": 681
+                }
+              }
+            ]
+          },
+					{
+            "field": "电算机领域",
+            "majors": [{
+              "name": "计算机类",
+              "score": {
+                "threshold": 637,
+                "safe": 681
+              }
+            }]
+          }
+        ]
+      }
+    ]
+  },
+
+  "Stable": {
+    "label": "稳妥",
+    "rows": [
+			{
+        "order": 6,
+        "school": {
+          "name": "浙江大学",
+          "region": "浙江"
+        },
+        "fields": [{
+            "field": "跨领域",
+            "majors": [{
+                "name": "理科试验班类",
+                "score": {
+                  "threshold": 654,
+                  "safe": 681
+                }
+              },
+              {
+                "name": "社会科学试验班",
+                "score": {
+                  "threshold": 653,
+                  "safe": 681
+                }
+              }
+            ]
+          },
+          {
+            "field": "工程领域",
+            "matches": ["TA", "TI"],
+            "majors": [{
+              "name": "工科试验班",
+              "score": {
+                "threshold": 653,
+                "safe": 681
+              }
+            }]
+          }
+        ]
+      },
+      {
+        "order": 7,
+        "school": {
+          "name": "中国科技技术大学",
+          "region": "安徽"
+        },
+        "fields": [
+					{
+            "field": "跨领域",
+            "majors": [{
+              "name": "理科试验班类",
+              "score": {
+                "threshold": 668,
+                "safe": 680
+              }
+            }]
+          },
+          {
+            "field": "商业领域",
+            "matches": ["TI"],
+            "majors": [{
+              "name": "经济学试验班",
+              "score": {
+                "threshold": 665,
+                "safe": 680
+              }
+            }]
+          },
+          {
+            "field": "数学及统计领域",
+            "matches": ["TA", "TI"],
+            "majors": [{
+              "name": "数学类",
+              "score": {
+                "threshold": 665,
+                "safe": 680
+              }
+            }]
+          },
+          {
+            "field": "自然科学领域",
+            "majors": [{
+                "name": "物理学类",
+                "score": {
+                  "threshold": 665,
+                  "safe": 680
+                }
+              },
+              {
+                "name": "化学类",
+                "score": {
+                  "threshold": 665,
+                  "safe": 680
+                }
+              },
+              {
+                "name": "地球物理学类",
+                "score": {
+                  "threshold": 665,
+                  "safe": 680
+                }
+              }
+            ]
+          },
+          {
+            "field": "生命科学领域",
+						"matches": ["TA"],
+            "majors": [{
+              "name": "生物科学类",
+              "score": {
+                "threshold": 665,
+                "safe": 680
+              }
+            }]
+          },
+          {
+            "field": "工程领域",
+            "matches": ["TA", "TI"],
+            "majors": [{
+                "name": "材料类",
+                "score": {
+                  "threshold": 665,
+                  "safe": 680
+                }
+              },
+              {
+                "name": "电子信息类",
+                "score": {
+                  "threshold": 665,
+                  "safe": 680
+                }
+              },
+              {
+                "name": "工科试验班",
+                "score": {
+                  "threshold": 668,
+                  "safe": 675
+                }
+              }
+            ]
+          },
+          {
+            "field": "电算机领域",
+            "majors": [{
+              "name": "计算机类",
+              "score": {
+                "threshold": 665,
+                "safe": 680
+              }
+            }]
+          }
+        ]
+      },
+      {
+        "order": 8,
+        "school": {
+          "name": "南京大学",
+          "region": "江苏"
+        },
+        "fields": [
+					{
+            "field": "跨领域",
+            "majors": [{
+              "name": "理科试验班类",
+              "score": {
+                "threshold": 663,
+                "safe": 678
+              }
+            }]
+          },
+          {
+            "field": "商业领域",
+            "matches": ["TI"],
+            "majors": [{
+              "name": "经济学类",
+              "score": {
+                "threshold": 662,
+                "safe": 678
+              }
+            }]
+          },
+          {
+            "field": "数学及统计领域",
+            "matches": ["TA", "TI"],
+            "majors": [{
+              "name": "数学类",
+              "score": {
+                "threshold": 661,
+                "safe": 678
+              }
+            }]
+          },
+          {
+            "field": "自然科学领域",
+            "majors": [{
+                "name": "物理学类",
+                "score": {
+                  "threshold": 661,
+                  "safe": 678
+                }
+              },
+              {
+                "name": "化学类",
+                "score": {
+                  "threshold": 661,
+                  "safe": 678
+                }
+              },
+              {
+                "name": "天文学类",
+                "score": {
+                  "threshold": 661,
+                  "safe": 678
+                }
+              },
+              {
+                "name": "大气科学类",
+                "score": {
+                  "threshold": 661,
+                  "safe": 678
+                }
+              }
+            ]
+          },
+          {
+            "field": "工程领域",
+            "matches": ["TA", "TI"],
+            "majors": [{
+                "name": "材料类",
+                "score": {
+                  "threshold": 661,
+                  "safe": 678
+                }
+              },
+              {
+                "name": "电子信息类",
+                "score": {
+                  "threshold": 661,
+                  "safe": 678
+                }
+              },
+              {
+                "name": "自动化",
+                "score": {
+                  "threshold": 661,
+                  "safe": 678
+                }
+              }
+            ]
+          },
+          {
+            "field": "电算机领域",
+            "majors": [{
+                "name": "计算机科学与技术",
+                "score": {
+                  "threshold": 661,
+                  "safe": 678
+                }
+              },
+              {
+                "name": "软件工程",
+                "score": {
+                  "threshold": 661,
+                  "safe": 678
+                }
+              }
+            ]
+          },
+          {
+            "field": "环境保护领域",
+						"matches": ["TA"],
+            "majors": [{
+              "name": "环境科学与工程类",
+              "score": {
+                "threshold": 661,
+                "safe": 678
+              }
+            }]
+          },
+          {
+            "field": "管理领域",
+            "matches": ["TI"],
+            "majors": [{
+                "name": "工商管理类",
+                "score": {
+                  "threshold": 661,
+                  "safe": 678
+                }
+              },
+              {
+                "name": "工业工程类",
+                "score": {
+                  "threshold": 661,
+                  "safe": 678
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "order": 9,
+        "school": {
+          "name": "南开大学",
+          "region": "天津"
+        },
+        "fields": [
+					{
+            "field": "商业领域",
+            "matches": ["TI"],
+            "majors": [{
+                "name": "经济学类",
+                "score": {
+                  "threshold": 669,
+                  "safe": 674
+                }
+              },
+              {
+                "name": "金融学类",
+                "score": {
+                  "threshold": 669,
+                  "safe": 675
+                }
+              }
+            ]
+          },
+          {
+            "field": "数学及统计领域",
+            "matches": ["TA", "TI"],
+            "majors": [{
+              "name": "数学类",
+              "score": {
+                "threshold": 668,
+                "safe": 674
+              }
+            }]
+          },
+          {
+            "field": "自然科学领域",
+            "majors": [{
+                "name": "物理学类",
+                "score": {
+                  "threshold": 668,
+                  "safe": 674
+                }
+              },
+              {
+                "name": "化学类",
+                "score": {
+                  "threshold": 668,
+                  "safe": 674
+                }
+              }
+            ]
+          },
+          {
+            "field": "生命科学领域",
+						"matches": ["TA"],
+            "majors": [{
+              "name": "生物科学类",
+              "score": {
+                "threshold": 668,
+                "safe": 674
+              }
+            }]
+          },
+          {
+            "field": "工程领域",
+            "matches": ["TA", "TI"],
+            "majors": [{
+              "name": "光电信息科学与工程",
+              "score": {
+                "threshold": 668,
+                "safe": 674
+              }
+            }]
+          },
+          {
+            "field": "电算机领域",
+            "majors": [{
+                "name": "软件工程",
+                "score": {
+                  "threshold": 668,
+                  "safe": 674
+                }
+              },
+              {
+                "name": "信息安全",
+                "score": {
+                  "threshold": 668,
+                  "safe": 674
+                }
+              }
+            ]
+          },
+          {
+            "field": "环境保护领域",
+						"matches": ["TA"],
+            "majors": [{
+              "name": "环境工程",
+              "score": {
+                "threshold": 668,
+                "safe": 674
+              }
+            }]
+          },
+          {
+            "field": "医药卫生领域",
+            "majors": [{
+              "name": "临床医学",
+              "score": {
+                "threshold": 668,
+                "safe": 674
+              }
+            }]
+          },
+					{
+            "field": "贸易营销领域",
+            "majors": [{
+              "name": "会计学",
+              "score": {
+                "threshold": 668,
+                "safe": 674
+              }
+            }]
+          },
+          {
+            "field": "管理领域",
+            "matches": ["TI"],
+            "majors": [{
+                "name": "工商管理类",
+                "score": {
+                  "threshold": 668,
+                  "safe": 674
+                }
+              },
+              {
+                "name": "城市管理",
+                "score": {
+                  "threshold": 668,
+                  "safe": 674
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "order": 10,
+        "school": {
+          "name": "同济大学",
+          "region": "上海"
+        },
+        "fields": [
+					{
+            "field": "跨领域",
+            "majors": [{
+              "name": "社会科学试验班",
+              "score": {
+                "threshold": 656,
+                "safe": 674
+              }
+            }]
+          },
+          {
+            "field": "工程领域",
+            "matches": ["TA", "TI"],
+            "majors": [
+							{
+                "name": "工业设计",
+                "score": {
+                  "threshold": 655,
+                  "safe": 673
+                }
+              },
+              {
+                "name": "车辆工程",
+                "score": {
+                  "threshold": 655,
+                  "safe": 673
+                }
+              },
+              {
+                "name": "材料科学与工程",
+                "score": {
+                  "threshold": 655,
+                  "safe": 673
+                }
+              },
+              {
+                "name": "软件工程",
+                "score": {
+                  "threshold": 655,
+                  "safe": 673
+                }
+              },
+              {
+                "name": "工科试验班",
+                "score": {
+                  "threshold": 655,
+                  "safe": 674
+                }
+              }
+            ]
+          },
+          {
+            "field": "建筑及都市规划领域",
+            "majors": [{
+              "name": "城乡规划",
+              "score": {
+                "threshold": 655,
+                "safe": 673
+              }
+            }]
+          },
+          {
+            "field": "农业科学领域",
+            "majors": [{
+              "name": "风景园林",
+              "score": {
+                "threshold": 655,
+                "safe": 673
+              }
+            }]
+          }
+        ]
+      }
+    ]
+  },
+
+  "Safe": {
+    "label": "保底",
+    "rows": [
+			{
+        "order": 11,
+        "school": {
+          "name": "北京师范大学",
+          "region": "北京",
+					"matches": ["region"]
+        },
+        "fields": [
+					{
+            "field": "跨领域",
+            "majors": [{
+              "name": "理科试验班",
+              "score": {
+                "threshold": 657,
+                "safe": 672
+              }
+            }]
+          },
+          {
+            "field": "商业领域",
+            "matches": ["TI"],
+            "majors": [{
+                "name": "经济学",
+                "score": {
+                  "threshold": 654,
+                  "safe": 672
+                }
+              },
+              {
+                "name": "金融学",
+                "score": {
+                  "threshold": 654,
+                  "safe": 672
+                }
+              },
+              {
+                "name": "国际经济与贸易",
+                "score": {
+                  "threshold": 654,
+                  "safe": 672
+                }
+              }
+            ]
+          },
+          {
+            "field": "法律领域",
+            "majors": [{
+              "name": "法学",
+              "score": {
+                "threshold": 653,
+                "safe": 672
+              }
+            }]
+          },
+          {
+            "field": "教育领域",
+            "majors": [{
+              "name": "教育学",
+              "score": {
+                "threshold": 653,
+                "safe": 672
+              }
+            }]
+          },
+          {
+            "field": "外语领域",
+            "majors": [{
+              "name": "英语",
+              "score": {
+                "threshold": 653,
+                "safe": 672
+              }
+            }]
+          },
+          {
+            "field": "数学及统计领域",
+            "matches": ["TA", "TI"],
+            "majors": [{
+                "name": "数学与应用数学",
+                "score": {
+                  "threshold": 653,
+                  "safe": 672
+                }
+              },
+              {
+                "name": "统计学",
+                "score": {
+                  "threshold": 653,
+                  "safe": 672
+                }
+              }
+            ]
+          },
+          {
+            "field": "自然科学领域",
+            "majors": [{
+                "name": "物理学",
+                "score": {
+                  "threshold": 653,
+                  "safe": 672
+                }
+              },
+              {
+                "name": "化学",
+                "score": {
+                  "threshold": 653,
+                  "safe": 672
+                }
+              },
+              {
+                "name": "地理科学类",
+                "score": {
+                  "threshold": 653,
+                  "safe": 672
+                }
+              }
+            ]
+          },
+          {
+            "field": "生命科学领域",
+						"matches": ["TA"],
+            "majors": [{
+              "name": "生物科学类",
+              "score": {
+                "threshold": 653,
+                "safe": 672
+              }
+            }]
+          },
+          {
+            "field": "心理领域",
+            "majors": [{
+              "name": "心理学",
+              "score": {
+                "threshold": 653,
+                "safe": 672
+              }
+            }]
+          },
+          {
+            "field": "工程领域",
+            "matches": ["TA", "TI"],
+            "majors": [{
+              "name": "电子信息科学与技术",
+              "score": {
+                "threshold": 653,
+                "safe": 672
+              }
+            }]
+          },
+          {
+            "field": "电算机领域",
+            "majors": [{
+              "name": "计算机科学与技术",
+              "score": {
+                "threshold": 653,
+                "safe": 672
+              }
+            }]
+          },
+          {
+            "field": "环境保护领域",
+						"matches": ["TA"],
+            "majors": [{
+                "name": "环境科学",
+                "score": {
+                  "threshold": 653,
+                  "safe": 672
+                }
+              },
+              {
+                "name": "资源环境科学",
+                "score": {
+                  "threshold": 653,
+                  "safe": 672
+                }
+              }
+            ]
+          },
+          {
+            "field": "贸易营销领域",
+            "majors": [{
+              "name": "会计学",
+              "score": {
+                "threshold": 653,
+                "safe": 672
+              }
+            }]
+          },
+          {
+            "field": "管理领域",
+            "matches": ["TI"],
+            "majors": [{
+              "name": "人力资源管理",
+              "score": {
+                "threshold": 653,
+                "safe": 672
+              }
+            }]
+          }
+        ]
+      },
+      {
+        "order": 12,
+        "school": {
+          "name": "北京航空航天大学",
+          "region": "北京",
+					"matches": ["region"]
+        },
+        "fields": [
+					{
+            "field": "跨领域",
+            "majors": [{
+                "name": "理科试验班类",
+                "score": {
+                  "threshold": 635,
+                  "safe": 671
+                }
+              },
+              {
+                "name": "社会科学试验班",
+                "score": {
+                  "threshold": 634,
+                  "safe": 672
+                }
+              }
+            ]
+          },
+          {
+            "field": "数学及统计领域",
+            "matches": ["TA", "TI"],
+            "majors": [{
+              "name": "数学类",
+              "score": {
+                "threshold": 632,
+                "safe": 671
+              }
+            }]
+          },
+          {
+            "field": "自然科学领域",
+            "majors": [{
+                "name": "物理学类",
+                "score": {
+                  "threshold": 632,
+                  "safe": 671
+                }
+              },
+              {
+                "name": "化学类",
+                "score": {
+                  "threshold": 632,
+                  "safe": 671
+                }
+              },
+              {
+                "name": "机械工程",
+                "score": {
+                  "threshold": 632,
+                  "safe": 671
+                }
+              },
+              {
+                "name": "仪器类",
+                "score": {
+                  "threshold": 632,
+                  "safe": 671
+                }
+              },
+              {
+                "name": "材料类",
+                "score": {
+                  "threshold": 632,
+                  "safe": 671
+                }
+              },
+              {
+                "name": "电气类",
+                "score": {
+                  "threshold": 632,
+                  "safe": 671
+                }
+              },
+              {
+                "name": "电子信息类",
+                "score": {
+                  "threshold": 632,
+                  "safe": 671
+                }
+              },
+              {
+                "name": "自动化类",
+                "score": {
+                  "threshold": 632,
+                  "safe": 671
+                }
+              }
+            ]
+          },
+          {
+            "field": "工程领域",
+            "matches": ["TA", "TI"],
+            "majors": [{
+              "name": "土木类",
+              "score": {
+                "threshold": 632,
+                "safe": 671
+              }
+            }]
+          },
+          {
+            "field": "电算机领域",
+            "majors": [{
+                "name": "计算机科学与技术",
+                "score": {
+                  "threshold": 632,
+                  "safe": 671
+                }
+              },
+              {
+                "name": "软件工程",
+                "score": {
+                  "threshold": 632,
+                  "safe": 671
+                }
+              }
+            ]
+          },
+          {
+            "field": "运输服务领域",
+            "majors": [{
+                "name": "交通运输类",
+                "score": {
+                  "threshold": 632,
+                  "safe": 671
+                }
+              },
+              {
+                "name": "飞行器设计与工程",
+                "score": {
+                  "threshold": 632,
+                  "safe": 671
+                }
+              },
+              {
+                "name": "飞行器动力工程",
+                "score": {
+                  "threshold": 632,
+                  "safe": 671
+                }
+              },
+              {
+                "name": "飞行器质量与可靠性",
+                "score": {
+                  "threshold": 632,
+                  "safe": 671
+                }
+              }
+            ]
+          },
+          {
+            "field": "环境保护领域",
+            "majors": [{
+              "name": "环境科学与工程类",
+              "score": {
+                "threshold": 632,
+                "safe": 671
+              }
+            }]
+          },
+          {
+            "field": "医药卫生领域",
+            "majors": [{
+              "name": "生物医学工程类",
+              "score": {
+                "threshold": 632,
+                "safe": 671
+              }
+            }]
+          },
+          {
+            "field": "管理领域",
+            "matches": ["TI"],
+            "majors": [{
+              "name": "管理科学与工程类",
+              "score": {
+                "threshold": 632,
+                "safe": 671
+              }
+            }]
+          }
+        ]
+      },
+      {
+        "order": 13,
+        "school": {
+          "name": "对外经济贸易大学",
+          "region": "北京",
+					"matches": ["region"]
+        },
+        "fields": [
+					{
+            "field": "商业领域",
+            "matches": ["TI"],
+            "majors": [
+							{
+                "name": "经济统计学",
+                "score": {
+                  "threshold": 633,
+                  "safe": 668
+                }
+              },
+              {
+                "name": "财政学",
+                "score": {
+                  "threshold": 632,
+                  "safe": 669
+                }
+              },
+              {
+                "name": "税收学",
+                "score": {
+                  "threshold": 633,
+                  "safe": 668
+                }
+              },
+              {
+                "name": "金融学",
+                "score": {
+                  "threshold": 633,
+                  "safe": 668
+                }
+              },
+              {
+                "name": "金融工程",
+                "score": {
+                  "threshold": 633,
+                  "safe": 668
+                }
+              },
+              {
+                "name": "保险学",
+                "score": {
+                  "threshold": 633,
+                  "safe": 668
+                }
+              },
+              {
+                "name": "投资学",
+                "score": {
+                  "threshold": 633,
+                  "safe": 668
+                }
+              },
+              {
+                "name": "经济与金融",
+                "score": {
+                  "threshold": 633,
+                  "safe": 668
+                }
+              },
+              {
+                "name": "国际经济与贸易",
+                "score": {
+                  "threshold": 633,
+                  "safe": 668
+                }
+              }
+            ]
+          },
+          {
+            "field": "法律领域",
+            "majors": [{
+              "name": "法学",
+              "score": {
+                "threshold": 633,
+                "safe": 668
+              }
+            }]
+          },
+          {
+            "field": "外语领域",
+            "majors": [{
+                "name": "英语",
+                "score": {
+                  "threshold": 633,
+                  "safe": 668
+                }
+              },
+              {
+                "name": "德语",
+                "score": {
+                  "threshold": 633,
+                  "safe": 668
+                }
+              },
+              {
+                "name": "法语",
+                "score": {
+                  "threshold": 633,
+                  "safe": 668
+                }
+              },
+              {
+                "name": "西班牙语",
+                "score": {
+                  "threshold": 633,
+                  "safe": 668
+                }
+              },
+              {
+                "name": "翻译",
+                "score": {
+                  "threshold": 633,
+                  "safe": 668
+                }
+              },
+              {
+                "name": "商务英语",
+                "score": {
+                  "threshold": 633,
+                  "safe": 668
+                }
+              }
+            ]
+          },
+          {
+            "field": "贸易营销领域",
+            "majors": [{
+                "name": "工商管理",
+                "score": {
+                  "threshold": 633,
+                  "safe": 668
+                }
+              },
+              {
+                "name": "市场营销",
+                "score": {
+                  "threshold": 633,
+                  "safe": 668
+                }
+              },
+              {
+                "name": "会计学",
+                "score": {
+                  "threshold": 633,
+                  "safe": 668
+                }
+              },
+              {
+                "name": "财务管理",
+                "score": {
+                  "threshold": 633,
+                  "safe": 668
+                }
+              },
+              {
+                "name": "电子商务",
+                "score": {
+                  "threshold": 633,
+                  "safe": 668
+                }
+              }
+            ]
+          },
+          {
+            "field": "管理领域",
+            "matches": ["TI"],
+            "majors": [{
+                "name": "信息管理与信息系统",
+                "score": {
+                  "threshold": 633,
+                  "safe": 668
+                }
+              },
+              {
+                "name": "人力资源管理",
+                "score": {
+                  "threshold": 633,
+                  "safe": 668
+                }
+              },
+              {
+                "name": "公共事业管理",
+                "score": {
+                  "threshold": 633,
+                  "safe": 668
+                }
+              },
+              {
+                "name": "行政管理",
+                "score": {
+                  "threshold": 633,
+                  "safe": 668
+                }
+              },
+              {
+                "name": "劳动与社会保障",
+                "score": {
+                  "threshold": 633,
+                  "safe": 668
+                }
+              },
+              {
+                "name": "海关管理",
+                "score": {
+                  "threshold": 633,
+                  "safe": 668
+                }
+              },
+              {
+                "name": "物流管理",
+                "score": {
+                  "threshold": 633,
+                  "safe": 668
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "order": 14,
+        "school": {
+          "name": "中央财经大学",
+          "region": "北京",
+					"matches": ["region"]
+        },
+        "fields": [
+					{
+            "field": "商业领域",
+            "matches": ["TI"],
+            "majors": [{
+                "name": "经济学",
+                "score": {
+                  "threshold": 641,
+                  "safe": 668
+                }
+              },
+              {
+                "name": "经济统计学",
+                "score": {
+                  "threshold": 640,
+                  "safe": 667
+                }
+              },
+              {
+                "name": "国民经济管理",
+                "score": {
+                  "threshold": 640,
+                  "safe": 667
+                }
+              },
+              {
+                "name": "财政学",
+                "score": {
+                  "threshold": 640,
+                  "safe": 667
+                }
+              },
+              {
+                "name": "税收学",
+                "score": {
+                  "threshold": 640,
+                  "safe": 667
+                }
+              },
+              {
+                "name": "金融学",
+                "score": {
+                  "threshold": 640,
+                  "safe": 667
+                }
+              },
+              {
+                "name": "金融工程",
+                "score": {
+                  "threshold": 640,
+                  "safe": 667
+                }
+              },
+              {
+                "name": "保险学",
+                "score": {
+                  "threshold": 640,
+                  "safe": 667
+                }
+              },
+              {
+                "name": "投资学",
+                "score": {
+                  "threshold": 640,
+                  "safe": 667
+                }
+              },
+              {
+                "name": "经济与贸易类",
+                "score": {
+                  "threshold": 640,
+                  "safe": 667
+                }
+              },
+              {
+                "name": "国际经济与贸易",
+                "score": {
+                  "threshold": 640,
+                  "safe": 667
+                }
+              },
+              {
+                "name": "贸易经济",
+                "score": {
+                  "threshold": 640,
+                  "safe": 667
+                }
+              }
+            ]
+          },
+          {
+            "field": "数学及统计领域",
+            "matches": ["TA", "TI"],
+            "majors": [{
+                "name": "数学与应用数学",
+                "score": {
+                  "threshold": 642,
+                  "safe": 668
+                }
+              },
+              {
+                "name": "信息与计算科学",
+                "score": {
+                  "threshold": 642,
+                  "safe": 668
+                }
+              },
+              {
+                "name": "统计学",
+                "score": {
+                  "threshold": 642,
+                  "safe": 668
+                }
+              },
+              {
+                "name": "应用统计学",
+                "score": {
+                  "threshold": 642,
+                  "safe": 668
+                }
+              }
+            ]
+          },
+          {
+            "field": "心理领域",
+            "majors": [{
+              "name": "应用心理学",
+              "score": {
+                "threshold": 642,
+                "safe": 668
+              }
+            }]
+          },
+          {
+            "field": "电算机领域",
+            "majors": [{
+                "name": "计算机科学与技术",
+                "score": {
+                  "threshold": 642,
+                  "safe": 668
+                }
+              },
+              {
+                "name": "信息安全",
+                "score": {
+                  "threshold": 642,
+                  "safe": 668
+                }
+              }
+            ]
+          },
+          {
+            "field": "管理领域",
+            "matches": ["TI"],
+            "majors": [{
+                "name": "管理科学",
+                "score": {
+                  "threshold": 642,
+                  "safe": 668
+                }
+              },
+              {
+                "name": "信息管理与信息系统",
+                "score": {
+                  "threshold": 642,
+                  "safe": 668
+                }
+              },
+              {
+                "name": "工程管理",
+                "score": {
+                  "threshold": 642,
+                  "safe": 668
+                }
+              },
+              {
+                "name": "房地产开发与管理",
+                "score": {
+                  "threshold": 642,
+                  "safe": 668
+                }
+              },
+              {
+                "name": "工商管理",
+                "score": {
+                  "threshold": 642,
+                  "safe": 668
+                }
+              },
+              {
+                "name": "人力资源管理",
+                "score": {
+                  "threshold": 642,
+                  "safe": 668
+                }
+              },
+              {
+                "name": "资产评估",
+                "score": {
+                  "threshold": 642,
+                  "safe": 668
+                }
+              },
+              {
+                "name": "体育经济与管理",
+                "score": {
+                  "threshold": 642,
+                  "safe": 668
+                }
+              },
+              {
+                "name": "公共事业管理",
+                "score": {
+                  "threshold": 642,
+                  "safe": 668
+                }
+              },
+              {
+                "name": "劳动与社会保障",
+                "score": {
+                  "threshold": 642,
+                  "safe": 668
+                }
+              },
+              {
+                "name": "城市管理",
+                "score": {
+                  "threshold": 642,
+                  "safe": 668
+                }
+              },
+              {
+                "name": "物流管理",
+                "score": {
+                  "threshold": 642,
+                  "safe": 668
+                }
+              }
+            ]
+          },
+          {
+            "field": "贸易营销领域",
+            "majors": [{
+                "name": "市场营销",
+                "score": {
+                  "threshold": 642,
+                  "safe": 668
+                }
+              },
+              {
+                "name": "会计学",
+                "score": {
+                  "threshold": 642,
+                  "safe": 668
+                }
+              },
+              {
+                "name": "财务管理",
+                "score": {
+                  "threshold": 642,
+                  "safe": 668
+                }
+              },
+              {
+                "name": "国际商务",
+                "score": {
+                  "threshold": 642,
+                  "safe": 668
+                }
+              },
+              {
+                "name": "电子商务",
+                "score": {
+                  "threshold": 642,
+                  "safe": 668
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "order": 15,
+        "school": {
+          "name": "厦门大学",
+          "region": "福建"
+        },
+        "fields": [
+					{
+            "field": "跨领域",
+            "majors": [{
+              "name": "人文科学试验班",
+              "score": {
+                "threshold": 656,
+                "safe": 663
+              }
+            }]
+          },
+          {
+            "field": "商业领域",
+            "matches": ["TI"],
+            "majors": [{
+              "name": "经济学类",
+              "score": {
+                "threshold": 655,
+                "safe": 662
+              }
+            }]
+          },
+          {
+            "field": "法律领域",
+            "majors": [{
+              "name": "法学类",
+              "score": {
+                "threshold": 655,
+                "safe": 662
+              }
+            }]
+          },
+          {
+            "field": "外语领域",
+            "majors": [{
+              "name": "日语",
+              "score": {
+                "threshold": 654,
+                "safe": 662
+              }
+            }]
+          },
+          {
+            "field": "传播领域",
+            "majors": [{
+              "name": "新闻传播学类",
+              "score": {
+                "threshold": 655,
+                "safe": 662
+              }
+            }]
+          },
+          {
+            "field": "数学及统计领域",
+            "matches": ["TA", "TI"],
+            "majors": [{
+              "name": "数学类",
+              "score": {
+                "threshold": 655,
+                "safe": 662
+              }
+            }]
+          },
+          {
+            "field": "自然科学领域",
+            "majors": [{
+                "name": "物理学类",
+                "score": {
+                  "threshold": 655,
+                  "safe": 662
+                }
+              },
+              {
+                "name": "化学类",
+                "score": {
+                  "threshold": 655,
+                  "safe": 662
+                }
+              },
+              {
+                "name": "海洋科学类",
+                "score": {
+                  "threshold": 655,
+                  "safe": 662
+                }
+              }
+            ]
+          },
+          {
+            "field": "生命科学领域",
+						"matches": ["TA"],
+            "majors": [{
+              "name": "生物科学类",
+              "score": {
+                "threshold": 655,
+                "safe": 662
+              }
+            }]
+          },
+          {
+            "field": "工程领域",
+            "matches": ["TA", "TI"],
+            "majors": [{
+                "name": "电子信息类",
+                "score": {
+                  "threshold": 655,
+                  "safe": 662
+                }
+              },
+              {
+                "name": "化学工程与工艺",
+                "score": {
+                  "threshold": 655,
+                  "safe": 662
+                }
+              }
+            ]
+          },
+          {
+            "field": "电算机领域",
+            "majors": [{
+                "name": "计算机类",
+                "score": {
+                  "threshold": 655,
+                  "safe": 662
+                }
+              },
+              {
+                "name": "软件工程",
+                "score": {
+                  "threshold": 655,
+                  "safe": 662
+                }
+              }
+            ]
+          },
+          {
+            "field": "运输服务领域",
+            "majors": [{
+              "name": "航空航天类",
+              "score": {
+                "threshold": 655,
+                "safe": 662
+              }
+            }]
+          },
+          {
+            "field": "环境保护领域",
+						"matches": ["TA"],
+            "majors": [{
+              "name": "环境科学与工程类",
+              "score": {
+                "threshold": 655,
+                "safe": 662
+              }
+            }]
+          },
+          {
+            "field": "贸易营销领域",
+            "majors": [{
+              "name": "工商管理类",
+              "score": {
+                "threshold": 655,
+                "safe": 662
+              }
+            }]
+          },
+          {
+            "field": "管理领域",
+            "matches": ["TI"],
+            "majors": [{
+              "name": "公共管理类",
+              "score": {
+                "threshold": 655,
+                "safe": 662
+              }
+            }]
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,716 @@
+{
+  "Sprint": {
+    "label": "冲刺",
+    "rows": []
+  },
+  "Stable": {
+    "label": "稳妥",
+    "rows": [
+      {
+        "order": 1,
+        "school": {
+          "name": "广西大学",
+          "code": "10593"
+        },
+        "major": {
+          "name": "汉语言文学",
+          "code": "111"
+        },
+        "region": "广西",
+        "schoolType": "公办",
+        "category": "普通类(历史)",
+        "scale": {
+          "plan": 39,
+          "admitted": 39
+        },
+        "score": {
+          "min": 591,
+          "avg": 597,
+          "max": 611
+        },
+        "rankMin": 1905,
+        "gap": 109
+      },
+      {
+        "order": 2,
+        "school": {
+          "name": "广西师范大学",
+          "code": "10602"
+        },
+        "major": {
+          "name": "汉语言文学(国家文科基地班)",
+          "code": "111"
+        },
+        "region": "广西",
+        "schoolType": "公办",
+        "category": "普通类(历史)",
+        "scale": {
+          "plan": 16,
+          "admitted": 16
+        },
+        "score": {
+          "min": 591,
+          "avg": 596,
+          "max": 608
+        },
+        "rankMin": 1938,
+        "gap": 109
+      },
+      {
+        "order": 3,
+        "school": {
+          "name": "广西大学",
+          "code": "10593"
+        },
+        "major": {
+          "name": "法学",
+          "code": "111"
+        },
+        "region": "广西",
+        "schoolType": "公办",
+        "category": "普通类(历史)",
+        "scale": {
+          "plan": 65,
+          "admitted": 65
+        },
+        "score": {
+          "min": 591,
+          "avg": 596,
+          "max": 605
+        },
+        "rankMin": 1913,
+        "gap": 109
+      },
+      {
+        "order": 4,
+        "school": {
+          "name": "广西大学",
+          "code": "10593"
+        },
+        "major": {
+          "name": "汉语言文学",
+          "code": "711"
+        },
+        "region": "广西",
+        "schoolType": "公办",
+        "category": "普通类(历史)",
+        "scale": {
+          "plan": 5,
+          "admitted": 5
+        },
+        "score": {
+          "min": 590,
+          "avg": 592,
+          "max": 596
+        },
+        "rankMin": 2002,
+        "gap": 110
+      },
+      {
+        "order": 5,
+        "school": {
+          "name": "广西大学",
+          "code": "10593"
+        },
+        "major": {
+          "name": "思想政治教育",
+          "code": "113"
+        },
+        "region": "广西",
+        "schoolType": "公办",
+        "category": "普通类(历史)",
+        "scale": {
+          "plan": 19,
+          "admitted": 19
+        },
+        "score": {
+          "min": 587,
+          "avg": 592,
+          "max": 598
+        },
+        "rankMin": 2160,
+        "gap": 113
+      },
+      {
+        "order": 6,
+        "school": {
+          "name": "广西大学",
+          "code": "10593"
+        },
+        "major": {
+          "name": "新闻传播学类",
+          "code": "711"
+        },
+        "region": "广西",
+        "schoolType": "公办",
+        "category": "普通类(历史)",
+        "scale": {
+          "plan": 5,
+          "admitted": 5
+        },
+        "score": {
+          "min": 586,
+          "avg": 588,
+          "max": 590
+        },
+        "rankMin": 2227,
+        "gap": 114
+      },
+      {
+        "order": 7,
+        "school": {
+          "name": "广西大学",
+          "code": "10593"
+        },
+        "major": {
+          "name": "汉语言国际教育",
+          "code": "111"
+        },
+        "region": "广西",
+        "schoolType": "公办",
+        "category": "普通类(历史)",
+        "scale": {
+          "plan": 20,
+          "admitted": 20
+        },
+        "score": {
+          "min": 583,
+          "avg": 586,
+          "max": 591
+        },
+        "rankMin": 2554,
+        "gap": 117
+      },
+      {
+        "order": 8,
+        "school": {
+          "name": "广西大学",
+          "code": "10593"
+        },
+        "major": {
+          "name": "哲学",
+          "code": "111"
+        },
+        "region": "广西",
+        "schoolType": "公办",
+        "category": "普通类(历史)",
+        "scale": {
+          "plan": 18,
+          "admitted": 18
+        },
+        "score": {
+          "min": 582,
+          "avg": 584,
+          "max": 591
+        },
+        "rankMin": 2610,
+        "gap": 118
+      },
+      {
+        "order": 9,
+        "school": {
+          "name": "广西大学",
+          "code": "10593"
+        },
+        "major": {
+          "name": "日语",
+          "code": "111"
+        },
+        "region": "广西",
+        "schoolType": "公办",
+        "category": "普通类(历史)",
+        "scale": {
+          "plan": 14,
+          "admitted": 14
+        },
+        "score": {
+          "min": 581,
+          "avg": 586,
+          "max": 591
+        },
+        "rankMin": 2653,
+        "gap": 119
+      },
+      {
+        "order": 10,
+        "school": {
+          "name": "广西大学",
+          "code": "10593"
+        },
+        "major": {
+          "name": "外国语言文学类",
+          "code": "111"
+        },
+        "region": "广西",
+        "schoolType": "公办",
+        "category": "普通类(历史)",
+        "scale": {
+          "plan": 35,
+          "admitted": 32
+        },
+        "score": {
+          "min": 580,
+          "avg": 586,
+          "max": 605
+        },
+        "rankMin": 2782,
+        "gap": 120
+      },
+      {
+        "order": 11,
+        "school": {
+          "name": "广西大学",
+          "code": "10593"
+        },
+        "major": {
+          "name": "新闻传播学类",
+          "code": "111"
+        },
+        "region": "广西",
+        "schoolType": "公办",
+        "category": "普通类(历史)",
+        "scale": {
+          "plan": 42,
+          "admitted": 43
+        },
+        "score": {
+          "min": 580,
+          "avg": 584,
+          "max": 591
+        },
+        "rankMin": 2776,
+        "gap": 120
+      },
+      {
+        "order": 12,
+        "school": {
+          "name": "广西大学",
+          "code": "10593"
+        },
+        "major": {
+          "name": "法学",
+          "code": "511"
+        },
+        "region": "广西",
+        "schoolType": "公办",
+        "category": "普通类(历史)",
+        "scale": {
+          "plan": 5,
+          "admitted": 5
+        },
+        "score": {
+          "min": 578,
+          "avg": 584,
+          "max": 593
+        },
+        "rankMin": 2985,
+        "gap": 122
+      },
+      {
+        "order": 13,
+        "school": {
+          "name": "广西大学",
+          "code": "10593"
+        },
+        "major": {
+          "name": "新闻传播学类",
+          "code": "512"
+        },
+        "region": "广西",
+        "schoolType": "公办",
+        "category": "普通类(历史)",
+        "scale": {
+          "plan": 3,
+          "admitted": 3
+        },
+        "score": {
+          "min": 578,
+          "avg": 580,
+          "max": 582
+        },
+        "rankMin": 2927,
+        "gap": 122
+      },
+      {
+        "order": 14,
+        "school": {
+          "name": "广西师范大学",
+          "code": "10602"
+        },
+        "major": {
+          "name": "汉语言文学",
+          "code": "711"
+        },
+        "region": "广西",
+        "schoolType": "公办",
+        "category": "普通类(历史)",
+        "scale": {
+          "plan": 8,
+          "admitted": 8
+        },
+        "score": {
+          "min": 576,
+          "avg": 580,
+          "max": 591
+        },
+        "rankMin": 3171,
+        "gap": 124
+      },
+      {
+        "order": 15,
+        "school": {
+          "name": "广西大学",
+          "code": "10593"
+        },
+        "major": {
+          "name": "汉语国际教育",
+          "code": "512"
+        },
+        "region": "广西",
+        "schoolType": "公办",
+        "category": "普通类(历史)",
+        "scale": {
+          "plan": 3,
+          "admitted": 3
+        },
+        "score": {
+          "min": 575,
+          "avg": 577,
+          "max": 578
+        },
+        "rankMin": 3213,
+        "gap": 125
+      },
+      {
+        "order": 16,
+        "school": {
+          "name": "广西大学",
+          "code": "10593"
+        },
+        "major": {
+          "name": "汉语言文学",
+          "code": "511"
+        },
+        "region": "广西",
+        "schoolType": "公办",
+        "category": "普通类(历史)",
+        "scale": {
+          "plan": 5,
+          "admitted": 5
+        },
+        "score": {
+          "min": 574,
+          "avg": 577,
+          "max": 578
+        },
+        "rankMin": 3339,
+        "gap": 126
+      },
+      {
+        "order": 17,
+        "school": {
+          "name": "广西师范大学",
+          "code": "10602"
+        },
+        "major": {
+          "name": "法学",
+          "code": "711"
+        },
+        "region": "广西",
+        "schoolType": "公办",
+        "category": "普通类(历史)",
+        "scale": {
+          "plan": 3,
+          "admitted": 3
+        },
+        "score": {
+          "min": 571,
+          "avg": 573,
+          "max": 575
+        },
+        "rankMin": 3598,
+        "gap": 129
+      },
+      {
+        "order": 18,
+        "school": {
+          "name": "广西师范大学",
+          "code": "10602"
+        },
+        "major": {
+          "name": "汉语言文学",
+          "code": "111"
+        },
+        "region": "广西",
+        "schoolType": "公办",
+        "category": "普通类(历史)",
+        "scale": {
+          "plan": 183,
+          "admitted": 183
+        },
+        "score": {
+          "min": 570,
+          "avg": 578,
+          "max": 590
+        },
+        "rankMin": 3766,
+        "gap": 130
+      },
+      {
+        "order": 19,
+        "school": {
+          "name": "广西师范大学",
+          "code": "10602"
+        },
+        "major": {
+          "name": "英语",
+          "code": "711"
+        },
+        "region": "广西",
+        "schoolType": "公办",
+        "category": "普通类(历史)",
+        "scale": {
+          "plan": 3,
+          "admitted": 3
+        },
+        "score": {
+          "min": 570,
+          "avg": 572,
+          "max": 573
+        },
+        "rankMin": 3723,
+        "gap": 130
+      },
+      {
+        "order": 20,
+        "school": {
+          "name": "广西师范大学",
+          "code": "10602"
+        },
+        "major": {
+          "name": "思想政治教育",
+          "code": "712"
+        },
+        "region": "广西",
+        "schoolType": "公办",
+        "category": "普通类(历史)",
+        "scale": {
+          "plan": 6,
+          "admitted": 6
+        },
+        "score": {
+          "min": 569,
+          "avg": 575,
+          "max": 578
+        },
+        "rankMin": 3855,
+        "gap": 131
+      }
+    ]
+  },
+  "Safe": {
+    "label": "保底",
+    "rows": [
+      {
+        "order": 1,
+        "school": {
+          "name": "广西师范大学",
+          "code": "10602"
+        },
+        "major": {
+          "name": "思想政治教育",
+          "code": "514"
+        },
+        "region": "广西",
+        "schoolType": "公办",
+        "category": "普通类(历史)",
+        "scale": {
+          "plan": 12,
+          "admitted": 12
+        },
+        "score": {
+          "min": 559,
+          "avg": 565,
+          "max": 581
+        },
+        "rankMin": 5069,
+        "gap": 141
+      },
+      {
+        "order": 2,
+        "school": {
+          "name": "广西师范大学",
+          "code": "10602"
+        },
+        "major": {
+          "name": "法学",
+          "code": "512"
+        },
+        "region": "广西",
+        "schoolType": "公办",
+        "category": "普通类(历史)",
+        "scale": {
+          "plan": 9,
+          "admitted": 9
+        },
+        "score": {
+          "min": 559,
+          "avg": 562,
+          "max": 568
+        },
+        "rankMin": 5035,
+        "gap": 141
+      },
+      {
+        "order": 3,
+        "school": {
+          "name": "广西师范大学",
+          "code": "10602"
+        },
+        "major": {
+          "name": "英语",
+          "code": "512"
+        },
+        "region": "广西",
+        "schoolType": "公办",
+        "category": "普通类(历史)",
+        "scale": {
+          "plan": 5,
+          "admitted": 5
+        },
+        "score": {
+          "min": 558,
+          "avg": 562,
+          "max": 566
+        },
+        "rankMin": 5191,
+        "gap": 142
+      },
+      {
+        "order": 4,
+        "school": {
+          "name": "广西师范大学",
+          "code": "10602"
+        },
+        "major": {
+          "name": "政治学与行政学",
+          "code": "113"
+        },
+        "region": "广西",
+        "schoolType": "公办",
+        "category": "普通类(历史)",
+        "scale": {
+          "plan": 30,
+          "admitted": 30
+        },
+        "score": {
+          "min": 558,
+          "avg": 561,
+          "max": 568
+        },
+        "rankMin": 5133,
+        "gap": 142
+      },
+      {
+        "order": 5,
+        "school": {
+          "name": "广西师范大学",
+          "code": "10602"
+        },
+        "major": {
+          "name": "文化产业管理",
+          "code": "111"
+        },
+        "region": "广西",
+        "schoolType": "公办",
+        "category": "普通类(历史)",
+        "scale": {
+          "plan": 4,
+          "admitted": 4
+        },
+        "score": {
+          "min": 557,
+          "avg": 559,
+          "max": 563
+        },
+        "rankMin": 5355,
+        "gap": 143
+      },
+      {
+        "order": 6,
+        "school": {
+          "name": "广西师范大学",
+          "code": "10602"
+        },
+        "major": {
+          "name": "历史学",
+          "code": "512"
+        },
+        "region": "广西",
+        "schoolType": "公办",
+        "category": "普通类(历史)",
+        "scale": {
+          "plan": 18,
+          "admitted": 18
+        },
+        "score": {
+          "min": 556,
+          "avg": 560,
+          "max": 576
+        },
+        "rankMin": 5468,
+        "gap": 144
+      },
+      {
+        "order": 7,
+        "school": {
+          "name": "广西师范大学",
+          "code": "10602"
+        },
+        "major": {
+          "name": "小学教育",
+          "code": "111"
+        },
+        "region": "广西",
+        "schoolType": "公办",
+        "category": "普通类(历史)",
+        "scale": {
+          "plan": 21,
+          "admitted": 21
+        },
+        "score": {
+          "min": 556,
+          "avg": 560,
+          "max": 569
+        },
+        "rankMin": 5498,
+        "gap": 144
+      },
+      {
+        "order": 8,
+        "school": {
+          "name": "广西师范大学",
+          "code": "10602"
+        },
+        "major": {
+          "name": "学前教育",
+          "code": "512"
+        },
+        "region": "广西",
+        "schoolType": "公办",
+        "category": "普通类(历史)",
+        "scale": {
+          "plan": 5,
+          "admitted": 5
+        },
+        "score": {
+          "min": 556,
+          "avg": 557,
+          "max": 560
+        },
+        "rankMin": 5518,
+        "gap": 144
+      }
+    ]
+  }
+}
