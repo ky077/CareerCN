@@ -1,0 +1,14 @@
+.resetPD{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-image: url("../img/bg.jpg");
+	background-position: center bottom;	
+	background-repeat: no-repeat;
+	background-size: cover;	
+}
+.resetPD-panel{ 
+	background-color: rgba(#fff, .85);
+	border-radius: $border-radius-lg;
+	padding: 2rem;
+}

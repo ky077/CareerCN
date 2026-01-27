@@ -32,9 +32,19 @@ a{
     text-underline-offset: .25em;  
     word-break: break-all;
 }
+[class*="btn-outline"]{
+	&[class*="gray-100"], &[class*="gray-200"], &[class*="gray-200"], &[class*="gray-400"]{
+		color: $body-color;
+		&:hover, &:focus, &:active{
+			color: $body-color;	
+		}
+	}
+}
+
 .form-check-input{
 	background-size: 130% 130% !important;
 }
+
 .form-check-input[type="radio"]:checked{
 	background-color: $white !important;
 }
@@ -43,6 +53,17 @@ a{
 	position: absolute;
 	transform: translate(-.5em, -.25em);
 }
+.input-group {
+	[class*="btn"]{
+		color: $input-color;
+		background-color: $input-bg;
+		border-color: $input-border-color;
+		&:hover{
+			background-color: $primary-100;
+		}
+	}
+}
+
 .icon-link {
 	align-items: flex-start;
 }
