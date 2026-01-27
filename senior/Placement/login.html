@@ -55,38 +55,38 @@
     <!-- Content Start -->
     <div class="container-fluid">
       <div class="row justify-content-center"> 
-        <!-- panel 開始-->
+        <!-- panel 开始-->
         <div class="col col-sm-7 col-lg-5 col-xxl-4 wow animate__animated animate__fadeInUp">
           <div class="login-panel">
-            <h2 class="text-center">歡迎回來</h2>
-            <p class="small text-center text-secondary mb-5">登入以查看您的個人化落點分析報告</p>
+            <h2 class="text-center">欢迎回来</h2>
+            <p class="small text-center text-secondary mb-5">登录以查看您的个人化落点分析报告</p>
             <div class="row">
               <div class="col-9 col-xxl-8 mx-auto">
                 <div class="mb-4">
-                  <label for="inputEmail" class="form-label mb-1">帳號</label>
+                  <label for="inputEmail" class="form-label mb-1">账号/邮箱</label>
                   <input type="email" class="form-control" id="inputEmail" placeholder="example@email.com">
                 </div>
                 <div class="mb-4">
                   <div class="d-flex justify-content-between align-items-center">
-                    <label for="inputPassword" class="form-label mb-1">密碼</label>
-                    <a href="#" type="button" data-bs-toggle="modal" data-bs-target="#forgetPdModal" class="fs-8">忘記密碼？</a></div>
+                    <label for="inputPassword" class="form-label mb-1">密码</label>
+                    <a href="#" type="button" data-bs-toggle="modal" data-bs-target="#forgetPdModal" class="fs-8">忘记密码？</a></div>
                   <div class="input-group">
-                    <input type="password" class="form-control" id="inputPassword" placeholder="請輸入您的密碼" aria-label="密碼" aria-describedby="passwordHelp">
-                    <button class="btn btn-showHidePD" type="button" id="togglePassword" aria-label="顯示或隱藏密碼"> <i class="bi bi-eye-slash-fill"></i> </button>
+                    <input type="password" class="form-control" id="inputPassword" placeholder="请输入您的密码" aria-label="密码" aria-describedby="passwordHelp">
+                    <button class="btn btn-showHidePD" type="button" id="togglePassword" aria-label="显示或隐藏密码"> <i class="bi bi-eye-slash-fill"></i> </button>
                   </div>
                 </div>
                 <div class="mb-1"><a href="myRecommend.html?uid=0" class="btn btn-primary w-100">立即登入</a></div>
-                <p class="small text-center mb-5 text-body-secondary">還沒有帳號？<a href="register.html">免費註冊</a></p>
+                <p class="small text-center mb-5 text-body-secondary">还没有账号？<a href="register.html">免费注册</a></p>
               </div>
             </div>
           </div>
         </div>
-        <!-- panel 結束--> 
+        <!-- panel 结束--> 
       </div>
     </div>
     <!-- Content End --> 
     
-    <!-- 忘記密碼Modal START -->
+    <!-- 忘记密码Modal START -->
     <div class="modal fade" id="forgetPdModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="forgetPdModal" aria-hidden="true">
       <div class="modal-dialog modal-lg modal-dialog-centered">
         <div class="modal-content">
@@ -96,9 +96,9 @@
           <div class="modal-body">
             <div class="row py-5">
               <div class="col-auto mx-auto">
-                <h2 class="text-center mb-4">忘記密碼</h2>
+                <h2 class="text-center mb-4">忘记密码</h2>
                 <div class="mb-4">
-                  <label for="inputGetEmail" class="form-label mb-1">請輸入您的信箱帳號以收取重製密碼信</label>
+                  <label for="inputGetEmail" class="form-label mb-1">请输入您注册时的邮箱以收取重制密码信</label>
                   <input type="email" class="form-control" id="inputGetEmail" placeholder="example@email.com">
                 </div>
                 <div class="mb-4">
@@ -110,12 +110,13 @@
         </div>
       </div>
     </div>
-    <!-- 忘記密碼Modal  END  --> 
+    <!-- 忘记密码Modal  END  --> 
   </main>
   <footer> </footer>
   <!-- Back to Top --> 
   <a href="#" class="btn btn-outline-primary rounded-circle back-to-top" aria-label="返回顶端" style="display: none;"><i class="bi bi-arrow-up"></i></a>
 </form>
+
 <!-- ------- ------- ------- ------- ------- ------- ------- --> 
 <!-- ------- ------- ------- ------- ------- ------- ------- --> 
 <!-- ------- ------- ------- ------- ------- ------- ------- --> 
@@ -133,7 +134,7 @@
 <script>
 //[忘記密碼]	
 $('#btnGetPd').click(function(){
-    alertModalDOM('已將重製密碼信寄送至您的電子信箱<div class="text-info">a***a@gmail.com</div>', 'md', '確定');
+    alertModalDOM('已将重制密码信寄送至您的邮箱<div class="text-info">a***a@gmail.com</div>', 'md', '确定');
 });
 </script>
 </body>

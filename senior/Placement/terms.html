@@ -49,45 +49,30 @@
     <div class="spinner-border" role="status"> <span class="visually-hidden">加载中...</span> </div>
   </div>
   <!-- Spinner End -->
-  
   <header> </header>
-  <main class="resetPD"> 
-    <!-- Content Start -->
-    <div class="container-fluid">
-      <div class="row justify-content-center"> 
-        <!-- panel 开始-->
-        <div class="col col-sm-7 col-lg-5 col-xxl-4 wow animate__animated animate__fadeInUp">
-          <div class="resetPD-panel">
-            <h2 class="text-center">重设密码</h2>
-            <div class="row">
-              <div class="col-11 col-xxl-10 mx-auto">
-                <div class="mb-4">
-                  <label for="inputEmail" class="form-label mb-1">账号/邮箱</label>
-                  <input type="email" class="form-control" id="inputEmail" placeholder="请输入您的Email" value="aaa@gmail.com" disabled>
-                </div>
-                <div class="mb-4">
-                  <label for="inputPassword" class="form-label mb-1">新密码</label>
-                  <div class="input-group mb-3">
-                    <input type="password" class="form-control" id="inputPassword" placeholder="请输入6至15位英数字混和之密码" aria-label="密码" aria-describedby="passwordHelp">
-                    <button class="btn btn-showHidePD" type="button" id="togglePassword" aria-label="显示或隐藏密码"> <i class="bi bi-eye-slash-fill"></i> </button>
-                  </div>
-                </div>
-                <div class="mb-4">
-                  <label for="inputCheckPassword" class="form-label mb-1">确认新密码</label>
-                  <div class="input-group mb-3">
-                    <input type="password" class="form-control" id="inputCheckPassword" placeholder="请再次输入密码" aria-label="确认密码" aria-describedby="passwordCheckHelp">
-                    <button class="btn btn-showHidePD" type="button" id="toggleCheckPassword" aria-label="显示或隐藏确认密码"> <i class="bi bi-eye-slash-fill"></i> </button>
-                  </div>
-                </div>
-                <div class="mb-1">
-                  <button type="button" class="btn btn-primary w-100" id="RESET">重设密码</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- panel 结束--> 
+  <main class="terms"> 
+    <!-- page-header Start -->
+    <div class="container-fluid page-header">
+      <div class="container wow animate__animated animate__slideInDown">
+        <h2 class="page-header-title">版权说明</h2>
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-center">
+            <li class="breadcrumb-item"><a href="index.html">首页</a></li>
+            <li class="breadcrumb-item active" aria-current="page">版权说明</li>
+          </ol>
+        </nav>
       </div>
+    </div>
+    <!-- page-header End --> 
+    <!-- Content Start -->
+    <div class="container py-5 text-muted wow animate__animated animate__fadeInUp">
+      <ul>
+        <li class="mb-4">职涯测验系统上刊载的所有内容，包括文字、照片、影像、插图或其他任何形式之素材等，均受到中华民国著作权法及国际著作权法律的保障。 网站内容的著作权为国立台湾师范大学心测中心及数字学习研究室所有。 </li>
+        <li class="mb-4">任何人对于职涯测验系统提供的内容与服务，仅能使用于个人、非商业用途，使用人利用时必须遵守著作权法的所有相关规定，否则将构成著作权之侵害，而须依法负民事及刑事责任。</li>
+        <li class="mb-4">非经取得著作权人书面同意或授权，使用者不得变更、发行、播送、转卖、重制、改作、散布、表演、展示或利用职涯测验系统的局部或全部的内容或服务，以赚取利益。</li>
+        <li class="mb-4">用户下载或拷贝网站的内容或服务仅可供个人、非商业用途之使用。个人使用以外之其他用途，在未取得职涯测验系统书面许可之前，完全禁止。</li>
+        <li class="mb-4">如有任何授权问题，请来信 email：career.ntnu@gmail.com</li>
+      </ul>
     </div>
     <!-- Content End --> 
   </main>
@@ -101,25 +86,16 @@
 <!-- ------- ------- ------- ------- ------- ------- ------- --> 
 <!-- JavaScript Libraries --> 
 <script src="Content/js/jquery-3.4.1.min.js"></script> 
-<script src="Content/lib/bootstrap-5.3.8/dist/js/bootstrap.bundle.min.js"></script> 
-<script src="Content/lib/WOW-master/dist/wow.min.js"></script> 
-
-<!-- This page Javascript Libraries --> 
+<script src="Content/lib/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script> 
 <script src="Content/lib/OwlCarousel2-2.3.4/owl.carousel.min.js"></script> 
+<script src="Content/lib/WOW-master/dist/wow.min.js"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/counterup2/2.0.2/index.min.js"></script> 
 
 <!-- This web Javascript --> 
 <script src="Content/js/fn.js"></script> 
 <script src="Content/js/main.js"></script> 
 <script>
-	
-//[重設密碼]
-$('#RESET').click(function(){
-	alertModalDOM('<div class="text-center">您已成功重设密码，可立即用新密码登入！</div>', size='md', btnOkText='确定');
-	$('#ALERT_OK').click(function(){
-		window.location.href = 'login.html';	
-	});
-});
-	
+
 </script>
 </body>
 </html>
