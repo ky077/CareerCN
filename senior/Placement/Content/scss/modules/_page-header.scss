@@ -1,33 +1,30 @@
 .page-header {
 	padding-top: map-get($spacers, 5);
   padding-bottom: map-get($spacers, 3);
-	background-image: url("../img/bg.jpg");
-  background-repeat: no-repeat;
-  background-position: center bottom;
-  background-size: cover;
 	position: relative;
+	&::before{
+		content: "";
+		display: block;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-image: url("../img/bg.jpg");
+		background-repeat: no-repeat;
+		background-position: center bottom;
+		background-size: cover;
+	}
+	> * {
+		position: relative;
+		z-index: 1;
+	}
 	.page-header-title{
 		font-size: 3.5rem;
 		font-weight: bold;
 		text-align: center;
 		margin-bottom: 0;
 	}
-	/*h2{display-4 text-center fw-bold
-		color: #fff;
-    	filter: opacity(0.9);
-	}
-	nav{
-		filter: opacity(.75);
-	}*/
-	/*.breadcrumb{
-		color: $white;
-		--bs-breadcrumb-divider-color: var(--bs-white);
-		--bs-breadcrumb-item-active-color: var(--bs-white);
-		a{
-			color: $white;
-			&:hover{
-				color: $tertiary;
-			}
-		}
-	}*/
 }
