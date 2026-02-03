@@ -16,26 +16,30 @@
 			font-size: $h1-font-size;
 			margin-bottom: 2.5rem;
 			margin-top: map-get($spacers, 5);
-			filter: drop-shadow(0 0 5px $white);
+			filter: drop-shadow(0 0 1px rgba($white, .5))
+							drop-shadow(0 0 2px rgba($white, .5)) 
+							drop-shadow(0 0 3px rgba($white, .5))
+							drop-shadow(0 0 4px rgba($white, .5))
+							drop-shadow(0 0 5px rgba($white, .5));
 		}
 		.section-slogan{
 			color: $cyan;
 			font-weight: 600;
 			font-size: $h5-font-size;
 			margin-bottom: 2.5rem;
-			filter: drop-shadow(0 0 1px $white)
-							drop-shadow(0 0 2px $white) 
-							drop-shadow(0 0 3px $white)
-							drop-shadow(0 0 4px $white)
-							drop-shadow(0 0 5px $white);
+			filter: drop-shadow(0 0 1px rgba($white, .5))
+							drop-shadow(0 0 2px rgba($white, .5)) 
+							drop-shadow(0 0 3px rgba($white, .5))
+							drop-shadow(0 0 4px rgba($white, .5))
+							drop-shadow(0 0 5px rgba($white, .5));
 		}
 		p{
 			color: $gray-600; 
-			filter: drop-shadow(0 0 1px $white)
-							drop-shadow(0 0 2px $white) 
-							drop-shadow(0 0 3px $white)
-							drop-shadow(0 0 4px $white)
-							drop-shadow(0 0 5px $white);
+			filter: drop-shadow(0 0 1px rgba($white, .5))
+							drop-shadow(0 0 2px rgba($white, .5)) 
+							drop-shadow(0 0 3px rgba($white, .5))
+							drop-shadow(0 0 4px rgba($white, .5))
+							drop-shadow(0 0 5px rgba($white, .5));
 		}
 	}
 	@keyframes play {
