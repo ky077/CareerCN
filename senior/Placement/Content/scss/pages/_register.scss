@@ -13,6 +13,7 @@
 	padding: 2rem;
 	margin-top: map-get($spacers, 5);
 	margin-bottom: map-get($spacers, 5);
+	box-shadow: $box-shadow-sm;
 	.btn-check:not(:checked) + .btn{
 		&:hover{
 			background-color: $primary-bg-subtle !important;
