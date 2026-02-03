@@ -86,6 +86,7 @@ header{
 				}
 			}
 			
+			
 			.nav-others{
 				&.dropdown-toggle::after {
 					display: none;
@@ -106,13 +107,14 @@ header{
 					font-size: calc((1em*1.5 + 0.375rem*2 + 2px)*.4);
 				}
 			}
-        }
+			.nav-register, .nav-user {
+				margin-top: .5rem;
+				@media screen and (min-width: 1200px) {
+				margin-top: 0;	
+				}
+			}
+     }
     }
 	
-	.nav-logout, .nav-user {
-		margin-top: .5rem;
-		@media screen and (min-width: 1200px) {
-		margin-top: 0;	
-		}
-	}
+
 }
