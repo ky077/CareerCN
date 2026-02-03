@@ -16,22 +16,29 @@
 			font-size: $h1-font-size;
 			margin-bottom: 2.5rem;
 			margin-top: map-get($spacers, 5);
-			filter: drop-shadow(0 0 1px rgba($white, .5))
-							drop-shadow(0 0 2px rgba($white, .5)) 
-							drop-shadow(0 0 3px rgba($white, .5))
-							drop-shadow(0 0 4px rgba($white, .5))
-							drop-shadow(0 0 5px rgba($white, .5));
+			filter: drop-shadow(0 0 1px rgba($white, .70))
+							drop-shadow(0 0 2px rgba($white, .65)) 
+							drop-shadow(0 0 3px rgba($white, .60))
+							drop-shadow(0 0 4px rgba($white, .55))
+							drop-shadow(0 0 5px rgba($white, .50));
+			.section-title-img{
+				width: 50%;
+				margin-bottom: map-get($spacers, 3);
+				@media screen and (min-width: 576px) {
+				width: 25%;	
+				}
+			}
 		}
 		.section-slogan{
 			color: $cyan;
 			font-weight: 600;
 			font-size: $h5-font-size;
 			margin-bottom: 2.5rem;
-			filter: drop-shadow(0 0 1px rgba($white, .5))
-							drop-shadow(0 0 2px rgba($white, .5)) 
-							drop-shadow(0 0 3px rgba($white, .5))
-							drop-shadow(0 0 4px rgba($white, .5))
-							drop-shadow(0 0 5px rgba($white, .5));
+			filter: drop-shadow(0 0 1px rgba($white, .70))
+							drop-shadow(0 0 2px rgba($white, .65)) 
+							drop-shadow(0 0 3px rgba($white, .60))
+							drop-shadow(0 0 4px rgba($white, .55))
+							drop-shadow(0 0 5px rgba($white, .50));
 		}
 		p{
 			color: $gray-600; 
