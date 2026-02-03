@@ -1,0 +1,226 @@
+.intro{
+	.section{
+		position: relative;	
+	}
+	.section1{
+		min-height: calc(100vh - (3.5rem + #{$navbar-brand-padding-y}*2 + #{$navbar-padding-y}*2));
+		background-image: url("../img/intro/section1-wave.png"), url("../img/intro/section1-student.png"), url("../img/intro/section1-bg.jpg");
+		background-position: bottom center, bottom right 15%, bottom center;
+		background-repeat: no-repeat;
+		background-size: 1920px auto, auto 70%, cover;
+		padding-top: map-get($spacers, 4);
+		padding-bottom: map-get($spacers, 5);
+		.section-title{
+			color: $primary-700;
+			font-weight: 800;
+			font-size: $h1-font-size;
+			margin-bottom: 2.5rem;
+			margin-top: map-get($spacers, 5);
+			filter: drop-shadow(0 0 5px $white);
+		}
+		.section-slogan{
+			color: $cyan;
+			font-weight: 600;
+			font-size: $h5-font-size;
+			margin-bottom: 2.5rem;
+			filter: drop-shadow(0 0 5px $white);
+		}
+		p{
+			color: $gray-600; 
+			filter: drop-shadow(0 0 5px $white);
+		}
+	}
+	@keyframes play {
+			0% { transform: translate(-50%, 0);}
+		100% { transform: translate(-50%, .25rem);}
+	}
+
+	.section2{
+		display: flex;
+		align-items: center;
+		min-height: calc(100vh - (3.5rem + #{$navbar-brand-padding-y}*2 + #{$navbar-padding-y}*2));
+		padding-top: map-get($spacers, 5);
+		padding-bottom: map-get($spacers, 5);
+  	.section-title{
+			color: $primary-700;
+			font-weight: 600;
+			text-align: center;
+			margin-bottom: 2.5rem;
+		}
+		.card{
+			border-color: transparent;
+			box-shadow: $box-shadow;
+			border-radius: $border-radius-lg;
+			margin-top: 2.5rem;
+			margin-bottom: -2.5rem;
+			.card-body{
+				.card-icon{
+					width: 5rem;
+    			height: 5rem;
+					border-radius: 100%;
+					background-color: $white;
+					box-shadow: $box-shadow-sm;
+					margin-top: calc(-2.5rem - #{$card-spacer-y});
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					font-size: 2rem;
+					margin-bottom: 1rem;
+					background-repeat: no-repeat;
+					background-size: 50% auto;
+					background-position: center center;
+				}
+				.card-title{
+					color: $primary-700;
+					font-size: $font-size-lg;
+					font-weight: 500;
+				}
+				p{
+					color: $body-secondary-color;
+				}
+			}
+			
+		}
+		.card1{
+			.card-body{
+				.card-icon{
+					background-color: $blue-100;
+					background-image: escape-svg(url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='#{$blue}' class='bi bi-crosshair2' viewBox='0 0 16 16'%3E %3Cpath d='M8 0a.5.5 0 0 1 .5.5v.518A7 7 0 0 1 14.982 7.5h.518a.5.5 0 0 1 0 1h-.518A7 7 0 0 1 8.5 14.982v.518a.5.5 0 0 1-1 0v-.518A7 7 0 0 1 1.018 8.5H.5a.5.5 0 0 1 0-1h.518A7 7 0 0 1 7.5 1.018V.5A.5.5 0 0 1 8 0m-.5 2.02A6 6 0 0 0 2.02 7.5h1.005A5 5 0 0 1 7.5 3.025zm1 1.005A5 5 0 0 1 12.975 7.5h1.005A6 6 0 0 0 8.5 2.02zM12.975 8.5A5 5 0 0 1 8.5 12.975v1.005a6 6 0 0 0 5.48-5.48zM7.5 12.975A5 5 0 0 1 3.025 8.5H2.02a6 6 0 0 0 5.48 5.48zM10 8a2 2 0 1 0-4 0 2 2 0 0 0 4 0'/%3E %3C/svg%3E"));
+				}
+			}
+		}
+		.card2{
+			.card-body{
+				.card-icon{
+					background-color: $orange-100;
+					background-image: escape-svg(url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='#{$orange}' class='bi bi-unlock2-fill' viewBox='0 0 16 16'%3E %3Cpath fill-rule='evenodd' d='M8 0c1.07 0 2.041.42 2.759 1.104l.14.14.062.08a.5.5 0 0 1-.71.675l-.076-.066-.216-.205A3 3 0 0 0 5 4v2h6.5A2.5 2.5 0 0 1 14 8.5v5a2.5 2.5 0 0 1-2.5 2.5h-7A2.5 2.5 0 0 1 2 13.5v-5a2.5 2.5 0 0 1 2-2.45V4a4 4 0 0 1 4-4'/%3E %3C/svg%3E"));
+				}
+			}
+		}
+		.card3{
+			.card-body{
+				.card-icon{
+					background-color: $purple-100;
+					background-image: escape-svg(url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='#{$purple}' class='bi bi-pin-map-fill' viewBox='0 0 16 16'%3E %3Cpath fill-rule='evenodd' d='M3.1 11.2a.5.5 0 0 1 .4-.2H6a.5.5 0 0 1 0 1H3.75L1.5 15h13l-2.25-3H10a.5.5 0 0 1 0-1h2.5a.5.5 0 0 1 .4.2l3 4a.5.5 0 0 1-.4.8H.5a.5.5 0 0 1-.4-.8z'/%3E %3Cpath fill-rule='evenodd' d='M4 4a4 4 0 1 1 4.5 3.969V13.5a.5.5 0 0 1-1 0V7.97A4 4 0 0 1 4 3.999z'/%3E %3C/svg%3E"));
+				}
+			}
+		}
+		.card4{
+			.card-body{
+				.card-icon{
+					background-color: $green-100;
+					background-image: escape-svg(url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 640'%3E%3C!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--%3E%3Cpath fill='#{$green}' d='M232 120L232 160L153.9 160C139.6 160 128 171.6 128 185.9C128 189.9 128.9 193.9 130.7 197.5L164.1 264.3C152.7 266.1 143.9 276 143.9 288C143.9 301.3 154.6 312 167.9 312L173.5 312L159.9 448L103.7 518.3C98.7 524.6 95.9 532.4 95.9 540.5C95.9 560.1 111.8 576 131.4 576L380.3 576C399.9 576 415.8 560.1 415.8 540.5C415.8 532.4 413.1 524.6 408 518.3L352 448L338.4 312L344 312C357.3 312 368 301.3 368 288C368 276.1 359.3 266.1 347.8 264.3L381.2 197.5C383 193.9 383.9 189.9 383.9 185.9C383.9 171.6 372.3 160 358 160L279.9 160L279.9 120L295.9 120C309.2 120 319.9 109.3 319.9 96C319.9 82.7 309.3 72 296 72L280 72L280 56C280 42.7 269.3 32 256 32C242.7 32 232 42.7 232 56L232 72L216 72C202.7 72 192 82.7 192 96C192 109.3 202.7 120 216 120L232 120zM389.8 343.6L398.3 429.1L445.7 488.3L449.9 494C459.1 507.7 464 523.9 464 540.5C464 553.2 461.2 565.3 456.1 576L539.2 576C559.5 576 576 559.5 576 539.2C576 531.9 573.8 524.8 569.8 518.8L544 480.1L544 416.1L557.3 402.8C569.3 390.8 576 374.5 576 357.5L576 256C576 238.3 561.7 224 544 224C526.3 224 512 238.3 512 256L512 272L480 272L480 256C480 238.3 465.7 224 448 224C430.3 224 416 238.3 416 256L416 288C416 310.4 405.8 330.4 389.8 343.6z'/%3E%3C/svg%3E"));
+					filter: brightness(1.025);
+				}
+			}
+		}
+	}
+
+	.section3{
+		padding-top: map-get($spacers, 5);
+		padding-bottom: map-get($spacers, 5);
+		color: $white;
+		.jumbotron{
+			border-radius: $border-radius*5;
+			background-color: $purple-800;
+			padding: map-get($spacers, 5) map-get($spacers, 4);
+			margin-top: 2.5rem;
+			margin-bottom: 2.5rem;
+			background-image: url("../img/intro/section3-bg.jpg");
+			background-repeat: no-repeat;
+			background-position: top center;
+			background-size: cover;
+			.jumbotron-title{
+				font-weight: 700;
+				margin-bottom: 1.5rem;
+				margin-top: 1.5rem;
+				>span{
+					display: block;
+				}
+			}
+			.jumbotron-list{
+				list-style: none;
+				padding: 0;
+				.list-item{
+					display: flex;
+					gap: .5rem;
+					&:not(:last-child){
+						margin-bottom: 1.5rem;	
+					}
+					.list-item-icon{
+						width: 1.5rem;
+						height: 1.5rem;
+						border-radius: 100%;
+						background-color: rgba($info, .25);
+						color: $info;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+					}
+					.list-item-title{
+						font-size: $font-size-base;
+						font-weight: 600;
+					}
+					.list-item-text{
+						font-size: $font-size-sm;
+						color: $gray-400;
+					}
+					
+				}
+			}
+			.jumbotron-panel{
+				display: block;
+				width: fit-content; 
+				margin: 0 auto 4rem auto;
+				background-color: rgba($white, .05);
+				background: linear-gradient(to bottom,  rgba($white, 0) 0%,rgba($white, .1) 100%); 
+				border: 1px solid rgba($white, .5);
+				border-radius: $border-radius-lg*2.5;
+				padding: map-get($spacers, 4);
+				filter: drop-shadow(0 0 5px rgba(0,0,0, .1));
+				box-shadow: $box-shadow-lg;
+				text-align: center;
+				.panel-title{
+					font-size: $font-size-base; 
+					font-weight: 600;
+					color: tint-color($info, 20%);
+				}
+				.panel-slogan{
+					font-size: $font-size-lg; 
+					margin-bottom: 0;
+				}
+			}
+			.jumbotron-btn{
+					text-align: center;
+					color: $gray-400;
+				  font-size: $font-size-sm; 
+					.btn{
+						margin: .75rem auto;
+						box-shadow: $box-shadow-lg;
+						&:hover{
+							background-color: $info;
+							transform: translateY(-5px);
+							transition: .35s ease-in;
+							box-shadow:  0 1rem 1.5rem rgba($info, .5); 
+    					filter: brightness(1.1);
+						}
+					}
+				}
+		}
+	}
+	
+	.section-arrow{
+		font-size: 2rem;
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		transform: translate(-50%, 0);;
+		color: $primary-800;
+		font-weight: 900;
+		filter: drop-shadow(0 0 5px $white);
+		animation: play 1s infinite alternate ease;
+		&:hover{
+
+		}
+	}
+}
