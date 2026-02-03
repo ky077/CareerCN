@@ -23,7 +23,6 @@
 			font-weight: 600;
 			font-size: $h5-font-size;
 			margin-bottom: 2.5rem;
-			text-shadow: 1px 1px rgba($white, .75);
 			filter: drop-shadow(0 0 1px $white)
 							drop-shadow(0 0 2px $white) 
 							drop-shadow(0 0 3px $white)
@@ -32,7 +31,6 @@
 		}
 		p{
 			color: $gray-600; 
-			text-shadow: 1px 1px rgba($white, .75);
 			filter: drop-shadow(0 0 1px $white)
 							drop-shadow(0 0 2px $white) 
 							drop-shadow(0 0 3px $white)
