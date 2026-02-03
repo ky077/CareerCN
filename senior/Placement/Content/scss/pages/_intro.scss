@@ -23,11 +23,11 @@
 			font-weight: 600;
 			font-size: $h5-font-size;
 			margin-bottom: 2.5rem;
-			filter: drop-shadow(0 0 5px $white);
+			text-shadow: 1px 1px rgba($white, .75);
 		}
 		p{
 			color: $gray-600; 
-			filter: drop-shadow(0 0 5px $white);
+			text-shadow: 1px 1px rgba($white, .75);
 		}
 	}
 	@keyframes play {
