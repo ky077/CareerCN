@@ -25,6 +25,11 @@
 
 <body>
 <form>
+  <!-- Spinner Start -->
+  <div id="spinner" class="show">
+    <div class="spinner-border" role="status"> <span class="visually-hidden">加载中...</span> </div>
+  </div>
+  <!-- Spinner End -->	
   <header></header>
   <main class="scorePlacement"> 
     <!-- banner start -->
@@ -58,7 +63,7 @@
                   </div>
                 </div>
                 <div class="row gx-2 mb-2">
-                  <label for="TB_Nscore2" class="col-auto col-form-label"><span class="form-required">*</span>区外高考总分︰</label>
+                  <label for="TB_Nscore2" class="col-auto col-form-label"><span class="form-required">*</span>区内高考总分︰</label>
                   <div class="col">
                     <input name="ctl00$ContentPlaceHolder1$TB_Nscore2" type="text" id="TB_Nscore2" class="form-control form-control-sm rounded-0 d-inline w-auto" autocomplete="off" placeholder="总分">
                     <div class="form-text"> <span id="RequiredFieldValidator2" class="text-danger" style="display: none;">请输入分数</span> <span id="RangeValidator2" class="text-danger">请输入数字１～９９９</span> </div>

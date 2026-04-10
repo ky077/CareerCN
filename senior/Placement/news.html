@@ -46,7 +46,7 @@
       <div class="news-nav hidden-xs visible-sm visible-md visible-lg  wow animate__animated animate__slideIn">
         <h2 class="visually-hidden">新闻分类</h2>
         <ul class="nav justify-content-center mb-4">
-          <li class="nav-item"><a class="nav-link active" aria-current="page" href="news.html" data-filter="*">最新新闻</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="#news" data-filter="*">最新新闻</a></li>
           <li class="nav-item"><a class="nav-link" href="#adm-update" data-filter=".adm-update">招生动态</a></li>
           <li class="nav-item"><a class="nav-link" href="#adm-policy" data-filter=".adm-policy">招生政策</a></li>
           <li class="nav-item"><a class="nav-link" href="#prog-insight" data-filter=".prog-insight">专业解读</a></li>
@@ -120,7 +120,7 @@
 <script>
 $(document).ready(function() {
 	//nowPage
-  	$('.nav-news').addClass('active');
+  $('.nav-news').addClass('active');
 	
 	
 	//點[活動專區]各項目，篩選出各項目內容 
@@ -131,6 +131,9 @@ $(document).ready(function() {
 	//點.activity-nav選單
 	var $buttonGroup = $('.news-nav');
 	$buttonGroup.on( 'click', 'a', function( event ) {
+		
+		event.preventDefault();
+		
 		var $button = $( event.currentTarget );
 		var filterValue = $button.attr('data-filter');
 		$grid.isotope({ filter: filterValue });

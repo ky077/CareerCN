@@ -1,15 +1,15 @@
 @mixin scrollbarStyles {
 	&::-webkit-scrollbar{  
-        background-color: transparent;
-    }  
-    &::-webkit-scrollbar-track {
-        background-color: $white;
-    } 
-    &::-webkit-scrollbar-thumb {
-		background: linear-gradient(to bottom, $secondary 0%, $primary-400 50%, $primary-600 100%);
-        border-radius: 17px;
-		border: 3px solid $white;
-    } 
+			background-color: transparent;
+	}  
+	&::-webkit-scrollbar-track {
+			background-color: $white;
+	} 
+	&::-webkit-scrollbar-thumb {
+	background: linear-gradient(to bottom, $secondary 0%, $primary-400 50%, $primary-600 100%);
+			border-radius: 17px;
+	border: 3px solid $white;
+	} 
 }
 
 html, body{ 
@@ -72,6 +72,10 @@ a{
 	&:hover, &:focus, &:active{
 		transform: scale(1.1);
 	}
+}
+
+.text-indigo{
+	color: $indigo !important;
 }
 .table{
 	>thead {

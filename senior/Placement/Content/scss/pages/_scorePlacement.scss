@@ -1,7 +1,6 @@
 .scorePlacement{
-	$placement-color: mix($cyan, $blue, 50%);
 	background: url("../img/scorePlacement/banner-bg.png"), 
-		        linear-gradient(to bottom right, $pink 0%, $placement-color 25%, mix($white, $placement-color, 60%) 100%);
+		        linear-gradient(to bottom right, $pink 0%, $scorePlacement-color 25%, mix($white, $scorePlacement-color, 60%) 100%);
 	background-position: top center;
 	background-repeat: no-repeat;
 	.banner{ 
@@ -103,26 +102,26 @@
 			}
 			
 			.form-control:focus, .form-select:focus{
-				border-color: rgba($placement-color, $focus-ring-opacity);
-    			box-shadow: 0 0 $focus-ring-blur $focus-ring-width rgba($placement-color, $focus-ring-opacity);
+				border-color: rgba($scorePlacement-color, $focus-ring-opacity);
+    			box-shadow: 0 0 $focus-ring-blur $focus-ring-width rgba($scorePlacement-color, $focus-ring-opacity);
 			}
 			.form-check-input:focus{
-				box-shadow: 0 0 $focus-ring-blur $focus-ring-width rgba($placement-color, $focus-ring-opacity);
+				box-shadow: 0 0 $focus-ring-blur $focus-ring-width rgba($scorePlacement-color, $focus-ring-opacity);
 			}
 			.form-check-input:hover {
 				+ .form-check-label{
-					color: $placement-color;	
+					color: $scorePlacement-color;	
 				}
 			}
 			.form-check-input:checked {
-				background-color: $placement-color;
-				border-color: $placement-color;	
+				background-color: $scorePlacement-color;
+				border-color: $scorePlacement-color;	
 				+ .form-check-label{
-					color: $placement-color;	
+					color: $scorePlacement-color;	
 				}
 			}
 			.form-check-input[type="radio"]:checked{
-				background-image: escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='2' fill='#{$placement-color}'/></svg>"));
+				background-image: escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='2' fill='#{$scorePlacement-color}'/></svg>"));
 			}
 			
 			.btn-group {
@@ -136,12 +135,12 @@
 					background-color: $gray-200;
 					&.active{
 						color: $white;
-						border-color: $placement-color;
-						background-color: $placement-color;
+						border-color: $scorePlacement-color;
+						background-color: $scorePlacement-color;
 					}
 					&:not(.active):hover{
-						border-color: $placement-color;	
-						color: $placement-color;	
+						border-color: $scorePlacement-color;	
+						color: $scorePlacement-color;	
 					}
 				}
 				.btn-check{
@@ -155,8 +154,8 @@
 						}
 					}
 					&:checked + .btn{
-						border-color: $placement-color;
-						background-color: $placement-color;
+						border-color: $scorePlacement-color;
+						background-color: $scorePlacement-color;
 						color:$white;
 					}
 				}
@@ -195,7 +194,8 @@
 			font-size: $font-size-sm;
 			color: $body-tertiary-color;
 			.result-info-item{
-				margin-right: 1.5rem;
+				margin: 1rem 1.5rem;
+				margin-left: 0;
 				&:not(:nth-of-type(1)){
 					padding-left: 1.5rem;
 					border-left: 1px solid $border-color;	
