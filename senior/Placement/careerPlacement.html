@@ -845,44 +845,12 @@ function initMatchTooltips() {
 	makeTooltip($('.card.matchRegion .school-name'), '意向地区');
 
 	//TA / TI
-	makeTooltip($('.card.matchTA .discipline-major'), '性向匹配');
+	makeTooltip($('.card.matchTA .discipline-major'), '潜能匹配');
 	makeTooltip($('.card.matchTI .discipline-major'), '兴趣匹配');
 
 	//TA + TI
-	makeTooltip($('.card.matchTA.matchTI .discipline-major'), '性向匹配、兴趣匹配');
+	makeTooltip($('.card.matchTA.matchTI .discipline-major'), '潜能匹配、兴趣匹配');
 }
-/*function initMatchTooltips() {
-  // 先清掉舊的 tooltip，避免重複初始化
-  document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach(el => {
-    const inst = bootstrap.Tooltip.getInstance(el);
-    if (inst) inst.dispose();
-    el.removeAttribute('data-bs-toggle');
-    el.removeAttribute('data-bs-placement');
-    el.removeAttribute('data-bs-title');
-    el.removeAttribute('title');
-  });
-
-  function bindTooltip(selector, titleText) {
-    document.querySelectorAll(selector).forEach(el => {
-      el.setAttribute('data-bs-toggle', 'tooltip');
-      el.setAttribute('data-bs-placement', 'top');
-      el.setAttribute('title', titleText);
-
-      new bootstrap.Tooltip(el, {
-        trigger: 'hover focus',
-        container: 'body'
-      });
-    });
-  }
-
-  // 學校地區符合：綁在地區文字
-  bindTooltip('.school-region.matchRegion > .school-name', '意向地区');
-
-  // 專業符合：綁在專業名稱
-  bindTooltip('.school-region.matchTA:not(.matchTI)', '潜能匹配');
-  bindTooltip('.school-region.matchTI:not(.matchTA)', '兴趣匹配');
-  bindTooltip('.school-region.matchTA.matchTI', '潜能匹配、兴趣匹配');
-}*/
 </script>
 </body>
 </html>
