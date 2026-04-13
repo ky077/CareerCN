@@ -789,10 +789,10 @@ function renderCard(row) {
 
 function renderCareerPlacement(data) {
   Object.entries(data).forEach(([key, tab]) => {
-    // 更新 nav 文字
-    const navLink = document.querySelector('#scrollspyNav .nav-link[href="#${key}"]');
+    // 【修正】這裡改用反引號，確保 href 和文字能正確帶入變數
+    const navLink = document.querySelector(`#scrollspyNav .nav-link[href="#${key}"]`);
     if (navLink) {
-      navLink.textContent = '${tab.label} (${tab.rows?.length || 0})';
+      navLink.textContent = `${tab.label} (${tab.rows?.length || 0})`;
     }
 
     // 更新各區塊卡片
