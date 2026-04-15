@@ -6,10 +6,7 @@
         "order": 1,
         "school": {
           "name": "广西大学",
-          "code": "10593",
-          "matches": [
-            "region"
-          ]
+          "code": "10593"
         },
         "discipline": {
           "name": "文学门类",
@@ -43,10 +40,7 @@
         "order": 1,
         "school": {
           "name": "广西大学",
-          "code": "10593",
-          "matches": [
-            "region"
-          ]
+          "code": "10593"
         },
         "discipline": {
           "name": "文学门类",

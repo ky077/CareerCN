@@ -424,7 +424,6 @@
                   </ul>
                 </nav>
                 <div class="result-remark">
-                  <div class="matchRegion">意向地区</div>
                   <div class="matchTA">潜能匹配</div>
                   <div class="matchTI">兴趣匹配</div>
                 </div>
@@ -802,7 +801,7 @@ function renderCareerPlacement(data) {
     }
   });
 
-  // 意向地區 / 潛能匹配 / 興趣匹配 tooltip
+  // 潛能匹配 / 興趣匹配 tooltip
   initMatchTooltips();
 
   // 重新初始化 ScrollSpy
@@ -840,9 +839,6 @@ function initMatchTooltips() {
 			});
 		});
 	}
-
-	//意向地区
-	makeTooltip($('.card.matchRegion .school-name'), '意向地区');
 
 	//TA / TI
 	makeTooltip($('.card.matchTA .discipline-major'), '潜能匹配');
