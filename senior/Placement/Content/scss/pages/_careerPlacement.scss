@@ -1,6 +1,7 @@
 .careerPlacement{
-	background: url("../img/careerPlacement/banner-bg.png"), 
-		        linear-gradient(to bottom right, $pink 0%, $careerPlacement-color 25%, mix($white, $careerPlacement-color, 60%) 100%);
+	background: url("../img/careerPlacement/banner-bg.png"), -webkit-linear-gradient(to bottom right, $pink 0%, $careerPlacement-color 25%, mix($white, $careerPlacement-color, 60%) 100%);
+	background: url("../img/careerPlacement/banner-bg.png"), -o-linear-gradient(to bottom right, $pink 0%, $careerPlacement-color 25%, mix($white, $careerPlacement-color, 60%) 100%);
+	background: url("../img/careerPlacement/banner-bg.png"), linear-gradient(to bottom right, $pink 0%, $careerPlacement-color 25%, mix($white, $careerPlacement-color, 60%) 100%);
 	background-position: top center;
 	background-repeat: no-repeat;
 	.banner{ 

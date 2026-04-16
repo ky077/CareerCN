@@ -715,16 +715,12 @@ function getMatchClass(matches = []) {
 
 // card
 function renderCard(row) {
-  const schoolMatchClass = getMatchClass(row.school?.matches || []);
   const majorMatchClass = getMatchClass(row.major?.matches || []);
 
-  // 卡片總 class：學校 match + 專業 match 都要帶上
-  const cardMatchClass = [schoolMatchClass, majorMatchClass]
-    .filter(Boolean)
-    .join(' ');
+  // 卡片總 class：專業 match 
+  const cardMatchClass = [majorMatchClass].filter(Boolean).join(' ');
 
   // 單一欄位也保留 match class，方便 tooltip / 樣式控制
-  const regionClass = schoolMatchClass;
   const majorClass = majorMatchClass;
 
   return `<div class="card ${cardMatchClass}">
@@ -738,7 +734,7 @@ function renderCard(row) {
             <div class="school-name">${row.school?.name ?? ''}</div>
             <div class="school-category">${row.category ?? ''}</div>
             <div>
-              <span class="school-region ${regionClass}">${row.region ?? ''}</span>
+              <span class="school-region">${row.region ?? ''}</span>
               <span class="school-type">${row.schoolType ?? ''}</span>
             </div>
           </div>
@@ -787,7 +783,6 @@ function renderCard(row) {
 
 function renderCareerPlacement(data) {
   Object.entries(data).forEach(([key, tab]) => {
-    // 【修正】這裡改用反引號，確保 href 和文字能正確帶入變數
     const navLink = document.querySelector(`#scrollspyNav .nav-link[href="#${key}"]`);
     if (navLink) {
       navLink.textContent = `${tab.label} (${tab.rows?.length || 0})`;
