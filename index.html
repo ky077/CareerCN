@@ -1,116 +1,272 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="zh-Hant">
 <head>
-<meta charset="utf-8">
-<title>CareerCN</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Career | KyLin @ NTNU</title>
+<script src="https://cdn.tailwindcss.com"></script>
 <style>
-* {
-	transition: all .3s ease-in;
-}
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap');
 body {
-	font-size: 20px;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-	padding: 0;
-	margin: 0 auto;
-	width: 100%;
-	max-width: 960px;
-}
-table th, table td {
-	border: 1px solid #ccc;
-	text-align: center;
-	padding: 15px;
-}
-table th {
-	background-color: #ddd;
-	padding-top: 10px;
-	padding-bottom: 10px;
-}
-table tfoot td {
-	background-color: #333;
-	color: #FFF;
-}
-table tfoot td a {
-	color: #FFF;
-}
-a {
-	display: inline-block;
-	text-underline-offset: 4px;
-}
-a:hover {
-	transform: scale(1.2);
-	font-weight: bold;
-}
-table tr:hover {
-	background-color: #FFEEEE;
-}
-.text-muted, .text-muted * {
-	color: #bbb;
-}
-footer {
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	right: 0;
+	/* 以 Noto Sans TC 为主要字体 */
+	font-family: 'Noto Sans SC', 'Plus Jakarta Sans', sans-serif;
+	background: #1a0b0b;
+	color: #f8fafc;
+	min-height: 100vh;
 	display: flex;
-	justify-content: space-between;
+	flex-direction: column;
+	align-items: center;
+	padding: 40px 20px;
+	overflow-x: hidden;
 }
-footer a {
-	display: block;
-	text-decoration: none;
-	padding: 15px;
-	background-color: #ebebeb;
-	color: #333;
+/* 动态背景光晕 */
+.bg-glow {
+	position: fixed;
+	width: 600px;
+	height: 600px;
+	background: radial-gradient(circle, rgba(148, 163, 184, 0.05) 0%, rgba(30, 41, 59, 0) 70%);
+	border-radius: 50%;
+	filter: blur(100px);
+	z-index: -1;
+	animation: pulse 12s infinite alternate;
 }
-footer a:hover {
-	transform: scale(1);
+@keyframes pulse {
+0% {
+transform: translate(-5%, -5%) scale(1);
 }
-footer a.active {
-	background-color: #333;
-	color: #fff;
+100% {
+transform: translate(5%, 5%) scale(1.1);
+}
+}
+/* 大标题样式 */
+.main-title {
+	font-size: 3.5rem;
+	font-weight: 800;
+	margin-bottom: 50px;
+	background: linear-gradient(to right, #f8fafc, #94a3b8);
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+	letter-spacing: -0.02em;
+}
+.dashboard {
+	background: rgba(26, 11, 11, 0.65);
+	backdrop-filter: blur(24px) saturate(150%);
+	border: 1px solid rgba(255, 255, 255, 0.08);
+	border-radius: 32px;
+	width: 100%;
+	/* 调宽最大宽度 */
+	max-width: 1024px;
+	box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.4);
+}
+.nav-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+	gap: 20px;
+	padding: 32px;
+}
+.nav-card {
+	background: rgba(255, 255, 255, 0.02);
+	border: 1px solid rgba(255, 255, 255, 0.05);
+	border-radius: 24px;
+	padding: 24px;
+	transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+.nav-card:hover {
+	background: rgba(255, 255, 255, 0.04);
+	transform: translateY(-4px);
+}
+.card-header {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+}
+.icon-box {
+	width: 42px;
+	height: 42px;
+	border-radius: 12px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: all 0.3s;
+	flex-shrink: 0;
+}
+/* 连结容器排版：2/3 与 1/3 */
+.link-group {
+	display: flex;
+	gap: 8px;
+	width: 100%;
+}
+.sub-link {
+	padding: 10px 4px;
+	border-radius: 12px;
+	text-align: center;
+	font-size: 0.85rem;
+	font-weight: 500;
+	transition: all 0.2s;
+}
+/* 主要连结 (2/3) */
+.sub-link-primary {
+	flex: 2;
+	background: rgba(255, 255, 255, 0.08);
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	color: white;
+}
+/* 次要连结 (1/3) */
+.sub-link-secondary {
+	flex: 1;
+	background: rgba(255, 255, 255, 0.03);
+	border: 1px solid rgba(255, 255, 255, 0.03);
+	color: rgba(255, 255, 255, 0.4); /* Muted 效果 */
+}
+/* 禁用链接样式 (保留位置但无法点击且呈现灰暗) */
+.sub-link-disabled {
+	flex: 1;
+	background: rgba(255, 255, 255, 0.01);
+	border: 1px solid rgba(255, 255, 255, 0.02);
+	color: rgba(255, 255, 255, 0.15); /* 极深灰色 */
+	pointer-events: none;
+	cursor: not-allowed;
+	user-select: none;
+}
+/* --- 高中版配色 --- */
+.hs-gradient-text {
+	background: linear-gradient(135deg, #38bdf8, #a78bfa);
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+	color: transparent;
+	display: inline-block;
+}
+.hs-card:hover {
+	border-color: rgba(167, 139, 250, 0.3);
+}
+.hs-card .icon-box {
+	background: rgba(167, 139, 250, 0.1);
+	color: #a78bfa;
+}
+.hs-card .sub-link-primary:hover {
+	background: #a78bfa;
+	color: white;
+	border-color: #a78bfa;
+}
+.hs-card .sub-link-secondary:hover {
+	background: rgba(255, 255, 255, 0.1);
+	color: #a78bfa;
+}
+/* --- 国中版配色 --- */
+.js-gradient-text {
+	background: linear-gradient(135deg, #FDE68A, #FB923C);
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+	color: transparent;
+	display: inline-block;
+}
+.js-card:hover {
+	border-color: rgba(251, 146, 60, 0.25);
+}
+.js-card .icon-box {
+	background: rgba(253, 230, 138, 0.08);
+	color: #fde68a;
+}
+.js-card .sub-link-primary:hover {
+	background: #fb923c;
+	color: white;
+	border-color: #fb923c;
+}
+.js-card .sub-link-secondary:hover {
+	background: rgba(255, 255, 255, 0.1);
+	color: #fb923c;
+}
+.note-card {
+	background: rgba(255, 255, 255, 0.02);
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	border-radius: 14px;
+	padding: 10px 20px;
+	transition: all 0.3s;
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+@media (max-width: 640px) {
+.main-title {
+	font-size: 2.25rem;
+	margin-bottom: 40px;
+}
 }
 </style>
 </head>
-
 <body>
-<table>
-  <thead>
-    <tr>
-      <th width="60%">高中名称</th>
-      <th width="20%">DEMO网页</th>
-      <th width="20%">工程师网页</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>赞生涯生涯落点分析系统 高中生</td>
-      <td><a href="senior/Placement/index.html" target="_blank">DEMO</a></td>
-      <td class="text-muted"><a href="" target="_blank"></a></td>
-    </tr>
-  </tbody>
-</table>
-<br>
-<!--<table>
-  <thead>
-    <tr>
-      <th width="60%">国中名称</th>
-      <th width="20%">DEMO网页</th>
-      <th width="20%">工程师网页</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td></td>
-      <td><a href="STUDENT-J/index.html" target="_blank"></a></td>
-      <td class="text-muted"></td>
-    </tr>
-  </tbody>
-</table>-->
-<footer>
-  <div><a href="https://ky077.github.io/CareerCN/" class="active">陆版</a></div>
-  <div><a href="https://ky077.github.io/Career/">台版</a></div>
-</footer>
+<div class="bg-glow"></div>
+
+<!-- 大标题 -->
+<h1 class="main-title">Career   |   KyLin @ NTNU</h1>
+
+<!-- Career 赞生涯（高中） -->
+<div class="dashboard mb-8">
+  <div class="px-10 py-8 border-b border-white/5 flex flex-col md:flex-row md:items-center justify-between gap-4">
+    <div>
+      <h2 class="text-3xl font-bold">
+        <span class="hs-gradient-text">Career 赞生涯</span>
+      </h2>
+      <p class="text-slate-500 mt-1 text-sm tracking-widest uppercase">大陸 高中</p>
+    </div>
+  </div>
+  <div class="nav-grid">
+		<!-- 落点分析 -->
+    <div class="nav-card hs-card">
+      <div class="card-header">
+        <div class="icon-box">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+          </svg>
+        </div>
+        <h3 class="font-semibold text-white text-lg">落点分析系统</h3>
+      </div>
+      <div class="link-group">
+        <a href="https://ky077.github.io/CareerCN/senior/Placement/index.html" class="sub-link sub-link-primary" target="_blank">KyLin's DEMO</a>
+        <a href="#" class="sub-link sub-link-disabled" target="_blank">莘倫</a>
+      </div>
+    </div>
+		
+    <!-- 信息系统 -->
+    <div class="nav-card hs-card">
+      <div class="card-header">
+        <div class="icon-box">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="12" y1="16" x2="12" y2="12"></line>
+            <line x1="12" y1="8" x2="12.01" y2="8"></line>
+          </svg>
+        </div>
+        <h3 class="font-semibold text-white text-lg">信息系统</h3>
+      </div>
+      <div class="link-group">
+        <a href="https://ky077.github.io/CareerCN/senior/Information/index.html" class="sub-link sub-link-primary" target="_blank">KyLin's DEMO</a>
+        <a href="#" class="sub-link sub-link-disabled" target="_blank">莘倫</a>
+      </div>
+    </div>
+    
+
+    
+    
+  </div>
+</div>
+
+<!-- footer -->
+<div class="w-full flex justify-center mt-10">
+  <a href="https://ky077.github.io/Career/" class="note-card group">
+  <svg class="text-slate-500 group-hover:text-slate-300 transition-colors" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+    <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+  </svg>
+  <span class="text-xs font-medium text-slate-400 group-hover:text-slate-200">前往 Career 讚生涯 - 臺版</span>
+  </a>
+</div>
 </body>
 </html>
