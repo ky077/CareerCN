@@ -132,6 +132,16 @@ transform: translate(5%, 5%) scale(1.1);
 	cursor: not-allowed;
 	user-select: none;
 }
+/* --- 入口網按鈕樣式 --- */
+.portal-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 14px;
+    border-radius: 9999px;
+    transition: all 0.3s;
+    text-decoration: none;
+}	
 /* --- 高中版配色 --- */
 .hs-gradient-text {
 	background: linear-gradient(135deg, #38bdf8, #a78bfa);
@@ -157,6 +167,15 @@ transform: translate(5%, 5%) scale(1.1);
 	background: rgba(255, 255, 255, 0.1);
 	color: #a78bfa;
 }
+.hs-portal {
+    background: rgba(99, 102, 241, 0.1);
+    border: 1px solid rgba(99, 102, 241, 0.2);
+}
+.hs-portal:hover {
+    background: rgba(99, 102, 241, 0.25);
+    border-color: rgba(99, 102, 241, 0.4);
+    transform: scale(1.05);
+}	
 /* --- 国中版配色 --- */
 .js-gradient-text {
 	background: linear-gradient(135deg, #FDE68A, #FB923C);
@@ -216,9 +235,16 @@ transform: translate(5%, 5%) scale(1.1);
       </h2>
       <p class="text-slate-500 mt-1 text-sm tracking-widest uppercase">大陸 高中</p>
     </div>
+    <a href="https://ky077.github.io/CareerCN/enter/index.html" class="portal-link hs-portal" target="_blank">
+        <span class="relative flex h-2 w-2">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
+        </span>
+        <span class="text-sm text-blue-200 font-semibold tracking-wide">入口網</span>
+    </a>
   </div>
   <div class="nav-grid">
-		<!-- 落点分析 -->
+    <!-- 落点分析 -->
     <div class="nav-card hs-card">
       <div class="card-header">
         <div class="icon-box">
@@ -233,7 +259,7 @@ transform: translate(5%, 5%) scale(1.1);
         <a href="#" class="sub-link sub-link-disabled" target="_blank">莘倫</a>
       </div>
     </div>
-		
+    
     <!-- 信息系统 -->
     <div class="nav-card hs-card">
       <div class="card-header">
@@ -251,10 +277,6 @@ transform: translate(5%, 5%) scale(1.1);
         <a href="#" class="sub-link sub-link-disabled" target="_blank">莘倫</a>
       </div>
     </div>
-    
-
-    
-    
   </div>
 </div>
 
