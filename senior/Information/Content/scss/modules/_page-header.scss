@@ -1,0 +1,28 @@
+.page-header {
+  padding-top: map-get($spacers, 5);
+  padding-bottom: map-get($spacers, 3);
+  position: relative;
+	background-color: $secondary;
+  .page-header-title {
+    font-size: 3.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 0;
+		color: $white;
+  }
+	.breadcrumb {
+		color: $navbar-dark-color;
+		a {
+			color: $navbar-dark-color;
+			&:hover, &:focus, &:active {
+				color: $navbar-dark-active-color;
+			}
+		}
+		.breadcrumb-item + .breadcrumb-item::before {
+			color: $navbar-dark-color;	
+		}
+		.breadcrumb-item.active{
+			color: $navbar-dark-active-color;	
+		}
+	}
+}

@@ -1,0 +1,399 @@
+.explore3{
+	@mixin explore3Style($color) {
+	.page-header{
+		background-color: $color;
+		background-image: escape-svg(url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 800 800'%3E%3C!--!https://www.svgbackgrounds.com/set/free-svg-backgrounds-and-patterns/--%3E%3Crect fill='none' width='800' height='800'/%3E%3Cg fill='none' stroke='#{$white}' stroke-opacity='0.11' stroke-width='1'%3E%3Cpath d='M769 229L1037 260.9M927 880L731 737 520 660 309 538 40 599 295 764 126.5 879.5 40 599-197 493 102 382-31 229 126.5 79.5-69-63'/%3E%3Cpath d='M-31 229L237 261 390 382 603 493 308.5 537.5 101.5 381.5M370 905L295 764'/%3E%3Cpath d='M520 660L578 842 731 737 840 599 603 493 520 660 295 764 309 538 390 382 539 269 769 229 577.5 41.5 370 105 295 -36 126.5 79.5 237 261 102 382 40 599 -69 737 127 880'/%3E%3Cpath d='M520-140L578.5 42.5 731-63M603 493L539 269 237 261 370 105M902 382L539 269M390 382L102 382'/%3E%3Cpath d='M-222 42L126.5 79.5 370 105 539 269 577.5 41.5 927 80 769 229 902 382 603 493 731 737M295-36L577.5 41.5M578 842L295 764M40-201L127 80M102 382L-261 269'/%3E%3C/g%3E%3Cg fill='#{$white}' fill-opacity='0.11' %3E%3Ccircle cx='769' cy='229' r='5'/%3E%3Ccircle cx='539' cy='269' r='5'/%3E%3Ccircle cx='603' cy='493' r='5'/%3E%3Ccircle cx='731' cy='737' r='5'/%3E%3Ccircle cx='520' cy='660' r='5'/%3E%3Ccircle cx='309' cy='538' r='5'/%3E%3Ccircle cx='295' cy='764' r='5'/%3E%3Ccircle cx='40' cy='599' r='5'/%3E%3Ccircle cx='102' cy='382' r='5'/%3E%3Ccircle cx='127' cy='80' r='5'/%3E%3Ccircle cx='370' cy='105' r='5'/%3E%3Ccircle cx='578' cy='42' r='5'/%3E%3Ccircle cx='237' cy='261' r='5'/%3E%3Ccircle cx='390' cy='382' r='5'/%3E%3C/g%3E%3C/svg%3E"));
+		background-attachment: fixed;
+		color: $white;
+		filter: drop-shadow($box-shadow-sm);
+		padding-bottom: 2rem + 4rem;
+		.breadcrumb {
+			padding-top: 0;
+		}
+		.page-header-title{
+			display: flex;
+			justify-content: flex-start;
+			align-items: flex-end; 
+		}
+		.page-header-code{
+			color: rgba($white, .5);	
+			font-size: 50%;
+			font-weight: 600;
+			margin-left: .75rem;
+		}
+		.page-header-back{
+			color: $navbar-dark-color;
+			font-size: $input-btn-font-size;
+			font-weight: $btn-font-weight;
+			margin-left: auto;
+			padding: $input-btn-padding-y 0;
+			&.icon-link-hover{
+				--bs-icon-link-transform: translate3d(-.25em, 0, 0); 	
+			}
+			&:hover{
+				color: $navbar-dark-active-color;
+			}
+		}
+	}	
+	.page-content{ 
+		position: relative;
+		z-index: 2;
+		margin-top: -4rem - .75rem;
+		.card{
+			border-color: transparent;
+			border-radius: $border-radius-xl; 
+			p{
+				margin-bottom: 0;
+			}
+			ol, ul, dl {
+				margin-top: 0;
+				margin-bottom: 0;
+			}
+		}
+		.card-title{ 
+			color: $color;
+			font-size: $h4-font-size;
+			font-weight: 600;
+			display: flex;
+			align-items: center;
+			&::before{
+				content: "";
+				font-family: "bootstrap-icons";
+				display: inline-block;
+				margin-right: .25rem;
+			}
+		}
+		.card-title-remark{
+			font-size: $h6-font-size;
+			font-weight: $font-weight-normal;
+			color: $body-tertiary-color;
+			.card-title-remark-date{
+				font-family: $font-family-monospace;
+			}
+		}
+		
+		.card-subtitle{
+			color: $body-color;	
+			font-size: $h5-font-size;
+			font-weight: 500;
+			margin-top: .5rem;
+			margin-bottom: .5rem;
+		}
+		.card-text{ 
+			color: $body-secondary-color;
+			line-height: $line-height-lg;
+			margin-top: .75rem;
+			margin-bottom: .75rem;
+		}
+		.card-subtext{
+			&:not(:last-child){
+				margin-bottom: 2rem;
+			}
+		}
+		.card-panel{
+			background-color: rgba($color, .1);
+			border-radius: $border-radius-xl;
+			font-size: $font-size-sm;
+			padding: map-get($spacers, 3);
+			.card-panel-title{
+				color: $body-color;
+				font-size: $h6-font-size;	
+				font-weight: 500;
+				margin-top: .125rem;
+				margin-bottom: .5rem;
+			}	
+		}
+		.badge{
+			background-color: rgba($color, .1);
+			color: $color;
+			font-size: $font-size-sm;
+			font-weight: $font-weight-normal;
+			border-radius: $border-radius-pill;
+		}
+
+		#intro {//專業簡介
+			.card-title::before{  
+					content: "\F476"; 
+			}
+			.card-panel{
+				height: 100%;
+				ol, ul {
+					padding-left: 1.325rem;
+				}
+			}	
+		} 	   
+		#tour {//學習旅程
+			.card-title::before{ content: "\F47F"; }
+			.card-text{
+				padding-left: calc((#{$h4-font-size} - #{$h5-font-size}));
+			}
+			.card-subtitle{
+				&::before{
+					content: "\F3E8";
+					display: inline;
+					font-family: "bootstrap-icons";
+					margin-right: .25rem;
+					vertical-align: middle;
+				}
+			}
+			.card-subtext{ 
+				padding-left: calc(#{$h5-font-size} + .25rem);
+				position: relative;
+				&::before{
+					content: "";
+					display: block;	
+					width: calc(#{$h6-font-size} * 1/16 + .5px);// icon圖片線框1px/icon圖片寬度
+					height: 100%;
+					position: absolute;
+					top: 0;
+					left: 0;
+					transform: translate(calc( #{$h5-font-size} / 2 - (#{$h6-font-size} * 1/16) / 2 ), -.675rem);
+					background: linear-gradient(to bottom, $body-color 0%, $body-color 25%, transparent 100%);
+				}
+			}
+		}
+		#career {//生涯發展
+			.card-title::before{ content: "\F1CC"; }
+			.card-subtitle{ 
+				&::before{ 
+					content: "\F54A";
+					display: inline;
+					font-family: "bootstrap-icons";
+					margin-right: .25rem;
+					vertical-align: middle;
+				}
+			}
+			.card-subtext{
+				padding-left: calc(#{$h5-font-size} + .25rem);
+				position: relative;
+				&::before{
+					content: "";
+					display: block;	
+					width:  calc(#{$h6-font-size} * 1.5/16 + .5px);
+					height: 100%;
+					position: absolute;
+					top: 0;
+					left: 0;
+					background: linear-gradient(to bottom, $body-color 0%, $body-color 25%, transparent 100%);
+					transform: translate(calc( #{$h5-font-size} / 2 - (#{$h6-font-size} * 1.5/16) / 2 ) , -.675rem);
+				}
+			}
+		}
+		#myth {//常見迷思
+			.card-title::before{ content: "\F4BE"; }
+			.card-subtitle{
+				font-size: $h6-font-size;
+				padding-left: calc( #{$font-size-sm}*2 + #{$badge-padding-x}*2 + .25rem);	
+			}
+			.card-subtext{
+				position: relative;
+				&:not(:last-child)::after{
+					content: "";
+					display: block;
+					width: 100%;
+					position: absolute;
+					left: 0;
+					right: 0;
+					bottom: -1rem;
+					border: 1px dashed $border-color;
+				}
+			}
+			p{
+				padding-left: calc( #{$font-size-sm}*2 + #{$badge-padding-x}*2 + .25rem);	
+			}
+			.badge{
+				margin-right: .25rem;
+				margin-left: calc( (#{$font-size-sm}*2 + #{$badge-padding-x}*2 + .25rem) * -1 );	
+			}
+		} 	   
+		#compare{//專業比較
+			.card-title::before{ content: "\F438"; }
+			.card-subtitle{
+				font-size: $h6-font-size;
+				background-color: rgba($color, .1);
+				border-radius: $border-radius-xl;
+				padding: map-get($spacers, 2) map-get($spacers, 3);
+				text-align: center;
+				margin-right: 1rem;
+				white-space: nowrap;
+			}
+			table {
+				th{
+					vertical-align: top;
+				}
+			}
+		}
+		#school{//推薦院校
+			.card-title::before{ content: "\F62E"; }
+			.card-subtitle{
+				display: flex;
+				align-items: center;
+				&::before{
+					content: "";
+					display: inline-block;
+					width: 5px;
+					height: 1em;
+					background-color: $color;
+					border-radius: $border-radius;
+					margin-right: .5rem;
+				}
+				> small{
+					color: $color;
+					font-size: $font-size-sm;
+					font-weight: $font-weight-normal;
+					margin-left: .5rem;
+					margin-top: auto;
+				}
+			}
+			.card-panel{
+				margin-top: 1rem;
+				margin-bottom: 1rem;
+			}
+		}
+		#admission {//招生政策
+			.card-title::before{ content: "\F28B"; }
+			.card-title{
+				display: flex;
+			}
+			.card-title-remark{
+				display: inline-flex;
+				flex: 1;
+    		align-items: center;
+				white-space: nowrap;
+				&::before{
+					content: "";
+					display: inline-block;
+					width: 100%;
+					height: 1px;
+					background-color: $border-color;
+					margin-left: 1rem; 
+					margin-right: .5rem; 
+				}
+			}
+			.card-text{
+				counter-reset: section; 	
+			}
+			.card-subtitle{
+				&::before{
+					counter-increment: section; 
+        	content: counter(section);	
+					display: inline-flex;
+					align-items: center;
+					justify-content: center;
+					width: $h5-font-size*1.2;
+					height: $h5-font-size*1.2;
+					font-size: $h5-font-size;
+					border: 2px solid $body-color;
+					border-radius: $border-radius-pill;
+					margin-right: .25rem;
+				}
+			}
+			.card-subtext{
+				padding-left: calc(#{$h5-font-size} + .25rem);
+			}
+			.card-panel{
+				border-left: 4px solid $color;
+				margin-top: .5rem;
+				padding-left: 0;
+			}
+		}
+	}	
+	.explore-slider{ 
+		background-color: $card-bg;
+		border-radius: $border-radius-xl;
+		padding: $spacer;
+		&.sticky-xl-top{
+			top: calc((3.5rem + #{$navbar-brand-padding-y}*2 + #{$navbar-padding-y}*2) + 1rem);
+		}
+		.explore-slider-list{
+			--bs-list-group-border-color: transparent;
+			--bs-list-group-item-padding-x: 0;
+			--bs-list-group-item-padding-y: 0;
+			
+			.list-group-item {
+				
+				&:not(:last-child) {
+					margin-bottom: .25rem;	
+				}
+				.list-group-item-action {
+					display: flex;
+					align-items: center;
+					padding: .5rem 1rem;
+					border-radius: $border-radius-pill;
+					&::before{
+						content: "";	
+						display: inline-block;
+						font-family: "bootstrap-icons";
+						font-weight: 600;
+						color: $color;
+						border-radius: $border-radius;
+						margin-right: .325rem;
+					}
+					&::after{
+						content: "\F285";
+						display: inline-block;
+						font-family: "bootstrap-icons";
+						margin-left: auto;
+					}
+					&:hover{
+						color: $color;	
+					}
+					&.active{
+						background-color: $color;
+						color: $white;
+						&::before, &::after{
+							color: $white;	
+						}
+					}
+					&[href="#intro"]::before{ content: "\F476"; }//專業簡介
+					&[href="#tour"]::before{ content: "\F47F"; }//學習旅程
+					&[href="#career"]::before{ content: "\F1CC"; }//生涯發展
+					&[href="#myth"]::before{ content: "\F4BE"; }//常見迷思
+					&[href="#compare"]::before{ content: "\F438"; }//專業比較
+					&[href="#school"]::before{ content: "\F62E"; }//推薦院校
+					&[href="#admission"]::before{ content: "\F28B"; }//招生政策
+				}
+			}
+		}
+	}
+	}
+	
+	&[data-code="01"] {///* 哲學 */
+		@include explore3Style($category-01);
+	}
+	&[data-code="02"] {///* 經濟 */
+		@include explore3Style($category-02);
+	}
+	&[data-code="03"] {///* 法學 */
+		@include explore3Style($category-03);
+	}
+	&[data-code="04"] {///* 教育 */
+		@include explore3Style($category-04);
+	}
+	&[data-code="05"] {///* 文學 */
+		@include explore3Style($category-05);
+	}
+	&[data-code="06"] {///* 歷史 */
+		@include explore3Style($category-06);
+	}
+	&[data-code="07"] {//* 理學 */
+		@include explore3Style($category-07);
+	}
+	&[data-code="08"] {///* 工學 */
+		@include explore3Style($category-08);
+	}
+	&[data-code="09"] {///* 農學 */
+		@include explore3Style($category-09);
+	}
+	&[data-code="10"] {///* 醫學 */
+		@include explore3Style($category-10);
+	}
+	&[data-code="12"] {///* 管理 */
+		@include explore3Style($category-12);
+	}
+	&[data-code="13"] {///* 藝術 */
+		@include explore3Style($category-13);
+	}
+	
+	
+}
