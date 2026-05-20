@@ -26,8 +26,8 @@ footer .infomation { background-color: rgba(255, 255, 255, 0.125); color: #fff; 
 footer .infomation .logo { margin-bottom: 1.5rem; }
 footer .infomation .infomation-data { padding-left: 13%; margin-bottom: 1.5rem; }
 footer .infomation .infomation-data p { margin-bottom: .25rem; }
-footer .infomation .infomation-nav { margin-top: .75rem; margin-bottom: .75rem; padding-left: 8.5%; }
-@media screen and (min-width: 480px) { footer .infomation .infomation-nav { flex-wrap: nowrap; } }
+footer .infomation .infomation-nav { margin-top: .75rem; margin-bottom: .75rem; }
+@media screen and (min-width: 768px) { footer .infomation .infomation-nav { flex-wrap: nowrap; padding-left: 7.5%; } }
 footer .infomation .infomation-nav a { color: #fff; font-size: 1rem; text-align: left; white-space: nowrap; }
 footer .infomation .infomation-nav a:hover, footer .infomation .infomation-nav a:focus, footer .infomation .infomation-nav a:active { color: #FFF580; }
 footer .infomation .infomation-link { font-size: 1rem; display: flex; align-items: center; padding-left: 1rem; margin-top: .75rem; margin-bottom: .75rem; }
