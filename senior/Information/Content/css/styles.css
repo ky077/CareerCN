@@ -196,6 +196,8 @@ a { text-underline-offset: .25em; word-break: break-all; }
 .index .step .step-content h4 small { color: transparent; font-size: 1rem; display: block; border-top: 1px solid #4f4da1; margin-right: -4rem; padding-right: 4rem; position: relative; margin-top: .5rem; }
 .index .step .step-content h4 small .step-icon { display: block; width: 4rem; height: 4rem; position: absolute; top: 0; right: 0; }
 .index .step .step-content p { color: rgba(52, 58, 64, 0.75); filter: brightness(1.2); }
+.index .step .step-content p > br { display: none; }
+@media screen and (min-width: 576px) { .index .step .step-content p > br { display: block; } }
 .index .step .step-icon { transform: scale(1); transform-style: preserve-3d; transition: transform .5s; }
 .index .step .step-icon .step-icon-front, .index .step .step-icon .step-icon-back { overflow: hidden; width: 100%; height: 100%; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-color: #0068b7; border-radius: 100%; border: .25rem solid #fff; box-shadow: 1px 1px #0068b7, -1px -1px #0068b7, -1px 1px #0068b7, 1px -1px #0068b7; display: flex; justify-content: center; align-items: center; color: #fff; transform: translateY(-50%); }
 .index .step .step-icon .step-icon-front img, .index .step .step-icon .step-icon-back img { max-width: 75%; max-height: 75%; }

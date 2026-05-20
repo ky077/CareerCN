@@ -258,11 +258,16 @@
 						right: 0;
 					}
 				}
-
 			}
 			p{
 				color: $body-secondary-color;
 				filter: brightness(1.2);
+				> br{
+					display: none;
+					@media screen and (min-width: 576px) {
+					display: block;	
+					}
+				}
 			}
 		}
 		.step-icon { 
