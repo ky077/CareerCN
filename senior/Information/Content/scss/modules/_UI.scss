@@ -70,6 +70,14 @@ a {
 }
 .link-scale {
   transition: .35s ease;
+	transform-origin: left center;
+  &:hover, &:focus, &:active {
+		color: mix($secondary, $primary, 50%) !important;
+    transform: scale(1.05);
+  }
+}
+.btn-scale {
+  transition: .35s ease;
   &:hover, &:focus, &:active {
     transform: scale(1.1);
   }

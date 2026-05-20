@@ -108,15 +108,13 @@
 		.news-section{
 			.list-group{
 				.list-group-item {
-					color: $body-secondary-color;
+					color: $body-color;
 					border-color: transparent;
-					padding: ($spacer * .25) 0;
+					padding: map-get($spacers, 2) 0;
 					white-space: nowrap;
 					overflow: hidden;
 					text-overflow: ellipsis;
-					&:hover, &:focus, &:active {
-						color: $primary;
-					}
+					@extend .link-scale;
 				}
 			}
 			.news-tag {
@@ -162,9 +160,8 @@
 						display: block;
 						color: $body-secondary-color;
 						text-decoration: none;
-						&:hover{
-							color: $primary;
-						}
+						transform-origin: left center;
+						@extend .link-scale;
 						&::before {
 							content: counter(rank-counter, decimal-leading-zero); ///* 顯示兩位數編號 */
 							width: 2rem;
@@ -179,20 +176,26 @@
 							background: rgba($body-secondary-color, .1);
 							color: $body-secondary-color;
 							border-radius: $border-radius-lg;
+							transition: $transition-base;
+						}
 					}
-				}
-				}
-				li:nth-child(1) > a:before { 
-					background: $orange; 
-					color: $body-color; 
-				}
-				li:nth-child(2) > a:before { 
-					background: $orange-300; 
-					color: $body-color; 
-				}
-				li:nth-child(3) > a:before { 
-					background: $yellow; 
-					color: $body-color; 
+					&:nth-child(1), &:nth-child(2), &:nth-child(3){
+						> a{
+							color: $body-color;	
+							&::before {
+								color: $body-color;		
+							}
+						}
+					}
+					&:nth-child(1) > a:before { 
+						background: $orange;
+					}
+					&:nth-child(2) > a:before { 
+						background: $orange-300;
+					}
+					&:nth-child(3) > a:before { 
+						background: $yellow;
+					}
 				}
 			}
 		}
