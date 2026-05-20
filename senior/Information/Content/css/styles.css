@@ -190,7 +190,7 @@ a { text-underline-offset: .25em; word-break: break-all; }
 .index .step { background-color: rgba(204, 225, 241, 0.15); padding-top: 3rem; padding-bottom: 3rem; }
 .index .step .step-title { color: #4f4da1; filter: brightness(1.2); font-size: 2rem; font-weight: 700; text-align: center; margin-top: 1rem; margin-bottom: 3rem; }
 .index .step .step-title > small { display: block; font-size: 1rem; font-weight: 400; color: rgba(52, 58, 64, 0.75); margin-top: .5rem; }
-.index .step .step-subtitle { display: flex; flex-direction: column; justify-content: center; align-items: center; font-weight: 600; }
+.index .step .step-subtitle { display: flex; flex-direction: column; justify-content: center; align-items: center; font-weight: 900; }
 .index .step .step-subtitle small { color: #4f4da1; font-size: 1rem; font-weight: 400; letter-spacing: .25em; }
 .index .step .step-content h4 { display: flex; flex-direction: column; line-height: 1.5; padding-right: 4rem; font-weight: 700; }
 .index .step .step-content h4 small { color: transparent; font-size: 1rem; display: block; border-top: 1px solid #4f4da1; margin-right: -4rem; padding-right: 4rem; position: relative; margin-top: .5rem; }
