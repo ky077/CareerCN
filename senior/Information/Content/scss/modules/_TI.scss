@@ -1,60 +1,80 @@
 $TI-color:			 #006500;
 $TI-light-color: #00ab28;
 
-$TI-A-color: $orange; //藝術型
-$TI-C-color: #862E9C; //事務型
-$TI-E-color: #E64980; //企業行
-$TI-I-color: $green; //研究型
-$TI-R-color: $red; //實用型
-$TI-S-color: $blue; //社會型
-@mixin TIsymbolStyles($color) {
-  //.TI-symbol{
-  width: 6rem;
-  height: 6rem;
-	min-width: 6rem;
-  min-height: 6rem;
-	max-width: 6rem;
-  max-height: 6rem;
-  border-radius: $border-radius-xxl;
-  color: $white;
+$TI-ART-color: #F8B62D; //icon-Art 艺术
+$TI-COM-color: #F08108; //icon-Commerce 商业
+$TI-ENG-color: #7ECEF4; //icon-Engineering 工程
+$TI-FIT-color: #9C6AAA; //icon-PhysicalFitness 体能
+$TI-HUM-color: #8EC54D; //icon-Humanities 人文 #adcf03
+$TI-LPS-color: #00913A; //icon-LawPolitics 法政
+$TI-SCI-color: #0071BE; //icon-Science 科学
+$TI-SOC-color: #EA5244; //icon-Society 社会
+$TI-SVC-color: #F8C9C7; //icon-Services 服务
+
+@mixin TIsymbolStyles($color, $get-path) {/* border: 1px solid red;*/
+  //.TI-symbol{ 
+  width: $font-size-base*6;
+  height: $font-size-base*6;
+	min-width: $font-size-base*6;
+  min-height: $font-size-base*6;
+	max-width: $font-size-base*6;
+  max-height: $font-size-base*6;
   display: inline-flex;
 	flex-direction: column;
+	align-items: center;
   justify-content: center;
-  align-items: center;
-  font-size: $font-size-base;
-  font-weight: 500;
-	background-color: $color;
-	box-shadow: 0 .5rem 1rem rgba($color, .25), inset -.325rem -.325rem .5rem rgba($black, 0.1), inset .325rem .325rem .5rem rgba($white, 0.2);
-	text-shadow: 0px 0px 5px rgba($black, .25);
-	border: .325rem solid tint-color($color, 40%);
-	.label-code{
-		font-size: $font-size-base*2;
-		font-weight: 600;
+	filter: drop-shadow($box-shadow-sm);
+	.symbol-text{
+		color: $color;
+		font-size: $font-size-base;
 		line-height: 1;
-		margin-bottom: .25rem;
+		margin-bottom: .5rem;
+	}
+	&::after{ 
+		content: "";
+		display: block;
+		width: calc(#{$font-size-base}*6 - #{$font-size-base} * 1 - .5rem);
+		height: calc(#{$font-size-base}*6 - #{$font-size-base} * 1 - .5rem);
+		background-image: url("../img/TI/niceCareer/icon-#{$get-path}.png");
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
 	}
 }
-//藝術型
-.TI-symbol.A {
-  @include TIsymbolStyles($TI-A-color);
+//艺术
+.TI-symbol.ART {
+  @include TIsymbolStyles($TI-ART-color, "Art");
 }
-//事務型
-.TI-symbol.C {
-  @include TIsymbolStyles($TI-C-color);
+//商业
+.TI-symbol.COM {
+  @include TIsymbolStyles($TI-COM-color, "Commerce");
 }
-//企業行
-.TI-symbol.E {
-  @include TIsymbolStyles($TI-E-color);
+//工程
+.TI-symbol.ENG {
+  @include TIsymbolStyles($TI-ENG-color, "Engineering");
 }
-//研究型
-.TI-symbol.I {
-  @include TIsymbolStyles($TI-I-color);
+//体能
+.TI-symbol.FIT {
+  @include TIsymbolStyles($TI-FIT-color, "PhysicalFitness");
 }
-//實用型
-.TI-symbol.R {
-  @include TIsymbolStyles($TI-R-color);
+//人文
+.TI-symbol.HUM {
+  @include TIsymbolStyles($TI-HUM-color, "Humanities");
 }
-//社會型
-.TI-symbol.S {
-  @include TIsymbolStyles($TI-S-color);
+//法政
+.TI-symbol.LPS {
+  @include TIsymbolStyles($TI-LPS-color, "LawPolitics");
 }
+//科学
+.TI-symbol.SCI {
+  @include TIsymbolStyles($TI-SCI-color, "Science");
+}
+//社会
+.TI-symbol.SOC {
+  @include TIsymbolStyles($TI-SOC-color, "Society");
+}
+//服务
+.TI-symbol.SVC {
+  @include TIsymbolStyles($TI-SVC-color, "Services");
+}
+

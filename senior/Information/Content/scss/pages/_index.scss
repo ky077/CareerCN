@@ -103,7 +103,7 @@
     padding-bottom: map-get($spacers, 7);
 		.media-title{
 			font-size: $h3-font-size;
-			font-weight: $font-weight-bold;
+			font-weight: $font-weight-semibold;
 		}
 		.news-section{
 			.list-group{
@@ -201,14 +201,13 @@
 		}
   }
   .step{
-		background-color: rgba($primary-100, .15);
 		padding-top: map-get($spacers, 7);
 		padding-bottom: map-get($spacers, 7);
 		.step-title{
 			color: $secondary;
 			filter: brightness(1.2);
 			font-size: $h2-font-size;
-			font-weight: $font-weight-bold;
+			font-weight: $font-weight-semibold;
 			text-align: center;
 			margin-top: map-get($spacers, 3);
 			margin-bottom: map-get($spacers, 7);
@@ -239,7 +238,7 @@
 				flex-direction: column;	
 				line-height: 1.5;
 				padding-right: 4rem;
-				font-weight: $font-weight-bold;
+				font-weight: $font-weight-semibold;
 				small{ //沒有字
 					color: transparent;
 					font-size: 1rem;
@@ -320,9 +319,7 @@
 			}
 		}	
 	}
-
 	.join-us{ 
-		background-color: rgba($primary-100, .15);
 		background-image: url("../img/index/join-bg.png");
 		background-position: center bottom;
 		background-size: 100% 100%;
@@ -330,7 +327,7 @@
 		text-align: center;
 		.join-title{
 			font-size: $h1-font-size;
-			font-weight: 700;
+			font-weight: $font-weight-bold;
 			padding-top: map-get($spacers, 7);
 			background: -webkit-linear-gradient($pink 0%, $pink 25%, $secondary 100%);
 			background:      -o-linear-gradient($pink 0%, $pink 25%, $secondary 100%);

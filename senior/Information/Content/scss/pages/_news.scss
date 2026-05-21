@@ -39,7 +39,7 @@ main.news {
 		}
     .card-title {
       font-size: $font-size-base*1.375;
-      font-weight: 400;
+      font-weight: $font-weight-semibold;
       line-height: $line-height-base;
       overflow: hidden;
       text-overflow: ellipsis;
@@ -58,13 +58,14 @@ main.news {
       }
     }
     .card-text {
-      font-weight: 300;
+      font-weight: $font-weight-light;
       overflow: hidden;
       text-overflow: ellipsis;
       display: -webkit-box;
       -webkit-line-clamp: 4;
       -webkit-box-orient: vertical;
-      min-height: calc(1em * #{$line-height-base} * 4);
+			line-height: 1.8;
+      min-height: calc(1em * 1.8 * 4);
     }
     .card-footer {
       font-size: $font-size-sm;

@@ -1,0 +1,72 @@
+$WV-color:			 #006500;
+$WV-light-color: #00ab28;
+
+$WV-A-color:   #f5c51d; //Altruistic 		  利他取向
+$WV-C-color:   #a3ca0f; //Comfortable 	  安定舒适
+$WV-D-color:   #e9516f; //Dignity				  社会尊严
+$WV-IND-color: #ef7c17; //Independence    自主弹性
+$WV-IP-color:  #0071be; //Interpersonal   人际互动
+$WV-P-color:   #d72f36; //Professional    专业成长
+$WV-S-color:   #2ca638; //SelfRealization 自我实现
+
+@mixin WVsymbolStyles($color, $get-path) {  
+  //.WV-symbol{
+  width: $font-size-base*6;
+  height: $font-size-base*6;
+	min-width: $font-size-base*6;
+  min-height: $font-size-base*6;
+	max-width: $font-size-base*6;
+  max-height: $font-size-base*6;
+  display: inline-flex;
+	flex-direction: column;
+	align-items: center;
+  justify-content: center;
+	filter: drop-shadow($box-shadow-sm);
+	.symbol-text{
+		color: $color;
+		font-size: $font-size-base;
+		line-height: 1;
+		margin-bottom: .5rem;
+	}
+	&::after{ 
+		content: "";
+		display: block;
+		width: calc(#{$font-size-base}*6 - #{$font-size-base} * 1 - .5rem - 1rem);
+		height: calc(#{$font-size-base}*6 - #{$font-size-base} * 1 - .5rem - 1rem);
+		background-color: $color;
+		background-image: url("../img/WV/#{$get-path}.png");
+		background-repeat: no-repeat;
+		background-size: 100%;
+		background-position: center;	
+		border-radius: $border-radius-xl;
+	}
+}
+//利他取向
+.WV-symbol.A {
+  @include WVsymbolStyles($WV-A-color, "Altruistic");
+}
+//安定舒适
+.WV-symbol.C {
+  @include WVsymbolStyles($WV-C-color, "Comfortable");
+}
+//社会尊严
+.WV-symbol.D {
+  @include WVsymbolStyles($WV-D-color, "Dignity");
+}
+//自主弹性
+.WV-symbol.IND {
+  @include WVsymbolStyles($WV-IND-color, "Independence");
+}
+//人际互动
+.WV-symbol.IP {
+  @include WVsymbolStyles($WV-IP-color, "Interpersonal");
+}
+//专业成长
+.WV-symbol.P {
+  @include WVsymbolStyles($WV-P-color, "Professional");
+}
+//自我实现
+.WV-symbol.S {
+  @include WVsymbolStyles($WV-S-color, "SelfRealization");
+}
+
