@@ -1,0 +1,32 @@
+@keyframes growUp {
+	0% { transform: scaleY(0); }
+100% { transform: scaleY(1); }
+}
+.growUp{
+	animation: growUp 1s ease-in-out forwards;
+	transform-origin: bottom;
+}
+@keyframes growLeft {
+	0% { transform: scaleX(0); }
+100% { transform: scaleX(1); }
+}
+.growLeft{
+	animation: growLeft 1s ease-in-out forwards;
+	transform-origin: left;
+}
+
+@keyframes fadeIn {
+	50% { opacity: 0; }
+100% { opacity: 1; }
+}
+.fadeIn{
+	animation: fadeIn 1s ease-in-out forwards;
+	opacity: 0;
+}
+
+.growUp .fadeIn,
+.fadeIn .growLeft{
+	animation-delay: .5s;
+}
+
+

@@ -11,18 +11,14 @@ $TI-SCI-color: #0071BE; //icon-Science 科学
 $TI-SOC-color: #EA5244; //icon-Society 社会
 $TI-SVC-color: #F8C9C7; //icon-Services 服务
 
+$TI-icon-width: 4.5rem;
+
 @mixin TIsymbolStyles($color, $get-path) {/* border: 1px solid red;*/
   //.TI-symbol{ 
-  width: $font-size-base*6;
-  height: $font-size-base*6;
-	min-width: $font-size-base*6;
-  min-height: $font-size-base*6;
-	max-width: $font-size-base*6;
-  max-height: $font-size-base*6;
   display: inline-flex;
 	flex-direction: column;
 	align-items: center;
-  justify-content: center;
+	justify-content: center;
 	filter: drop-shadow($box-shadow-sm);
 	.symbol-text{
 		color: $color;
@@ -33,8 +29,8 @@ $TI-SVC-color: #F8C9C7; //icon-Services 服务
 	&::after{ 
 		content: "";
 		display: block;
-		width: calc(#{$font-size-base}*6 - #{$font-size-base} * 1 - .5rem);
-		height: calc(#{$font-size-base}*6 - #{$font-size-base} * 1 - .5rem);
+		width: 4.5rem;
+		height: 4.5rem;
 		background-image: url("../img/TI/niceCareer/icon-#{$get-path}.png");
 		background-repeat: no-repeat;
 		background-size: cover;

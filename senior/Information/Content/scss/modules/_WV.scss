@@ -1,5 +1,5 @@
-$WV-color:			 #006500;
-$WV-light-color: #00ab28;
+$WV-color:			 #a13820;
+$WV-light-color: #f7ddb8;
 
 $WV-A-color:   #f5c51d; //Altruistic 		  利他取向
 $WV-C-color:   #a3ca0f; //Comfortable 	  安定舒适
@@ -9,18 +9,14 @@ $WV-IP-color:  #0071be; //Interpersonal   人际互动
 $WV-P-color:   #d72f36; //Professional    专业成长
 $WV-S-color:   #2ca638; //SelfRealization 自我实现
 
+$WV-icon-width: 3.5rem;
+
 @mixin WVsymbolStyles($color, $get-path) {  
   //.WV-symbol{
-  width: $font-size-base*6;
-  height: $font-size-base*6;
-	min-width: $font-size-base*6;
-  min-height: $font-size-base*6;
-	max-width: $font-size-base*6;
-  max-height: $font-size-base*6;
   display: inline-flex;
 	flex-direction: column;
 	align-items: center;
-  justify-content: center;
+	justify-content: center;
 	filter: drop-shadow($box-shadow-sm);
 	.symbol-text{
 		color: $color;
@@ -31,14 +27,23 @@ $WV-S-color:   #2ca638; //SelfRealization 自我实现
 	&::after{ 
 		content: "";
 		display: block;
-		width: calc(#{$font-size-base}*6 - #{$font-size-base} * 1 - .5rem - 1rem);
-		height: calc(#{$font-size-base}*6 - #{$font-size-base} * 1 - .5rem - 1rem);
+		width: $WV-icon-width;
+		height: $WV-icon-width;
 		background-color: $color;
 		background-image: url("../img/WV/#{$get-path}.png");
 		background-repeat: no-repeat;
 		background-size: 100%;
 		background-position: center;	
 		border-radius: $border-radius-xl;
+	}
+	
+	&.symbol-v{
+		display: inline-flex;
+		flex-direction: row-reverse;
+		.symbol-text{
+			margin-bottom: 0;
+			margin-left: .5rem;
+		}
 	}
 }
 //利他取向

@@ -358,41 +358,41 @@
 	}
 	}
 	
-	&[data-code="01"] {///* 哲學 */
-		@include explore3Style($category-01);
+	&[data-disc-code="01"] {///* 哲學 */
+		@include explore3Style($disc-01-color);
 	}
-	&[data-code="02"] {///* 經濟 */
-		@include explore3Style($category-02);
+	&[data-disc-code="02"] {///* 經濟 */
+		@include explore3Style($disc-02-color);
 	}
-	&[data-code="03"] {///* 法學 */
-		@include explore3Style($category-03);
+	&[data-disc-code="03"] {///* 法學 */
+		@include explore3Style($disc-03-color);
 	}
-	&[data-code="04"] {///* 教育 */
-		@include explore3Style($category-04);
+	&[data-disc-code="04"] {///* 教育 */
+		@include explore3Style($disc-04-color);
 	}
-	&[data-code="05"] {///* 文學 */
-		@include explore3Style($category-05);
+	&[data-disc-code="05"] {///* 文學 */
+		@include explore3Style($disc-05-color);
 	}
-	&[data-code="06"] {///* 歷史 */
-		@include explore3Style($category-06);
+	&[data-disc-code="06"] {///* 歷史 */
+		@include explore3Style($disc-06-color);
 	}
-	&[data-code="07"] {//* 理學 */
-		@include explore3Style($category-07);
+	&[data-disc-code="07"] {//* 理學 */
+		@include explore3Style($disc-07-color);
 	}
-	&[data-code="08"] {///* 工學 */
-		@include explore3Style($category-08);
+	&[data-disc-code="08"] {///* 工學 */
+		@include explore3Style($disc-08-color);
 	}
-	&[data-code="09"] {///* 農學 */
-		@include explore3Style($category-09);
+	&[data-disc-code="09"] {///* 農學 */
+		@include explore3Style($disc-09-color);
 	}
-	&[data-code="10"] {///* 醫學 */
-		@include explore3Style($category-10);
+	&[data-disc-code="10"] {///* 醫學 */
+		@include explore3Style($disc-10-color);
 	}
-	&[data-code="12"] {///* 管理 */
-		@include explore3Style($category-12);
+	&[data-disc-code="12"] {///* 管理 */
+		@include explore3Style($disc-12-color);
 	}
-	&[data-code="13"] {///* 藝術 */
-		@include explore3Style($category-13);
+	&[data-disc-code="13"] {///* 藝術 */
+		@include explore3Style($disc-13-color);
 	}
 	
 	

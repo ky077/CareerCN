@@ -10,18 +10,14 @@ $TA-M-color : #f5c51d; //数学
 $TA-S-color : #2ca638; //空间
 $TA-SR-color: #ef7c17; //科学推理
 
-@mixin TAsymbolStyles($color, $get-path) { 
+$TA-icon-width: 3.5rem;
+
+@mixin TAsymbolStyles($color, $get-path) {  
   //.TA-symbol{
-  width: $font-size-base*6;
-  height: $font-size-base*6;
-	min-width: $font-size-base*6;
-  min-height: $font-size-base*6;
-	max-width: $font-size-base*6;
-  max-height: $font-size-base*6;
-  display: inline-flex;
+	display: inline-flex;
 	flex-direction: column;
 	align-items: center;
-  justify-content: center;
+	justify-content: center;
 	filter: drop-shadow($box-shadow-sm);
 	.symbol-text{ 
 		color: $color;
@@ -32,8 +28,8 @@ $TA-SR-color: #ef7c17; //科学推理
 	&::after{ 
 		content: "";
 		display: block;
-		width: calc(#{$font-size-base}*6 - #{$font-size-base} * 1 - .5rem - 1rem);
-		height: calc(#{$font-size-base}*6 - #{$font-size-base} * 1 - .5rem - 1rem);
+		width: $TA-icon-width;
+		height: $TA-icon-width;
 		background-color: $color;
 		background-image: url("../img/TA/#{$get-path}.png");
 		background-repeat: no-repeat;

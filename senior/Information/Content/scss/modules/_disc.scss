@@ -1,0 +1,88 @@
+@mixin discBtnStyle($color, $icon-svg) {
+//.disc-btn{
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	background-color: $white;
+	border-radius: $border-radius-lg;
+	border-color: $border-color;
+	padding: $input-btn-padding-y-lg $input-btn-padding-x-lg;
+	color: $body-color;
+	transition: $icon-link-icon-transition;
+	.disc-icon{
+		width: 1em;
+		height: 1em;
+		overflow: hidden;
+		position: relative;
+		margin-right: .25rem;
+		&::after{
+			content: ""	;
+			display: block;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background-color: $color; 
+			mask-image: url($icon-svg);
+			mask-repeat: no-repeat;
+			mask-position: center;
+			mask-size: 100%;
+		}
+	}
+	.disc-label{
+	}
+	.disc-code{
+		font-size: $font-size-sm;
+		color: $body-tertiary-color;
+		margin-left: .5rem;
+	}	
+	&:hover{
+		border-color: $color;
+		transition: $icon-link-icon-transition;
+		&::after{
+			color: $color !important;
+			transform: $icon-link-icon-transform;
+		}	
+	}
+}
+
+[data-disc-code="01"] .disc-btn, .disc-btn[data-disc-code="01"]{
+	@include discBtnStyle($disc-01-color, $disc-01-icon);
+}
+[data-disc-code="02"] .disc-btn, .disc-btn[data-disc-code="02"]{
+	@include discBtnStyle($disc-02-color, $disc-02-icon);
+}
+[data-disc-code="03"] .disc-btn, .disc-btn[data-disc-code="03"]{
+	@include discBtnStyle($disc-03-color, $disc-03-icon);
+}
+[data-disc-code="04"] .disc-btn, .disc-btn[data-disc-code="04"]{
+	@include discBtnStyle($disc-04-color, $disc-04-icon);
+}
+[data-disc-code="05"] .disc-btn, .disc-btn[data-disc-code="05"]{
+	@include discBtnStyle($disc-05-color, $disc-05-icon);
+}
+[data-disc-code="06"] .disc-btn, .disc-btn[data-disc-code="06"]{
+	@include discBtnStyle($disc-06-color, $disc-06-icon);
+}
+[data-disc-code="07"] .disc-btn, .disc-btn[data-disc-code="07"]{
+	@include discBtnStyle($disc-07-color, $disc-07-icon);
+}
+[data-disc-code="08"] .disc-btn, .disc-btn[data-disc-code="08"]{
+	@include discBtnStyle($disc-08-color, $disc-08-icon);
+}
+[data-disc-code="09"] .disc-btn, .disc-btn[data-disc-code="09"]{
+	@include discBtnStyle($disc-09-color, $disc-09-icon);
+}
+[data-disc-code="10"] .disc-btn, .disc-btn[data-disc-code="10"]{
+	@include discBtnStyle($disc-10-color, $disc-10-icon);
+}
+[data-disc-code="12"] .disc-btn, .disc-btn[data-disc-code="12"]{
+	@include discBtnStyle($disc-12-color, $disc-12-icon);
+}
+[data-disc-code="13"] .disc-btn, .disc-btn[data-disc-code="13"]{
+	@include discBtnStyle($disc-13-color, $disc-13-icon);
+}
+
