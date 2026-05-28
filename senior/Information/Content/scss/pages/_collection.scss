@@ -17,6 +17,9 @@
 			line-height: 1;
 		}
 	}
+	.nav-link:hover{
+		color: $body-color;
+	}
 	.nav-link.active {
 		border-bottom: 2px solid $primary;
 		color: $primary;
@@ -31,12 +34,9 @@
 .collection-search{
 	margin-top: map-get($spacers, 5);
 	margin-bottom: map-get($spacers, 5);
-	> [class*="container"]{
-		background-color: $body-secondary-bg;	
-		border-radius: $border-radius;
-		padding-top: $grid-gutter-width*.5;
-		padding-bottom: $grid-gutter-width*.5;
-	}
+	background-color: $body-secondary-bg;	
+	border-radius: $border-radius;
+	padding: $grid-gutter-width*.5;
 	.collection-search-title{
 		font-size: $font-size-base;
 		margin-bottom: 0;
@@ -57,64 +57,121 @@
 	
 }
 
-.collection-disc, .collection-major{
-	position: relative;
-	@media screen and (min-width: 1200px) {
-	padding-left:  map-get($spacers, 5);
-	padding-right: map-get($spacers, 5);	
-	}
-	.collection-title{
-		position: absolute;
-		top: 0;
-		bottom: 0;
-		left: $grid-gutter-width/2;
-		writing-mode: vertical-lr;
-		margin: 0;
-		letter-spacing: .1em;
+@mixin collectionCardStyle($color, $icon-svg) {
+//.collection-card{
+	--bs-card-border-radius: var(--bs-border-radius-xl);
+	--bs-card-spacer-x: 1.5rem;
+	--bs-card-cap-padding-x: 1.5rem;
+	.card-body{
 		display: flex;
-		justify-content: center;
-		align-content: center;
-		@media screen and (min-width: 1200px) {
-		left: map-get($spacers, 5);	
+		flex-direction: row;
+		align-items: center;
+		gap: $card-spacer-x;
+
+		.card-icon{
+			width: 3rem;
+			height: 3rem;
+			overflow: hidden;
+			background-color: tint-color($color, 90%);
+			border-radius: $border-radius-lg;
+			position: relative;
+			&::after{
+				content: ""	;
+				display: block;
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				background-color: $color; 
+				mask-image: url($icon-svg);
+				mask-repeat: no-repeat;
+				mask-position: center;
+				mask-size: 60%;
+			}
+		}
+		.card-title {
+			font-size: $h5-font-size;
+			line-height: $line-height-base;
+			margin: 0;
+			display: flex;
+			align-items: center;
+			.card-label{
+				flex: 1;
+			}
+			.card-code{
+				color: $body-tertiary-color;
+				font-size: $h7-font-size;
+				margin-left: .5rem;
+			}
+		}
+		.card-intro{
+			color: $color;
+			font-size: $h7-font-size;
+			font-weight: 300;
+			border: 1px solid $color;
+			border-radius: $border-radius-pill;
+			padding: $input-btn-padding-y $input-btn-padding-x-lg;
+			margin-left: auto;
+			&:hover{
+				color: $white;
+				border-color: $color;
+				background-color: $color;	
+			}
+		}	
+	}	
+	.card-footer{
+		background-color: tint-color($color, 95%);
+		.card-intro{
+			color: $body-secondary-color;
+			font-size: $font-size-sm;
+			&:hover{
+				color: $color;	
+			}
 		}
 	}
-	$title-height: calc(2rem*1.5*2 + 1rem*2);
-	
-	.data-empty{
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		min-height: 250px;
+	&:hover{
+		box-shadow: $box-shadow;
 	}
-	.data-filled{}
-	
-	.futuristic-frame{
-		padding-left: map-get($spacers, 5)*2;
-		padding-right: map-get($spacers, 5)*2;
-		position: relative;
-		clip-path: polygon(   0%   0%, 
-							100%   0%, 
-			//右洞
-						100% calc(100% - 7rem), 
-						calc(100% - 1.5rem) calc(100% - 7rem), 
-						calc(100% - 1.5rem) calc(100% - 6rem), calc(100% - .5rem) calc(100% - 6rem), 
-		calc(100% - .5rem) calc(100% - 7rem), 100% calc(100% - 7rem),
-						100% calc(100% - 5.5rem), calc(100% - 1.5rem) calc(100% - 5.5rem), 
-		calc(100% - 1.5rem) calc(100% - 4.5rem), calc(100% - .5rem) calc(100% - 4.5rem), 
-		calc(100% - .5rem) calc(100% - 5.5rem), 100% calc(100% - 5.5rem),
-						100% calc(100% - 4rem), calc(100% - 1.5rem) calc(100% - 4rem), 
-		calc(100% - 1.5rem) calc(100% - 3rem), calc(100% - .5rem) calc(100% - 3rem), 
-		calc(100% - .5rem) calc(100% - 4rem), 100% calc(100% - 4rem),
-							100% calc(100% - 1px), 
-							  0% calc(100% - 1px),
-							0% calc(50% + #{$title-height}/2), 2rem*1.5 calc(50% + #{$title-height}/2 - 1rem), 2rem*1.5 calc(50% - #{$title-height}/2 + 1rem), 0% calc(50% - #{$title-height}/2));	
-	}	
 }
-.collection-disc{//学科门类
-	
-}
-.collection-major{//专业 
 
+.collection-card[data-disc-code="01"] {///* 哲學 */
+	@include collectionCardStyle($disc-01-color, $disc-01-icon);
+}
+.collection-card[data-disc-code="02"] {///* 經濟 */
+	@include collectionCardStyle($disc-02-color, $disc-02-icon);
+}
+.collection-card[data-disc-code="03"] {///* 法學 */
+	@include collectionCardStyle($disc-03-color, $disc-03-icon);
+}
+.collection-card[data-disc-code="04"] {///* 教育 */
+	@include collectionCardStyle($disc-04-color, $disc-04-icon);
+}
+.collection-card[data-disc-code="05"] {///* 文學 */
+	@include collectionCardStyle($disc-05-color, $disc-05-icon);
+}
+.collection-card[data-disc-code="06"] {///* 歷史 */
+	@include collectionCardStyle($disc-06-color, $disc-06-icon);
+}
+.collection-card[data-disc-code="07"] {//* 理學 */
+	@include collectionCardStyle($disc-07-color, $disc-07-icon);
+}
+.collection-card[data-disc-code="08"] {///* 工學 */
+	@include collectionCardStyle($disc-08-color, $disc-08-icon);
+}
+.collection-card[data-disc-code="09"] {///* 農學 */
+	@include collectionCardStyle($disc-09-color, $disc-09-icon);
+}
+.collection-card[data-disc-code="10"] {///* 醫學 */
+	@include collectionCardStyle($disc-10-color, $disc-10-icon);
+}
+.collection-card[data-disc-code="12"] {///* 管理 */
+	@include collectionCardStyle($disc-12-color, $disc-12-icon);
+}
+.collection-card[data-disc-code="13"] {///* 藝術 */
+	@include collectionCardStyle($disc-13-color, $disc-13-icon);
 }
 
 

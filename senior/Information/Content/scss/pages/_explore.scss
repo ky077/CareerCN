@@ -15,30 +15,10 @@
 			background-size: cover;
 			background-position: center top;
 		}
-		/*&::before{  
-			content: "";
-			display: block;
-			width: 20%;
-			height: 90%;
-			position: absolute;
-			bottom: 0;
-			left: 1rem;
-			background-image: url("../img/explore/boy.png");
-			background-size: 100% auto;
-			background-position: center top;
+		>[class*="container"]{
+			position: relative;
+			z-index: 1;
 		}
-		&::after{ 
-			content: "";
-			display: block;
-			width: 20%;
-			height: 90%;
-			position: absolute;
-			bottom: 0;
-			right: 1rem;
-			background-image: url("../img/explore/girl.png");
-			background-size: 100% auto;
-			background-position: center top;
-		}*/
 	}
 	.page-content{ 
 		margin-top: map-get($spacers, 7)*-1;
@@ -266,7 +246,6 @@
 				}
 			}
 		}
-		
 		&:hover{
 			box-shadow: $box-shadow;
 		}

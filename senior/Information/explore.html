@@ -81,7 +81,6 @@
           </div>
         </div>
         <!-- 探索介绍 结束 -->
-        
       </div>
     </div>
     <!-- page-header End -->
@@ -298,15 +297,16 @@
 $(document).ready(function() {
 	//nowPage
   $('.nav-explore').addClass('active');
-});		
-</script>
-<script>
-$(function () {
-  $.getJSON("Content/json/categories.json", function (res) {
+	
+	//探索學科專業清單
+	$.getJSON("Content/json/categories.json", function (res) {
     renderCategories(res.data);
   });
-});
-
+	
+	//第一個清單專業詳情展開
+	
+});	
+	
 function renderCategories(data) {
   const $wrap = $("#categoryList");
   $wrap.empty();
@@ -350,7 +350,7 @@ function renderCategories(data) {
 						<span class="card-label">${category.name}</span>
 						<small class="card-code">${category.code}</small>
 					</h3>
-          <a class="icon-link icon-link-hover card-intro" href="explore1.html">学科介绍<i class="bi bi-arrow-right ms-1"></i></a>
+          <a class="icon-link icon-link-hover card-intro" href="explore1.html">门类介绍<i class="bi bi-arrow-right ms-1"></i></a>
         </div>
         <div class="card-footer">
 					<div class="card-info">
@@ -365,7 +365,7 @@ function renderCategories(data) {
 
     $wrap.append(cardHtml);
   });
-}	
+}		
 </script>
 </body>
 </html>

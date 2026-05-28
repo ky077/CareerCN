@@ -63,12 +63,10 @@
     <!-- page-header End -->
     
     <!-- Content Start -->
-    
     <div class="container-fluid page-content">
-			<div class="container">
-			
-      <!-- 頁籤 開始 -->
-      <div class="collection-nav">
+      <div class="container">
+        <!-- 頁籤 開始 -->
+        <div class="collection-nav">
           <ul class="nav nav-fill justify-content-center">
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="collectionFAV.html"><i class="bi bi-suit-heart"></i>我的最爱</a>
@@ -80,11 +78,10 @@
               <a class="nav-link" href="collectionCMP.html"><i class="bi bi-intersect"></i>比较列表</a>
             </li>
           </ul>
-
-      </div>
-      <!-- 頁籤 結束 -->
-      <!-- 筛选搜尋 start -->
-      <div class="collection-search">
+        </div>
+        <!-- 頁籤 結束 -->
+        <!-- 筛选搜尋 start -->
+        <div class="collection-search">
           <div class="row justify-content-around">
             <div class="col d-flex flex-row align-items-center">
               <h3 class="collection-search-title"><i class="bi bi-funnel"></i>筛选</h3>
@@ -104,54 +101,63 @@
               <input type="email" class="form-control form-search" id="" placeholder="输入关键词搜寻最爱学科或专业...">
             </div>
           </div>
-      </div>
-      <!-- 筛选搜尋 end -->
-      <!-- 最爱 開始 -->
-      <div class="collection-favorite ">
+        </div>
+        <!-- 筛选搜尋 end -->
+        <!-- 最爱 開始 -->
+        <div class="collection-favorite">
           <div class="row g-4 isotope-list">
-						<!-- -->
-          <div class="isotope-list-none"></div>
-          <!-- -->
+            <!-- -->
+            <div class="isotope-list-none"></div>
+            <!-- -->
             <div class="col-md-4 isotope-item disc">
-              <div class="card" data-disc-code="01">
+              <div class="card collection-card" data-disc-code="01">
                 <div class="card-body">
                   <div class="card-icon"></div>
                   <h3 class="card-title"><span class="card-label">哲学</span><small class="card-code">01</small></h3>
+                </div>
+                <div class="card-footer">
+                  <a class="icon-link icon-link-hover card-intro" href="explore1.html">门类介绍<i class="bi bi-arrow-right ms-1"></i></a>
+									<button></button>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 isotope-item disc">
+              <div class="card collection-card" data-disc-code="02">
+                <div class="card-body">
+                  <div class="card-icon"></div>
+                  <h3 class="card-title"><span class="card-label">经济学</span><small class="card-code">02</small></h3>
+                </div>
+                <div class="card-footer">
                   <a class="icon-link icon-link-hover card-intro" href="explore1.html">门类介绍<i class="bi bi-arrow-right ms-1"></i></a>
                 </div>
               </div>
             </div>
-						<div class="col-md-4 isotope-item disc">
-              <div class="card" data-disc-code="01">
+            <div class="col-md-4 isotope-item disc">
+              <div class="card collection-card" data-disc-code="03">
                 <div class="card-body">
                   <div class="card-icon"></div>
-                  <h3 class="card-title"><span class="card-label">哲学</span><small class="card-code">01</small></h3>
+                  <h3 class="card-title"><span class="card-label">法学</span><small class="card-code">03</small></h3>
+                </div>
+                <div class="card-footer">
                   <a class="icon-link icon-link-hover card-intro" href="explore1.html">门类介绍<i class="bi bi-arrow-right ms-1"></i></a>
                 </div>
               </div>
             </div>
-						<div class="col-md-4 isotope-item disc">
-              <div class="card" data-disc-code="01">
+            <div class="col-md-4 isotope-item major">
+              <div class="card collection-card" data-disc-code="01">
                 <div class="card-body">
                   <div class="card-icon"></div>
-                  <h3 class="card-title"><span class="card-label">哲学</span><small class="card-code">01</small></h3>
-                  <a class="icon-link icon-link-hover card-intro" href="explore1.html">门类介绍<i class="bi bi-arrow-right ms-1"></i></a>
+                  <h3 class="card-title"><span class="card-label">哲学专业</span><small class="card-code">010101</small></h3>
                 </div>
-              </div>
-            </div>
-						<div class="col-md-4 isotope-item major">
-              <div class="card" data-disc-code="01">
-                <div class="card-body">
-                  <div class="card-icon"></div>
-                  <h3 class="card-title"><span class="card-label">哲学</span><small class="card-code">01</small></h3>
+                <div class="card-footer">
                   <a class="icon-link icon-link-hover card-intro" href="explore1.html">专业介绍<i class="bi bi-arrow-right ms-1"></i></a>
                 </div>
               </div>
             </div>
           </div>
+        </div>
+        <!-- 最爱 結束 -->
       </div>
-      <!-- 最爱 結束 -->
-				</div>
     </div>
     <!-- Content End -->
   </main>
@@ -169,7 +175,7 @@
 <script src="Content/lib/WOW-master/dist/wow.min.js"></script>
 
 <!-- This page Javascript Libraries -->
-<script src="Content/lib/isotope/isotope.pkgd.min.js"></script> 	
+<script src="Content/lib/isotope/isotope.pkgd.min.js"></script>
 
 <!-- This web Javascript -->
 <script src="Content/js/fn.js"></script>
