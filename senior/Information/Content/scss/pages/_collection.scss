@@ -1,0 +1,121 @@
+.collection-nav{
+  font-size: $font-size-lg;
+	margin-top: map-get($spacers, 5);
+	margin-bottom: map-get($spacers, 5);
+	.nav-link{
+		color: $body-secondary-color;
+		i{
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			width: 2rem;
+			height: 2rem;
+			background-color: rgba($body-secondary-color, .05);
+			border-radius: $border-radius;
+			font-size: $font-size-base;
+			margin-right: .25rem;
+			line-height: 1;
+		}
+	}
+	.nav-link.active {
+		border-bottom: 2px solid $primary;
+		color: $primary;
+		i{
+			background-color: $primary;
+			color: $white;
+			box-shadow: 0 .5rem 1rem rgba($primary, .15);
+		}
+	}
+}
+
+.collection-search{
+	margin-top: map-get($spacers, 5);
+	margin-bottom: map-get($spacers, 5);
+	> [class*="container"]{
+		background-color: $body-secondary-bg;	
+		border-radius: $border-radius;
+		padding-top: $grid-gutter-width*.5;
+		padding-bottom: $grid-gutter-width*.5;
+	}
+	.collection-search-title{
+		font-size: $font-size-base;
+		margin-bottom: 0;
+		color: $body-tertiary-color;	
+		padding: $nav-link-padding-y $nav-link-padding-x;
+	}
+	.nav-link{
+		color: $body-secondary-color;
+		border-radius: $border-radius;
+	}
+	.nav-link:hover{
+		color: $secondary;
+	}
+	.nav-link.active{
+		background-color: $white;
+		color: $secondary;
+	}
+	
+}
+
+.collection-disc, .collection-major{
+	position: relative;
+	@media screen and (min-width: 1200px) {
+	padding-left:  map-get($spacers, 5);
+	padding-right: map-get($spacers, 5);	
+	}
+	.collection-title{
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: $grid-gutter-width/2;
+		writing-mode: vertical-lr;
+		margin: 0;
+		letter-spacing: .1em;
+		display: flex;
+		justify-content: center;
+		align-content: center;
+		@media screen and (min-width: 1200px) {
+		left: map-get($spacers, 5);	
+		}
+	}
+	$title-height: calc(2rem*1.5*2 + 1rem*2);
+	
+	.data-empty{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		min-height: 250px;
+	}
+	.data-filled{}
+	
+	.futuristic-frame{
+		padding-left: map-get($spacers, 5)*2;
+		padding-right: map-get($spacers, 5)*2;
+		position: relative;
+		clip-path: polygon(   0%   0%, 
+							100%   0%, 
+			//右洞
+						100% calc(100% - 7rem), 
+						calc(100% - 1.5rem) calc(100% - 7rem), 
+						calc(100% - 1.5rem) calc(100% - 6rem), calc(100% - .5rem) calc(100% - 6rem), 
+		calc(100% - .5rem) calc(100% - 7rem), 100% calc(100% - 7rem),
+						100% calc(100% - 5.5rem), calc(100% - 1.5rem) calc(100% - 5.5rem), 
+		calc(100% - 1.5rem) calc(100% - 4.5rem), calc(100% - .5rem) calc(100% - 4.5rem), 
+		calc(100% - .5rem) calc(100% - 5.5rem), 100% calc(100% - 5.5rem),
+						100% calc(100% - 4rem), calc(100% - 1.5rem) calc(100% - 4rem), 
+		calc(100% - 1.5rem) calc(100% - 3rem), calc(100% - .5rem) calc(100% - 3rem), 
+		calc(100% - .5rem) calc(100% - 4rem), 100% calc(100% - 4rem),
+							100% calc(100% - 1px), 
+							  0% calc(100% - 1px),
+							0% calc(50% + #{$title-height}/2), 2rem*1.5 calc(50% + #{$title-height}/2 - 1rem), 2rem*1.5 calc(50% - #{$title-height}/2 + 1rem), 0% calc(50% - #{$title-height}/2));	
+	}	
+}
+.collection-disc{//学科门类
+	
+}
+.collection-major{//专业 
+
+}
+
+
+

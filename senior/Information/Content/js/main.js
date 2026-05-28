@@ -107,5 +107,22 @@
       button.setAttribute('aria-expanded', 'false');
     });
   });
+	
+	//如何安排測驗？modal
+	$('[data-bs-target="#modal-testSchedule"]').click(function(e) {
+			e.preventDefault();
+
+			// 檢查是否已經加載了模態框
+			if ($('#modal-testSchedule').length === 0) {
+					// 動態載入模態框內容
+					$.get('testSchedule.html', function(data) {
+							$('body').append(data);
+							$('#modal-testSchedule').modal('show');
+					});
+			} else {
+					// 顯示已經加載的模態框
+					$('#modal-testSchedule').modal('show');
+			}
+	});
 
 })(jQuery);

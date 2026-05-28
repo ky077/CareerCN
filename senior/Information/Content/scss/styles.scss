@@ -19,13 +19,16 @@
 @import "modules/TA"; 
 @import "modules/TI"; 
 @import "modules/WV"; 
-
 @import "modules/disc"; 
 @import "modules/major"; 
+
+
 
 @import "pages/index"; 
 @import "pages/news"; 
 @import "pages/intro"; 
+@import "pages/test"; 
+
 @import "pages/login"; 
 @import "pages/register"; 
 @import "pages/resetPD"; 
@@ -33,5 +36,7 @@
 @import "pages/explore"; 
 @import "pages/explore3"; 
 @import "pages/exploreTip"; 
+@import "pages/collection"; 
 @import "pages/myRecommend"; 
+
 

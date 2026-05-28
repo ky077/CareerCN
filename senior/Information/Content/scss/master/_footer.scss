@@ -1,7 +1,10 @@
 footer {
-  background: -webkit-linear-gradient(top left, $secondary 0%, $primary-500 50%);
+  /*background: -webkit-linear-gradient(top left, $secondary 0%, $primary-500 50%);
   background: -o-linear-gradient(top left, $secondary 0%, $primary-500 50%);
-  background: linear-gradient(to bottom right, $secondary 0%, $primary-500 50%);
+  background: linear-gradient(to bottom right, $secondary 0%, $primary-500 50%);*/
+  background: -webkit-linear-gradient(top left, $primary-500 0%, $secondary 50%);
+  background:      -o-linear-gradient(top left, $primary-500 0%, $secondary 50%);
+  background:         linear-gradient(to bottom right, $primary-500 0%, $secondary 50%);
   .infomation {
     background-color: rgba($white, .125);
     color: #fff;
