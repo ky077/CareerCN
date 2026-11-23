@@ -44,7 +44,27 @@ header {
       flex-shrink: 0;
     }
     .navbar-nav {
-      .nav-link {
+      .nav-item > a.nav-link {
+        position: relative;
+        width: fit-content;
+
+        &::after {
+          content: '';
+          position: absolute;
+          bottom: .25rem;
+          left: 20%;
+          width: 60%;
+          height: 2px;
+          background-color: $primary;
+          transform: scaleX(0);
+          transform-origin: left center;
+          transition: transform .35s ease;
+        }
+
+        &:hover::after, &:focus-visible::after, &.active::after {
+          transform: scaleX(1);
+        }
+
         &:hover, &:focus {
           color: $primary;
         }

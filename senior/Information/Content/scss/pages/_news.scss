@@ -8,15 +8,31 @@ main.news {
 .news-nav {
   font-size: $font-size-lg;
   .nav-link {
+    position: relative;
     color: $body-secondary-color;
-    text-underline-offset: .5rem;
-    &:hover, &:focus, &:active, &.hover, &.focus, {
-      color: $secondary;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: .25rem;
+      left: 20%;
+      width: 60%;
+      height: 2px;
+      background-color: $primary;
+      transform: scaleX(0);
+      transform-origin: left center;
+      transition: transform .35s ease;
+    }
+
+    &:hover, &:focus, &:active, &.hover, &.focus {
+      color: $primary;
       text-decoration: none;
+    }
+    &:hover::after, &:focus-visible::after, &.active::after {
+      transform: scaleX(1);
     }
     &.active {
       color: $primary;
-      text-decoration: underline;
     }
   }
 }

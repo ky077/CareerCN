@@ -73,7 +73,7 @@
           <div class="col-12 col-lg-7 py-5 wow animate__animated animate__slideInLeft">
             <div class="news-section">
               <h2 class="media-title news-title">最新新闻</h2>
-              <hr class="text-primary w-75 mt-0">
+              <hr class="text-info mt-0 border-2">
               <div class="list-group list-group-flush">
                 <!-- 最多5條消息 -->
                 <a href="news-detail.html?n=1" class="list-group-item"><span class="news-tag">[招生动态]</span>广西启动2026年普通高校招生考试报名信息采集工作</a>
@@ -117,7 +117,7 @@
     <!-- step Start -->
     <div class="step">
       <div class="container">
-        <h2 class="step-title">生涯信息三步骤<small>系统将结合生涯测评结果，帮助学生建立个人成长档案，为专业选择与职业发展提供科学参考。</small></h2>
+        <h2 class="step-title"><span>生涯信息三步骤</span><small>系统将结合生涯测评结果，帮助学生建立个人成长档案，为专业选择与职业发展提供科学参考。</small></h2>
         <div class="row gy-7 flex-column">
           <div class="col mb-7 mb-md-0">
             <div class="row align-items-center">
@@ -138,6 +138,11 @@
                 </div>
               </div>
             </div>
+            <svg class="step-path" viewBox="0 0 381.3 161" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+              <path d="M.8.8c23.5,74.3,111.2,96.3,158.2,89.1,45.5-7,80.7-15.8,111.5-11.2,34.4,5.1,69.7,15.2,110,81.6" fill="none" stroke="#8d9cff" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="3 5" />
+              <circle cx="32.3" cy="49.5" r="5.4" fill="#f6f9ff" stroke="#8d9cff" stroke-width="2.1" />
+              <circle cx="345.6" cy="115.9" r="5.4" fill="#f6f9ff" stroke="#8d9cff" stroke-width="2.1" />
+            </svg>
           </div>
           <div class="col mb-7 mb-md-0">
             <div class="row flex-lg-row-reverse align-items-center">
@@ -159,6 +164,11 @@
                 </div>
               </div>
             </div>
+            <svg class="step-path" viewBox="0 0 381.3 161" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+              <path d="M.8.8c23.5,74.3,111.2,96.3,158.2,89.1,45.5-7,80.7-15.8,111.5-11.2,34.4,5.1,69.7,15.2,110,81.6" fill="none" stroke="#8d9cff" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="3 5" />
+              <circle cx="32.3" cy="49.5" r="5.4" fill="#f6f9ff" stroke="#8d9cff" stroke-width="2.1" />
+              <circle cx="345.6" cy="115.9" r="5.4" fill="#f6f9ff" stroke="#8d9cff" stroke-width="2.1" />
+            </svg>
           </div>
           <div class="col mb-7 mb-md-0">
             <div class="row align-items-center">
@@ -187,10 +197,10 @@
     <!-- join-us Start -->
     <section class="join-us">
       <div class="container py-7">
-        <h2 class="join-title wow animate__animated animate__zoomIn">經營你的人生，從讚生涯開始</h2>
-        <h3 class="join-text wow animate__animated animate__zoomIn">測驗、收藏、紀錄與比較，讚生涯幫助你全面探索，做出更好的職涯選擇！</h3>
+        <h2 class="join-title wow animate__animated animate__zoomIn">经营你的人生，从赞生涯开始</h2>
+        <h3 class="join-text wow animate__animated animate__zoomIn">测验、收藏、纪录与比较，赞生涯帮助你全面探索，做出更好的职涯选择！</h3>
         <div class="mt-4">
-          <a class="btn btn-secondary rounded-pill px-4 btn-scale wow animate__animated animate__slideInUp" href="register.html">注册加入</a>
+          <a class="btn btn-secondary rounded-pill px-4 btn-scale wow animate__animated animate__slideInUp" href="register.html"><i class="bi bi-hand-index-thumb me-1"></i>注册加入</a>
         </div>
       </div>
     </section>
@@ -215,6 +225,18 @@
 <script src="Content/js/fn.js"></script>
 <script src="Content/js/main.js"></script>
 <script>
+// WOW 在步驟進入畫面時啟動動畫；各路徑等待自己的 slideInLeft 結束。
+document.querySelectorAll('.step .step-title + .row > .col:nth-child(-n+2)').forEach(function (step) {
+    var slide = step.querySelector('.animate__slideInLeft');
+    if (!slide) return;
+    function revealPath(event) {
+        if (event.target !== slide || event.animationName !== 'slideInLeft') return;
+        step.classList.add('step-path-visible');
+        slide.removeEventListener('animationend', revealPath);
+    }
+    slide.addEventListener('animationend', revealPath);
+});
+
 $(document).ready(function () {
 	//首頁輪播carousel
     $('#heroCarousel').owlCarousel({

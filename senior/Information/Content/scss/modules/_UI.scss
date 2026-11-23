@@ -12,7 +12,7 @@
   }
 }
 html, body {
-  background-color: rgba($primary-100, .15);
+  background-color: rgba($cyan-100, .15);
   font-size: 14px;
   @media screen and (min-width: 768px) {
     font-size: 16px;
@@ -79,7 +79,8 @@ a {
 .btn-scale {
   transition: .35s ease;
   &:hover, &:focus, &:active {
-    transform: scale(1.1);
+    transform: scale(1.15);
+		filter: drop-shadow(0 1rem 3rem rgba($pink, .15));
   }
 }
 .text-indigo {
