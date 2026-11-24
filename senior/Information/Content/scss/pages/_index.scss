@@ -424,7 +424,9 @@
 			-webkit-background-clip: text;
 			-o-background-clip: text;
 			color: transparent;
-			filter: drop-shadow(1px 1px 5px rgba($white, .5)) drop-shadow(-1px -1px 5px rgba($white, .5)) drop-shadow(-1px 1px 5px rgba($white, .5)) drop-shadow(1px -1px 5px rgba($white, .5)) brightness(1.2);
+			filter: 
+				drop-shadow(1px 1px $white) drop-shadow(-1px -1px $white) drop-shadow(-1px 1px $white) drop-shadow(1px -1px $white)
+				drop-shadow(1px 1px 10px rgba($secondary, .15));
 			&::before{
 				content: "";
 				display: block;
