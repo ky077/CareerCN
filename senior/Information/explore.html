@@ -59,24 +59,33 @@
       <div class="container">
         <h2 class="page-header-title wow animate__animated animate__slideInDown">探索学科专业<small class="page-header-slogan">发现你的热情所在，规划精彩人生路</small></h2>
         <!-- 搜尋 开始 -->
-        <div class="row justify-content-center explore-search">
-          <div class="col-lg-6">
+        <div class="row justify-content-center explore-search align-items-center">
+          <div class="col-lg-6 position-relative">
             <input type="text" class="form-control rounded-pill form-search" placeholder="输入关键词搜寻学科或专业...">
+            <img src="Content/img/nice-hi.apng" alt="" class="explore-search-IP"/>
           </div>
         </div>
         <!-- 搜尋 结束 -->
         <!-- 探索介绍 开始 -->
         <div class="explore-intro">
           <div class="row explore-intro-frame">
-            <div class="col explore-intro-item">
-              <strong class="explore-intro-count">12</strong><span class="explore-intro-label">学科门类</span></div>
-            <div class="col explore-intro-item">
-              <strong class="explore-intro-count">92</strong><span class="explore-intro-label">专业类别</span></div>
-            <div class="col explore-intro-item">
-              <strong class="explore-intro-count">845</strong><span class="explore-intro-label">本科专业</span></div>
-            <div class="col explore-intro-item">
-              <strong class="explore-intro-count">07</strong><span class="explore-intro-label">核心导览</span>
-              <a href="#" role="button" class="link-sky" data-bs-toggle="modal" data-bs-target="#guideModal"><i class="bi bi-question-circle-fill"></i></a>
+            <div class="col-6 col-md explore-intro-item">
+              <i class="bi bi-layers explore-intro-icon" aria-hidden="true"></i>
+              <div><strong class="explore-intro-count">12</strong><span class="explore-intro-label">学科门类</span></div>
+            </div>
+            <div class="col-6 col-md explore-intro-item">
+              <i class="bi bi-grid-fill explore-intro-icon" aria-hidden="true"></i>
+              <div><strong class="explore-intro-count">92</strong><span class="explore-intro-label">专业类别</span></div>
+            </div>
+            <div class="col-6 col-md explore-intro-item">
+              <i class="bi bi-mortarboard explore-intro-icon" aria-hidden="true"></i>
+              <div><strong class="explore-intro-count">845</strong><span class="explore-intro-label">本科专业</span></div>
+            </div>
+            <div class="col-6 col-md explore-intro-item">
+              <i class="bi bi-compass explore-intro-icon" aria-hidden="true"></i>
+              <div><strong class="explore-intro-count">07</strong><span class="explore-intro-label">核心导览</span>
+                <a href="#" role="button" class="link-sky" data-bs-toggle="modal" data-bs-target="#guideModal"><i class="bi bi-question-circle-fill ms-1"></i></a>
+              </div>
             </div>
           </div>
         </div>
@@ -95,13 +104,17 @@
               <div class="card" data-disc-code="01">
                 <div class="card-body">
                   <div class="card-icon"></div>
-                  <h3 class="card-title"><span class="card-label">哲学</span><small class="card-code">01</small></h3>
-                  <a class="icon-link icon-link-hover card-intro" href="explore1.html">门类介绍<i class="bi bi-arrow-right ms-1"></i></a>
+                  <div class="card-title">
+                    <div>
+                      <h3 class="card-label">哲学</h3>
+                      <small class="card-code">01</small></div>
+                    <a class="icon-link icon-link-hover card-go-intro" href="explore1.html">查看门类介绍<i class="bi bi-arrow-right ms-1"></i></a>
+                  </div>
+                  <div class="card-info">包含<span class="card-info-count">1</span>个专业类
+                    <a class="btn btn-sm card-info-toggle" href="#collapse-01" data-bs-toggle="collapse" role="button" aria-expanded="false">展开专业</a>
+                  </div>
                 </div>
                 <div class="card-footer">
-                  <div class="card-info">包含<span class="card-info-count">1</span>个专业类
-                    <a class="card-info-toggle" href="#collapse-01" data-bs-toggle="collapse" role="button" aria-expanded="false">专业详情</a>
-                  </div>
                   <div class="card-list collapse" id="collapse-01">
                     <h4 class="card-list-title"><span class="card-label">哲学类</span>
                       <samll class="card-code">0101</samll>
@@ -302,9 +315,6 @@ $(document).ready(function() {
 	$.getJSON("Content/json/categories.json", function (res) {
     renderCategories(res.data);
   });
-	
-	//第一個清單專業詳情展開
-	
 });	
 	
 function renderCategories(data) {
@@ -315,7 +325,7 @@ function renderCategories(data) {
     const collapseId = `collapse-${category.code}`;
     const iconIndex = index + 1;
 
-    let footerHtml = "";
+    let listHtml = "";
 
     // majors
     $.each(category.majors || [], function (_, majorClass) {
@@ -331,7 +341,7 @@ function renderCategories(data) {
         `;
       });
 
-      footerHtml += `
+      listHtml += `
         <h4 class="card-list-title">
           <span class="card-label">${majorClass.name}</span>
           <small class="card-code">${majorClass.code}</small>
@@ -346,27 +356,35 @@ function renderCategories(data) {
       <div class="card" data-disc-code="${category.code}">
         <div class="card-body">
           <div class="card-icon"></div>
-					<h3 class="card-title">
-						<span class="card-label">${category.name}</span>
-						<small class="card-code">${category.code}</small>
-					</h3>
-          <a class="icon-link icon-link-hover card-intro" href="explore1.html">门类介绍<i class="bi bi-arrow-right ms-1"></i></a>
+          <div class="card-title">
+            <div>
+              <h3 class="card-label">${category.name}</h3>
+              <small class="card-code">${category.code}</small>
+            </div>
+            <a class="icon-link icon-link-hover card-go-intro" href="explore1.html">查看门类介绍<i class="bi bi-arrow-right ms-1"></i></a>
+          </div>
+          <div class="card-info">
+            包含<span class="card-info-count">${(category.majors || []).length}</span>个专业类
+            <a class="btn btn-sm card-info-toggle" href="#${collapseId}" data-bs-toggle="collapse" role="button" aria-expanded="false">展开专业</a>
+          </div>
         </div>
         <div class="card-footer">
-					<div class="card-info">
-            包含<span class="card-info-count">${(category.majors || []).length}</span>个专业类<a class="card-info-toggle" href="#${collapseId}" data-bs-toggle="collapse" role="button" aria-expanded="false">专业详情</a>
+          <div class="card-list collapse" id="${collapseId}">
+            ${listHtml}
           </div>
-				  <div class="card-list collapse" id="${collapseId}">
-          	${footerHtml}
-					</div>
         </div>
       </div>
     `;
 
     $wrap.append(cardHtml);
   });
+
+  // 第一個清單專業詳情展開
+  const firstList = $wrap.find(".card-list.collapse").get(0);
+  if (firstList) {
+    bootstrap.Collapse.getOrCreateInstance(firstList, { toggle: false }).show();
+  }
 }		
 </script>
 </body>
 </html>
-
