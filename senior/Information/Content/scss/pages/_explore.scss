@@ -73,13 +73,17 @@
 		}
 	}
 	.explore-search-IP{
-		width: 8rem;
+		width: 4/12*100%;
 		height: auto;
 		position: absolute;
 		bottom: 0;
 		right: 0;
-		transform: translate(85%, 15%);
+		transform: translate(100%, 15%);
 		z-index: 2;
+		@media screen and (min-width: 992px) {
+		width: 8rem;	
+		transform: translate(85%, 15%);	
+		}
 	}
 }
 .explore-intro{
