@@ -59,15 +59,18 @@
       <div class="container">
         <h2 class="page-header-title wow animate__animated animate__slideInDown">探索学科专业<small class="page-header-slogan">发现你的热情所在，规划精彩人生路</small></h2>
         <!-- 搜尋 开始 -->
-        <div class="row justify-content-center explore-search align-items-center">
+        <div class="row justify-content-center explore-search align-items-center wow animate__animated animate__slideInUp">
           <div class="col-lg-6 position-relative">
-            <input type="text" class="form-control rounded-pill form-search" placeholder="输入关键词搜寻学科或专业...">
+            <div class="input-group rounded-pill">
+              <input type="text" class="form-control form-search" placeholder="输入关键词搜寻学科或专业..." id="exploreSearch" autocomplete="off">
+              <button class="btn btn-outline-primary bg-transparent btn-clear" type="button" title="清除" style="display: none;"><span class="me-1 visually-hidden">清除</span></button>
+            </div>
             <img src="Content/img/nice-hi.apng" alt="" class="explore-search-IP"/>
           </div>
         </div>
         <!-- 搜尋 结束 -->
         <!-- 探索介绍 开始 -->
-        <div class="explore-intro">
+        <div class="explore-intro wow animate__animated animate__slideInUp">
           <div class="row explore-intro-frame">
             <div class="col-6 col-md explore-intro-item">
               <i class="bi bi-layers explore-intro-icon" aria-hidden="true"></i>
@@ -97,7 +100,7 @@
     <!-- page-content Start -->
     <div class="page-content">
       <!-- 学科专业 开始 -->
-      <div class="explore-card">
+      <div class="explore-card wow animate__animated animate__slideInUp">
         <div class="container">
           <div class="row justify-content-center">
             <div class="col-md-10" id="categoryList">
@@ -310,16 +313,59 @@
 $(document).ready(function() {
 	//nowPage
   $('.nav-explore').addClass('active');
-	
+
+	let allCategories = [];
+	const $search = $('#exploreSearch');
+	const $clear = $('.explore-search .btn-clear');
+
+	function filterCategories() {
+	  const query = $.trim($search.val()).toLowerCase();
+	  $clear.toggle(query !== '');
+	  if (!query) {
+	    renderCategories(allCategories);
+	    return;
+	  }
+
+	  const matches = allCategories.map(function (category) {
+	    if (category.name.toLowerCase().includes(query)) return category;
+	    const majors = (category.majors || []).map(function (major) {
+	      if (major.name.toLowerCase().includes(query)) return major;
+	      const items = (major.items || []).filter(function (item) {
+	        return item.name.toLowerCase().includes(query);
+	      });
+	      return items.length ? { ...major, items: items } : null;
+	    }).filter(Boolean);
+	    return majors.length ? { ...category, majors: majors } : null;
+	  }).filter(Boolean);
+
+	  renderCategories(matches, true);
+	}
+
+	$search.on('input', filterCategories);
+	$clear.on('click', function () {
+	  $search.val('');
+	  filterCategories();
+	  $search.trigger('focus');
+	});
+	$search.closest('form').on('submit', function (event) {
+	  event.preventDefault();
+	});
+
 	//探索學科專業清單
 	$.getJSON("Content/json/categories.json", function (res) {
-    renderCategories(res.data);
+    allCategories = res.data || [];
+    filterCategories();
   });
 });	
 	
-function renderCategories(data) {
+function renderCategories(data, expandMatches = false) {
   const $wrap = $("#categoryList");
   $wrap.empty();
+
+  if (!data.length) {
+    $wrap.append('<div id="exploreSearchEmpty" class="text-center py-5">找不到符合的学科或专业，请换个关键词试试。</div>');
+    return;
+  }
 
   $.each(data, function (index, category) {
     const collapseId = `collapse-${category.code}`;
@@ -379,11 +425,13 @@ function renderCategories(data) {
     $wrap.append(cardHtml);
   });
 
-  // 第一個清單專業詳情展開
-  const firstList = $wrap.find(".card-list.collapse").get(0);
-  if (firstList) {
-    bootstrap.Collapse.getOrCreateInstance(firstList, { toggle: false }).show();
-  }
+  // 搜尋時展開所有符合的門類；清空時恢復預設的第一個展開。
+  const lists = expandMatches
+    ? $wrap.find('.card-list.collapse').get()
+    : $wrap.find('.card-list.collapse').first().get();
+  lists.forEach(function (list) {
+    bootstrap.Collapse.getOrCreateInstance(list, { toggle: false }).show();
+  });
 }		
 </script>
 </body>
